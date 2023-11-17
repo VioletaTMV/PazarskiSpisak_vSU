@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+<main>
+
+    <section class="container-fluid">
+        <h2 class="text-15-left-padding text-white">Рецепти в категория: <span th:text="${category}">Категория</span>
+        </h2>
+        <h3 class="text-15-left-padding text-white text-header-h3"><span th:text="${recipeCount}"></span> намерени
+            рецепти</h3>
+
+        <div class="container-cards">
+            <div class="recipes row /*mx-auto d-flex flex-row justify-content-center*/">
+                <div th:each="r: ${recipes}" class="recipe card col-sm-6 col-md-3  col-lg-2 m-1 p-0">
+                    <div class="card-img-top-wrapper">
+                        <img class="card-img-top" src="/images/evie-s-gXPcOgp723g-unsplash.jpg"
+                             alt="Recipe image">
+                        <div class="card-body pb-1">
+                            <a th:href="@{/recipe(id=${r.id})}">
+                                <b th:text="${r.name}" class="card-title"></b>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="recipe-details list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="card-text"><i class="fa-solid fa-user-clock"></i> подготовка:
+                                <span th:text="${r.prepTime}"></span>
+                            </div>
+                            <div class="card-text"><i class="fa-solid fa-stopwatch"></i> готвене: <span
+                                    th:text="${r.cookTime}"></span></div>
+                            <div class="card-text"><i class="fa-solid fa-pencil"></i> от:
+                                <span th:text="${r.publishedBy}"></span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="recipe-body">
+                        <a class="recipe-link" th:href="@{/recipe(id=${r.id})}"><i class="fa-regular fa-eye"></i>
+                            Виж</a>
+                        <!--                            <a class="add-to-list-link" href="/"><i class="fa-solid fa-pen-to-square"></i> Добави</a>-->
+
+
+                        <form
+                                sec:authorize="isAuthenticated()"
+                                class="inline-display"
+                                th:method="post"
+                                th:action="@{/list/add-recipe(id=${category})}">
+                            <button class="button-as-link add-to-list-link"
+                                    th:name="addRecipeToShopListFromRecipeCategoriesList"
+                                    th:data-id="${r.id}"
+                                    th:value="${r.id}"
+                                    th:onclick="blinkShopListRecipeAdd()">
+                                <a>
+                                    <i class=" fa-solid fa-pen-to-square"></i> Добави
+                                </a>
+                            </button>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer></footer>
+
+
+</body>
+
+</html>

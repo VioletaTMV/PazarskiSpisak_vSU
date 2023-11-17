@@ -1,0 +1,5506 @@
+[
+	{
+		"article_id" : 41,
+		"article_name" : "наденица",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 120,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 40,
+		"article_name" : "кашкавал",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 39,
+		"article_name" : "лук",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "гл.",
+		"article_measure_altsize" : 170,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 38,
+		"article_name" : "картофи",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 160,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 37,
+		"article_name" : "кимион млян",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 36,
+		"article_name" : "авокадо",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 400,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 34,
+		"article_name" : "сол",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 5,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 35,
+		"article_name" : "зехтин",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 33,
+		"article_name" : "яйца",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 60,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 32,
+		"article_name" : "кисело мляко",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.ч.",
+		"article_measure_altsize" : 200,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 31,
+		"article_name" : "карфиол",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 1000,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 29,
+		"article_name" : "лимони",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 150,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 30,
+		"article_name" : "чери домати",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 10,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 28,
+		"article_name" : "моркови",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 100,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 26,
+		"article_name" : "целина глави",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "гл.",
+		"article_measure_altsize" : 330,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 27,
+		"article_name" : "ябълки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 175,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 25,
+		"article_name" : "тиквички",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 350,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 24,
+		"article_name" : "чесън",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ск.",
+		"article_measure_altsize" : 2,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 23,
+		"article_name" : "краставици",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 250,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 22,
+		"article_name" : "домати",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 250,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 42,
+		"article_name" : "киноа",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.ч.",
+		"article_measure_altsize" : 200,
+		"article_category" : 28
+	},
+	{
+		"article_id" : 43,
+		"article_name" : "ориз",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.ч.",
+		"article_measure_altsize" : 220,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 44,
+		"article_name" : "спанак",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 45,
+		"article_name" : "захар",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 12,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 46,
+		"article_name" : "брашно",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 8,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 47,
+		"article_name" : "риба тон консерва",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 185,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 48,
+		"article_name" : "прясно сирене",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 49,
+		"article_name" : "босилек",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 2,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 50,
+		"article_name" : "черен пипер",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 51,
+		"article_name" : "грозде",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 52,
+		"article_name" : "нар",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 53,
+		"article_name" : "прясно мляко",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 54,
+		"article_name" : "сметана заквасена",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 30,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 56,
+		"article_name" : "майонеза",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 15,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 57,
+		"article_name" : "кетчуп",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 20,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 58,
+		"article_name" : "горчица",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 59,
+		"article_name" : "грах в консерва",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 60,
+		"article_name" : "царевица конс.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 61,
+		"article_name" : "каперси мариновани",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 5,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 62,
+		"article_name" : "сушени домати мар.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 10,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 63,
+		"article_name" : "детско пюре",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 200,
+		"article_category" : 30
+	},
+	{
+		"article_id" : 64,
+		"article_name" : "детско сокче",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 30
+	},
+	{
+		"article_id" : 65,
+		"article_name" : "детска супа",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 200,
+		"article_category" : 30
+	},
+	{
+		"article_id" : 66,
+		"article_name" : "детски бисквити",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 30
+	},
+	{
+		"article_id" : 67,
+		"article_name" : "броколи замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 68,
+		"article_name" : "карфиол замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 69,
+		"article_name" : "бейби моркови замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 70,
+		"article_name" : "моркови замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 71,
+		"article_name" : "зелен фасул замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 72,
+		"article_name" : "грах замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 73,
+		"article_name" : "извара",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 74,
+		"article_name" : "пиле",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 1400,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 75,
+		"article_name" : "пил. бутчета",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 250,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 76,
+		"article_name" : "пил. крилца",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 72,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 77,
+		"article_name" : "пил. филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 200,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 78,
+		"article_name" : "пил. бон филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 79,
+		"article_name" : "адаптирано мляко",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 30
+	},
+	{
+		"article_id" : 80,
+		"article_name" : "замр. зеленч. смес",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 81,
+		"article_name" : "лютеница",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 82,
+		"article_name" : "масло",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 5,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 83,
+		"article_name" : "крема сирене",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 84,
+		"article_name" : "маргарин",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 85,
+		"article_name" : "кремче",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 86,
+		"article_name" : "сладолед",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 87,
+		"article_name" : "сладоледена торта",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 92,
+		"article_name" : "соев сос",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 15,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 93,
+		"article_name" : "сос уорчестер",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 94,
+		"article_name" : "доматено пюре",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 20,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 95,
+		"article_name" : "зеле",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 2200,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 96,
+		"article_name" : "елда",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.ч.",
+		"article_measure_altsize" : 200,
+		"article_category" : 28
+	},
+	{
+		"article_id" : 97,
+		"article_name" : "бира",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 98,
+		"article_name" : "кока кола",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 99,
+		"article_name" : "газирани безалк.",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 100,
+		"article_name" : "плодов сок",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 101,
+		"article_name" : "минерална вода",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 102,
+		"article_name" : "вино",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 103,
+		"article_name" : "сьомга котлет",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 240,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 104,
+		"article_name" : "сьомга филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 105,
+		"article_name" : "лаврак",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 400,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 106,
+		"article_name" : "лаврак филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 80,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 107,
+		"article_name" : "лаврак див",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 108,
+		"article_name" : "ципура",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 350,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 109,
+		"article_name" : "ципура филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 90,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 110,
+		"article_name" : "ципура дива",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 111,
+		"article_name" : "сирене краве",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 112,
+		"article_name" : "боб",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 656,
+		"article_name" : "мортадела",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 113,
+		"article_name" : "джоджен сушен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 114,
+		"article_name" : "червен пипер",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 2,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 115,
+		"article_name" : "оцет",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 116,
+		"article_name" : "олио",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 706,
+		"article_name" : "босилек пресен лист",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 1,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 124,
+		"article_name" : "шунка",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 125,
+		"article_name" : "ленено семе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 2,
+		"article_category" : 28
+	},
+	{
+		"article_id" : 126,
+		"article_name" : "чушки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 100,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 127,
+		"article_name" : "чушки зелени",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 100,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 128,
+		"article_name" : "чушки червени",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 100,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 129,
+		"article_name" : "чушки бели",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 100,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 130,
+		"article_name" : "лук червен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 150,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 131,
+		"article_name" : "копър",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 5,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 132,
+		"article_name" : "орехи",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 133,
+		"article_name" : "леща",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 134,
+		"article_name" : "заек",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 2000,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 135,
+		"article_name" : "заешки бутчета",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 200,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 137,
+		"article_name" : "кафе мляно",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 29
+	},
+	{
+		"article_id" : 138,
+		"article_name" : "кафе на зърна",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 29
+	},
+	{
+		"article_id" : 139,
+		"article_name" : "Нес кафе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 29
+	},
+	{
+		"article_id" : 140,
+		"article_name" : "чай",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 29
+	},
+	{
+		"article_id" : 141,
+		"article_name" : "копър сушен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 5,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 150,
+		"article_name" : "бамя",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 152,
+		"article_name" : "други",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 42
+	},
+	{
+		"article_id" : 153,
+		"article_name" : "бисквити",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 27
+	},
+	{
+		"article_id" : 154,
+		"article_name" : "шоколад",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 27
+	},
+	{
+		"article_id" : 158,
+		"article_name" : "сирене козе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 159,
+		"article_name" : "сирене овче",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 160,
+		"article_name" : "маскарпоне",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 161,
+		"article_name" : "моцарела",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 162,
+		"article_name" : "пармезан",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 163,
+		"article_name" : "синьо сирене",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 164,
+		"article_name" : "сирене чедар",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 165,
+		"article_name" : "сирене рикота",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 166,
+		"article_name" : "сирене бри",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 167,
+		"article_name" : "агн. бут с кост",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 2500,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 168,
+		"article_name" : "агн. врат",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 169,
+		"article_name" : "агн. котлет",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 170,
+		"article_name" : "агн. гърди",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 171,
+		"article_name" : "бекон",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 172,
+		"article_name" : "тел. език",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 1350,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 173,
+		"article_name" : "луканка",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 174,
+		"article_name" : "пил. дробчета замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 175,
+		"article_name" : "пил. сърца замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 176,
+		"article_name" : "пуешко филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 177,
+		"article_name" : "кайма смес",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 178,
+		"article_name" : "кайма телешка",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 179,
+		"article_name" : "кайма свинска",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 180,
+		"article_name" : "св. дроб",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 181,
+		"article_name" : "тел. дроб",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 651,
+		"article_name" : "чушки печени",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 55,
+		"article_category" : 42
+	},
+	{
+		"article_id" : 183,
+		"article_name" : "пъстърва",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 350,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 184,
+		"article_name" : "скариди",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 185,
+		"article_name" : "скумрия",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 750,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 186,
+		"article_name" : "ананас",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 187,
+		"article_name" : "аспержи",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 188,
+		"article_name" : "банани",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 180,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 189,
+		"article_name" : "броколи",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "гл.",
+		"article_measure_altsize" : 500,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 190,
+		"article_name" : "брюкселско зеле",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 191,
+		"article_name" : "брюксел. зеле замразено",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 192,
+		"article_name" : "грейпфрут",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 193,
+		"article_name" : "гъби",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 194,
+		"article_name" : "диня",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 195,
+		"article_name" : "зелен фасул",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 196,
+		"article_name" : "кайсии",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 197,
+		"article_name" : "киви",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 198,
+		"article_name" : "круши",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 180,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 199,
+		"article_name" : "къпини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 200,
+		"article_name" : "пресен лук",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "стр.",
+		"article_measure_altsize" : 30,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 201,
+		"article_name" : "малини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 202,
+		"article_name" : "манго",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 203,
+		"article_name" : "мандарини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 204,
+		"article_name" : "маруля",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 250,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 205,
+		"article_name" : "нектарини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 206,
+		"article_name" : "патладжан",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 400,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 207,
+		"article_name" : "портокали",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 220,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 208,
+		"article_name" : "праз",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "стр.",
+		"article_measure_altsize" : 130,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 209,
+		"article_name" : "праскови",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 210,
+		"article_name" : "пресни картофки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 211,
+		"article_name" : "пъпеш",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 212,
+		"article_name" : "репички",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 20,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 213,
+		"article_name" : "рукола",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 214,
+		"article_name" : "сини сливи",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 215,
+		"article_name" : "сладки картофи",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 300,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 216,
+		"article_name" : "стафиди",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 217,
+		"article_name" : "сушени смокини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 218,
+		"article_name" : "тиква",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 219,
+		"article_name" : "фурми",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 10,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 220,
+		"article_name" : "царевица кочан",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 250,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 221,
+		"article_name" : "череши",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 222,
+		"article_name" : "ягоди",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 223,
+		"article_name" : "бадеми",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 224,
+		"article_name" : "кашу",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 225,
+		"article_name" : "лешници",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 226,
+		"article_name" : "фъстъци",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 227,
+		"article_name" : "шам-фъстък",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 228,
+		"article_name" : "сусам",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 28
+	},
+	{
+		"article_id" : 229,
+		"article_name" : "сусамов тахан",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 20,
+		"article_category" : 28
+	},
+	{
+		"article_id" : 230,
+		"article_name" : "бейлис",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 231,
+		"article_name" : "бяло вино",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 232,
+		"article_name" : "червено вино",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 233,
+		"article_name" : "водка",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 234,
+		"article_name" : "джин",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 235,
+		"article_name" : "мартини",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 236,
+		"article_name" : "ром",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 237,
+		"article_name" : "уиски",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 238,
+		"article_name" : "шампанско",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 710,
+		"article_name" : "див чесън листа",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 5,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 720,
+		"article_name" : "нектар кайсия",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 239,
+		"article_name" : "пил. бедра",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 100,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 240,
+		"article_name" : "св. врат пърж.-кост",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 180,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 241,
+		"article_name" : "св. ребра",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 60,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 243,
+		"article_name" : "хляб",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "фил.",
+		"article_measure_altsize" : 40,
+		"article_category" : 47
+	},
+	{
+		"article_id" : 244,
+		"article_name" : "шарена сол",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 4,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 245,
+		"article_name" : "кестени",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 15,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 246,
+		"article_name" : "целина листа",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 5,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 247,
+		"article_name" : "филе св. пушено",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 248,
+		"article_name" : "бакпулвер",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 3,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 249,
+		"article_name" : "мед",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 25,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 250,
+		"article_name" : "маслини с чушка",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 49
+	},
+	{
+		"article_id" : 251,
+		"article_name" : "маслини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 49
+	},
+	{
+		"article_id" : 252,
+		"article_name" : "пил. подбедрици",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 80,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 253,
+		"article_name" : "кисели краставички",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 25,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 254,
+		"article_name" : "кокосови стърготини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 257,
+		"article_name" : "салата айсберг",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 700,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 258,
+		"article_name" : "цвекло",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 170,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 259,
+		"article_name" : "маслини с бадем",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 49
+	},
+	{
+		"article_id" : 260,
+		"article_name" : "фиде",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "гн.",
+		"article_measure_altsize" : 40,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 261,
+		"article_name" : "сушени сини сливи",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 10,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 262,
+		"article_name" : "песто",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 20,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 263,
+		"article_name" : "магданоз",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 5,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 264,
+		"article_name" : "тел. шол",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 265,
+		"article_name" : "газирана вода",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 266,
+		"article_name" : "точени кори фини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 267,
+		"article_name" : "какао",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 29
+	},
+	{
+		"article_id" : 268,
+		"article_name" : "ванилия",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 269,
+		"article_name" : "черна ряпа",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 230,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 270,
+		"article_name" : "джинджифил стрит",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 2,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 271,
+		"article_name" : "св. врат пърж.+кост",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 250,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 272,
+		"article_name" : "пудра захар",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 273,
+		"article_name" : "дафинов лист",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 274,
+		"article_name" : "корен магданоз",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 20,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 275,
+		"article_name" : "пил. бульон",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 42
+	},
+	{
+		"article_id" : 752,
+		"article_name" : "сьомгова пъстърва",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 1000,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 276,
+		"article_name" : "пил. бульон кубче",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 5,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 277,
+		"article_name" : "маково семе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 278,
+		"article_name" : "панировка",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 279,
+		"article_name" : "кренвирши",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 80,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 280,
+		"article_name" : "чубрица",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 2,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 281,
+		"article_name" : "хрян",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 282,
+		"article_name" : "пащърнак",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 130,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 283,
+		"article_name" : "зелев сок",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 42
+	},
+	{
+		"article_id" : 284,
+		"article_name" : "сушени черв. чушки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 8,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 286,
+		"article_name" : "тесто",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 287,
+		"article_name" : "тел. рагу",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 288,
+		"article_name" : "тел. кокали",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 289,
+		"article_name" : "св. кокали",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 290,
+		"article_name" : "св. рагу",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 291,
+		"article_name" : "розмарин сушен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 292,
+		"article_name" : "шафран",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 293,
+		"article_name" : "качамак /царев. грис",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 6,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 294,
+		"article_name" : "печурки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 295,
+		"article_name" : "манатарки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 296,
+		"article_name" : "манатарки конс.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 297,
+		"article_name" : "тиква цигулка",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 298,
+		"article_name" : "тиква бяла",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 299,
+		"article_name" : "джинджифил корен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "рзн.",
+		"article_measure_altsize" : 1,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 300,
+		"article_name" : "рибно филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 301,
+		"article_name" : "св. месо",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 302,
+		"article_name" : "пил. месо",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 303,
+		"article_name" : "тел. месо",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 304,
+		"article_name" : "агн. месо",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 305,
+		"article_name" : "пуешко месо",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 306,
+		"article_name" : "оцет винен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 307,
+		"article_name" : "оцет ябълков",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 308,
+		"article_name" : "нишесте",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 6,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 309,
+		"article_name" : "нишесте пшенично",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 6,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 310,
+		"article_name" : "нишесте царевично",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 6,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 311,
+		"article_name" : "ананас консерва",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 312,
+		"article_name" : "оцет оризов",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 313,
+		"article_name" : "майорана",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 314,
+		"article_name" : "св. шарено месо",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 315,
+		"article_name" : "св. котлет",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 180,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 316,
+		"article_name" : "бамя замразена",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 317,
+		"article_name" : "домати цели конс.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 50,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 318,
+		"article_name" : "домати кубче конс.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 20,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 319,
+		"article_name" : "тел. джолан",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 320,
+		"article_name" : "селъри",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "стр.",
+		"article_measure_altsize" : 60,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 649,
+		"article_name" : "сушени домати",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 322,
+		"article_name" : "кисело зеле",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 1500,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 323,
+		"article_name" : "червен пипер лют",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 2,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 324,
+		"article_name" : "макарони",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 325,
+		"article_name" : "брашно пшенично",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 326,
+		"article_name" : "брашно от камут",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 28
+	},
+	{
+		"article_id" : 327,
+		"article_name" : "брашно от лимец",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 28
+	},
+	{
+		"article_id" : 328,
+		"article_name" : "брашно от просо",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 28
+	},
+	{
+		"article_id" : 329,
+		"article_name" : "просо",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.ч.",
+		"article_measure_altsize" : 220,
+		"article_category" : 28
+	},
+	{
+		"article_id" : 330,
+		"article_name" : "брашно царевично",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 331,
+		"article_name" : "боб консерва",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 332,
+		"article_name" : "зелен фасул конс.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 333,
+		"article_name" : "лозови листа",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 4,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 334,
+		"article_name" : "лозови листа стер.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 4,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 335,
+		"article_name" : "салам",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 336,
+		"article_name" : "салам шпек",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 337,
+		"article_name" : "салам телешки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 338,
+		"article_name" : "пиле замразено",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 1400,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 339,
+		"article_name" : "пил. пържола",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 340,
+		"article_name" : "пил. хапки пане замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 341,
+		"article_name" : "агн. глави замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 342,
+		"article_name" : "пастърма",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 343,
+		"article_name" : "орехи сурови",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 344,
+		"article_name" : "орехи печени",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 345,
+		"article_name" : "бадеми филирани",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 346,
+		"article_name" : "фъстъци сурови",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 347,
+		"article_name" : "лешници сурови",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 348,
+		"article_name" : "солети",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 27
+	},
+	{
+		"article_id" : 349,
+		"article_name" : "кашу сурово",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 350,
+		"article_name" : "царевица за пуканки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 351,
+		"article_name" : "леблебия",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 352,
+		"article_name" : "лайм",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 100,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 353,
+		"article_name" : "лимонов сок шише",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 354,
+		"article_name" : "бульон зеленч. куб.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 355,
+		"article_name" : "бульон тел. куб.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 356,
+		"article_name" : "фикс",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 357,
+		"article_name" : "бял пипер",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 359,
+		"article_name" : "бял пипер зърна",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 360,
+		"article_name" : "ванилова захар",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 361,
+		"article_name" : "канела",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 2,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 362,
+		"article_name" : "канела пръчки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 363,
+		"article_name" : "карамфил",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 364,
+		"article_name" : "кардамон",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 365,
+		"article_name" : "кимион",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 366,
+		"article_name" : "къри",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 2,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 367,
+		"article_name" : "лимонена киселина",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 368,
+		"article_name" : "мащерка",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 2,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 369,
+		"article_name" : "натриев глутамат",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 370,
+		"article_name" : "черен пипер зърна",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 2,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 372,
+		"article_name" : "чесън сух",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 650,
+		"article_name" : "амониев бикарбонат",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 374,
+		"article_name" : "шоколадови пръчици",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 375,
+		"article_name" : "сода бикарбонат",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 6,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 376,
+		"article_name" : "акула котлет",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 377,
+		"article_name" : "скариди замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 378,
+		"article_name" : "октопод",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 379,
+		"article_name" : "калмари",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 380,
+		"article_name" : "калмари замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 381,
+		"article_name" : "калмар шайби замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 382,
+		"article_name" : "калмар пипала замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 383,
+		"article_name" : "херинга маринована",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 384,
+		"article_name" : "пъстърва замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 350,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 385,
+		"article_name" : "риба меч филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 386,
+		"article_name" : "черен хайвер",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 387,
+		"article_name" : "скумрия филе замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 388,
+		"article_name" : "пушена сьомга филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 49
+	},
+	{
+		"article_id" : 389,
+		"article_name" : "тон филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 390,
+		"article_name" : "треска",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 391,
+		"article_name" : "маслини черни",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 49
+	},
+	{
+		"article_id" : 392,
+		"article_name" : "маслини натурални",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 49
+	},
+	{
+		"article_id" : 393,
+		"article_name" : "хайвер",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 49
+	},
+	{
+		"article_id" : 395,
+		"article_name" : "топено сирене",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 396,
+		"article_name" : "гауда",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 397,
+		"article_name" : "камамбер",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 398,
+		"article_name" : "зелена салата",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 399,
+		"article_name" : "рулца от раци",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 400,
+		"article_name" : "гъби мариновани",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 401,
+		"article_name" : "индийско орехче",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 402,
+		"article_name" : "естрагон",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 1,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 403,
+		"article_name" : "естрагон сушен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 404,
+		"article_name" : "коприва",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 405,
+		"article_name" : "коприва листа",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 406,
+		"article_name" : "коприва връхчета",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 407,
+		"article_name" : "олио слънчогледово",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 408,
+		"article_name" : "олио царевично",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 409,
+		"article_name" : "камби",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 410,
+		"article_name" : "зелени домати",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 411,
+		"article_name" : "бяло вино сухо",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 412,
+		"article_name" : "семе от пиня",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 414,
+		"article_name" : "розмарин пресен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 415,
+		"article_name" : "доматена паста",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 20,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 416,
+		"article_name" : "грах",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 417,
+		"article_name" : "крутони",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 47
+	},
+	{
+		"article_id" : 750,
+		"article_name" : "сметана готв. раст.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 25,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 420,
+		"article_name" : "желатин",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 421,
+		"article_name" : "ликьор портокалов",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 422,
+		"article_name" : "галета",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 47
+	},
+	{
+		"article_id" : 423,
+		"article_name" : "пушени гърди",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 424,
+		"article_name" : "мас",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 425,
+		"article_name" : "св. мас",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 426,
+		"article_name" : "ванилия капсула",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 427,
+		"article_name" : "св. бут",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 428,
+		"article_name" : "чушки печени замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 55,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 429,
+		"article_name" : "чушки печени стер.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 55,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 430,
+		"article_name" : "фетучини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 431,
+		"article_name" : "патица",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 705,
+		"article_name" : "леща червена",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 433,
+		"article_name" : "патица замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 435,
+		"article_name" : "холандски сос",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 436,
+		"article_name" : "ананас шайби конс.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 437,
+		"article_name" : "ананас куб. конс.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 438,
+		"article_name" : "диво прасе месо",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 42
+	},
+	{
+		"article_id" : 439,
+		"article_name" : "сърна месо",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 42
+	},
+	{
+		"article_id" : 440,
+		"article_name" : "черва",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 441,
+		"article_name" : "ракия гроздова",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 442,
+		"article_name" : "ракия сливова",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 443,
+		"article_name" : "тел. плешка",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 444,
+		"article_name" : "св. плешка",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 445,
+		"article_name" : "св. шол",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 446,
+		"article_name" : "зеле савойско",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 447,
+		"article_name" : "ким",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 448,
+		"article_name" : "пъстърва филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 140,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 449,
+		"article_name" : "пъстърва филе замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 140,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 450,
+		"article_name" : "ванилия прах",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 451,
+		"article_name" : "ванилия пръчки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 452,
+		"article_name" : "лимон. есенция капс.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 453,
+		"article_name" : "кисело зеле листа",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 100,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 454,
+		"article_name" : "печурки стер.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 455,
+		"article_name" : "мерлуза филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 456,
+		"article_name" : "мерлуза филе замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 457,
+		"article_name" : "наденица варена",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 458,
+		"article_name" : "кайсиево масло",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 459,
+		"article_name" : "куркума",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 2,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 460,
+		"article_name" : "люцерна",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 461,
+		"article_name" : "люцерна кълнове",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 462,
+		"article_name" : "соеви кълнове",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 463,
+		"article_name" : "броколи кълнове",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 464,
+		"article_name" : "пшеница кълнове",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 465,
+		"article_name" : "слънч. кълнове",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 466,
+		"article_name" : "слънч. семки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 467,
+		"article_name" : "слънч. семе белено",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 468,
+		"article_name" : "палмово масло",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 469,
+		"article_name" : "блат",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 27
+	},
+	{
+		"article_id" : 470,
+		"article_name" : "кремижел прах",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 27
+	},
+	{
+		"article_id" : 471,
+		"article_name" : "шоколад бял",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 27
+	},
+	{
+		"article_id" : 472,
+		"article_name" : "шоколад кафяв",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 27
+	},
+	{
+		"article_id" : 473,
+		"article_name" : "св. бон филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 474,
+		"article_name" : "тел. бон филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 475,
+		"article_name" : "риган",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 476,
+		"article_name" : "риган сушен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 477,
+		"article_name" : "риган пресен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 478,
+		"article_name" : "манатарки сушени",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 479,
+		"article_name" : "касис сок",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 480,
+		"article_name" : "тиквено семе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 481,
+		"article_name" : "оцет балсамико чер.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 482,
+		"article_name" : "оцет балсамико бял",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 483,
+		"article_name" : "оцет балсамико",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 484,
+		"article_name" : "дренки сушени",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 485,
+		"article_name" : "дренки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 486,
+		"article_name" : "пене",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 487,
+		"article_name" : "пене ригате",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 488,
+		"article_name" : "табаско",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 489,
+		"article_name" : "чили сос",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 490,
+		"article_name" : "пил. воденички замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 491,
+		"article_name" : "було",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 492,
+		"article_name" : "бутер тесто",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 493,
+		"article_name" : "горгонзола",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 494,
+		"article_name" : "котидж сирене",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 495,
+		"article_name" : "прошуто",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 496,
+		"article_name" : "нахут",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 28
+	},
+	{
+		"article_id" : 497,
+		"article_name" : "булгур",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 498,
+		"article_name" : "кедрови ядки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 499,
+		"article_name" : "компот праскови",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 500,
+		"article_name" : "компот череши",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 501,
+		"article_name" : "компот вишни",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 502,
+		"article_name" : "компот кайсии",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 503,
+		"article_name" : "сладко боровинки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 504,
+		"article_name" : "сладко ягоди",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 505,
+		"article_name" : "сладко смокини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 506,
+		"article_name" : "сладко малини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 507,
+		"article_name" : "сладко горски плод.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 508,
+		"article_name" : "конфитюр праскови",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 509,
+		"article_name" : "конфитюр ягоди",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 510,
+		"article_name" : "конфитюр боровинки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 511,
+		"article_name" : "конфитюр малини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 512,
+		"article_name" : "течен шоколад",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 513,
+		"article_name" : "течен шоколад бял",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 514,
+		"article_name" : "течен шоколад кафяв",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 515,
+		"article_name" : "конфитюр кайсии",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 516,
+		"article_name" : "конфитюр шипки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 517,
+		"article_name" : "мая суха",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 518,
+		"article_name" : "брашно ръжено",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 519,
+		"article_name" : "ръж",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 28
+	},
+	{
+		"article_id" : 520,
+		"article_name" : "ръж кълнове",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 521,
+		"article_name" : "брашно от рошкови",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 28
+	},
+	{
+		"article_id" : 522,
+		"article_name" : "морска сол",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 523,
+		"article_name" : "мая прясна",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 528,
+		"article_name" : "юфка",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 527,
+		"article_name" : "вода",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 42
+	},
+	{
+		"article_id" : 652,
+		"article_name" : "питки за бургер",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 47
+	},
+	{
+		"article_id" : 529,
+		"article_name" : "фъстъчено масло",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 530,
+		"article_name" : "сушени череши",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 531,
+		"article_name" : "сушени кайсии",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 532,
+		"article_name" : "сушени ягоди",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 533,
+		"article_name" : "сушени малини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 534,
+		"article_name" : "малини замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 535,
+		"article_name" : "ягоди замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 536,
+		"article_name" : "боровинки чер. замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 537,
+		"article_name" : "боровинки черв. замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 538,
+		"article_name" : "сушени банани",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 539,
+		"article_name" : "капелини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 540,
+		"article_name" : "канелони",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 10,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 541,
+		"article_name" : "диталини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 542,
+		"article_name" : "яйчена паста",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 543,
+		"article_name" : "фарфале /панделки/",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 544,
+		"article_name" : "фузили",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 545,
+		"article_name" : "лазаня кори",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 546,
+		"article_name" : "лингуини",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 547,
+		"article_name" : "орзо",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 548,
+		"article_name" : "ригатони",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 549,
+		"article_name" : "радиаторе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 550,
+		"article_name" : "ротини /спирали/",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 551,
+		"article_name" : "конкилие",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 552,
+		"article_name" : "конкильоне",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 553,
+		"article_name" : "спагети",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 554,
+		"article_name" : "сушен ананас",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 555,
+		"article_name" : "кус кус",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 556,
+		"article_name" : "сушени круши",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 557,
+		"article_name" : "филе тел. пушено",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 558,
+		"article_name" : "пастет",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 559,
+		"article_name" : "пастет консерва",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 560,
+		"article_name" : "салам хамбургски",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 561,
+		"article_name" : "салам камчия",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 562,
+		"article_name" : "франкфуртери",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 563,
+		"article_name" : "вурст",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 564,
+		"article_name" : "пушен св. врат",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 565,
+		"article_name" : "леберкез",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 566,
+		"article_name" : "суджук",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 567,
+		"article_name" : "кървавица",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 568,
+		"article_name" : "карначе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 569,
+		"article_name" : "сушеница",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 570,
+		"article_name" : "наденица сурова",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 200,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 571,
+		"article_name" : "чернокоп",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 572,
+		"article_name" : "шаран",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 1500,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 573,
+		"article_name" : "кефал",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 574,
+		"article_name" : "щука",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 575,
+		"article_name" : "бяла риба филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 576,
+		"article_name" : "миди",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 577,
+		"article_name" : "омар",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 578,
+		"article_name" : "лефер",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 579,
+		"article_name" : "фагри",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 580,
+		"article_name" : "морски език",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 581,
+		"article_name" : "калкан",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 582,
+		"article_name" : "сафрид",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 583,
+		"article_name" : "барбун",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 584,
+		"article_name" : "зарган",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 270,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 585,
+		"article_name" : "бакалярос",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 586,
+		"article_name" : "есетра",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 587,
+		"article_name" : "попчета",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 588,
+		"article_name" : "цаца",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 589,
+		"article_name" : "паламуд",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 590,
+		"article_name" : "карагьоз",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 591,
+		"article_name" : "харип",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 592,
+		"article_name" : "граца",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 593,
+		"article_name" : "кралски скариди",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 594,
+		"article_name" : "агне",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 595,
+		"article_name" : "агн. плешка",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 596,
+		"article_name" : "агн. черва",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 597,
+		"article_name" : "агн. комплект",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 598,
+		"article_name" : "агн. комплект замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 599,
+		"article_name" : "агн. було",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 600,
+		"article_name" : "агн. було замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 601,
+		"article_name" : "агн. езици",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 602,
+		"article_name" : "агн. шардени",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 603,
+		"article_name" : "пил. фенери",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 604,
+		"article_name" : "пил. трътки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 605,
+		"article_name" : "пил. шийки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 606,
+		"article_name" : "патешки бут",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 607,
+		"article_name" : "патешко филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 608,
+		"article_name" : "патешки фенер",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 609,
+		"article_name" : "патешки сърца",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 610,
+		"article_name" : "патешки сърца замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 611,
+		"article_name" : "патешки фенер замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 612,
+		"article_name" : "теле",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 613,
+		"article_name" : "тел. контра филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 614,
+		"article_name" : "тел. глави",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 615,
+		"article_name" : "тел. мозък",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 616,
+		"article_name" : "тел. шкембе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 617,
+		"article_name" : "тел. шкембе замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 618,
+		"article_name" : "св. контра филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 619,
+		"article_name" : "св. контра филе замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 620,
+		"article_name" : "св. гърди",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 621,
+		"article_name" : "св. джолан",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 622,
+		"article_name" : "пангасиус филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 623,
+		"article_name" : "пангасиус филе замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 624,
+		"article_name" : "сминдух",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 625,
+		"article_name" : "девесил сушен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 5,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 626,
+		"article_name" : "чимен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 627,
+		"article_name" : "кориандър",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 628,
+		"article_name" : "синап",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 629,
+		"article_name" : "трюфели",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 630,
+		"article_name" : "уасаби",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 631,
+		"article_name" : "лимонена трева",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 640,
+		"article_name" : "индрише",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 641,
+		"article_name" : "мармалад сливи",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 642,
+		"article_name" : "мармалад шипки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 643,
+		"article_name" : "конфитюр сливи",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 644,
+		"article_name" : "алабаш",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 700,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 645,
+		"article_name" : "бяла ряпа",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 150,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 646,
+		"article_name" : "червена ряпа",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 647,
+		"article_name" : "бяла дълга ряпа",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 648,
+		"article_name" : "розови домати",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 653,
+		"article_name" : "франзела",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 300,
+		"article_category" : 47
+	},
+	{
+		"article_id" : 654,
+		"article_name" : "хляб за тост",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "фил.",
+		"article_measure_altsize" : 28,
+		"article_category" : 47
+	},
+	{
+		"article_id" : 655,
+		"article_name" : "грис пшеничен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 10,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 657,
+		"article_name" : "кафява захар",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 12,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 658,
+		"article_name" : "люти чушки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 10,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 659,
+		"article_name" : "люти чушки стер.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 660,
+		"article_name" : "чорбадж. чушки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 661,
+		"article_name" : "чорбадж. чушки стер.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 12,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 662,
+		"article_name" : "чушки шипка стер.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 10,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 663,
+		"article_name" : "чушки шипка",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 664,
+		"article_name" : "квас",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 42
+	},
+	{
+		"article_id" : 665,
+		"article_name" : "луканков салам",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 666,
+		"article_name" : "бахур",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 667,
+		"article_name" : "джоджен пресен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 668,
+		"article_name" : "заек замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 2000,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 669,
+		"article_name" : "оризово фиде",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 670,
+		"article_name" : "оризови спагети",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 671,
+		"article_name" : "св. врат цяло парче",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 672,
+		"article_name" : "салам флорентинер",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 673,
+		"article_name" : "юфка препечена",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 674,
+		"article_name" : "ечемик",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 28
+	},
+	{
+		"article_id" : 675,
+		"article_name" : "царевица замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 676,
+		"article_name" : "маслини зелени б.к.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 8,
+		"article_category" : 49
+	},
+	{
+		"article_id" : 679,
+		"article_name" : "сухари",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 47
+	},
+	{
+		"article_id" : 681,
+		"article_name" : "песто суш. домати",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 20,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 682,
+		"article_name" : "маслини паста",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 49
+	},
+	{
+		"article_id" : 683,
+		"article_name" : "мащерка сушена",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 2,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 685,
+		"article_name" : "кадаиф суров",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 689,
+		"article_name" : "вода изворна",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 691,
+		"article_name" : "катък",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 49
+	},
+	{
+		"article_id" : 692,
+		"article_name" : "кадаиф печен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 694,
+		"article_name" : "кориандър млян",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 695,
+		"article_name" : "маслини каламата",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 4,
+		"article_category" : 49
+	},
+	{
+		"article_id" : 696,
+		"article_name" : "маслини услу",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 2,
+		"article_category" : 49
+	},
+	{
+		"article_id" : 697,
+		"article_name" : "пресен чесън",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "стр.",
+		"article_measure_altsize" : 20,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 698,
+		"article_name" : "маршмелоу",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 10,
+		"article_category" : 27
+	},
+	{
+		"article_id" : 699,
+		"article_name" : "Choco rice-зърн.зак.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.ч.",
+		"article_measure_altsize" : 385,
+		"article_category" : 42
+	},
+	{
+		"article_id" : 700,
+		"article_name" : "овесени ядки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 42
+	},
+	{
+		"article_id" : 701,
+		"article_name" : "салвия прясна листа",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 1,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 702,
+		"article_name" : "салвия сушена",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 703,
+		"article_name" : "нахут конс.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 704,
+		"article_name" : "нишесте оризово",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 6,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 707,
+		"article_name" : "киселец",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 708,
+		"article_name" : "лапад листа",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 15,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 709,
+		"article_name" : "скариди замр. чист.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 711,
+		"article_name" : "брашно бяло",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 8,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 712,
+		"article_name" : "агн. кокали",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 713,
+		"article_name" : "сметана сладка",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 714,
+		"article_name" : "брашно пълнозърн.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 715,
+		"article_name" : "шопско сирене",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 716,
+		"article_name" : "скариди марин.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 49
+	},
+	{
+		"article_id" : 717,
+		"article_name" : "аспержи замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 721,
+		"article_name" : "нектар праскова",
+		"article_measure_type" : 1,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 36
+	},
+	{
+		"article_id" : 722,
+		"article_name" : "цвекло листа",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 8,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 723,
+		"article_name" : "кайма агнешка",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 724,
+		"article_name" : "чили (едросмляно)",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 2,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 725,
+		"article_name" : "пушено сирене",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 726,
+		"article_name" : "св. шницел",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 130,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 727,
+		"article_name" : "тел. шницел",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 280,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 728,
+		"article_name" : "бял амур филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 729,
+		"article_name" : "агн. бут без кост",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 730,
+		"article_name" : "говеждо рагу",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 732,
+		"article_name" : "пачи крак",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 733,
+		"article_name" : "пачи крак конс.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 734,
+		"article_name" : "точени кори",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 735,
+		"article_name" : "чушки зелени Сиврия",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 736,
+		"article_name" : "кайма",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 751,
+		"article_name" : "сметана готв. млечна",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 25,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 738,
+		"article_name" : "сметана бита спрей",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 739,
+		"article_name" : "сметана на прах",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 740,
+		"article_name" : "чушки рибки",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 10,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 741,
+		"article_name" : "арпаджик",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 742,
+		"article_name" : "арпаджик конс.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 2,
+		"article_category" : 26
+	},
+	{
+		"article_id" : 743,
+		"article_name" : "костур",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 744,
+		"article_name" : "нилски костур филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 745,
+		"article_name" : "костур филе замр.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 35
+	},
+	{
+		"article_id" : 746,
+		"article_name" : "талятели",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 48
+	},
+	{
+		"article_id" : 747,
+		"article_name" : "руска салата",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 25,
+		"article_category" : 49
+	},
+	{
+		"article_id" : 748,
+		"article_name" : "шунка пражка",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 749,
+		"article_name" : "костур филе",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 753,
+		"article_name" : "ементал",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 754,
+		"article_name" : "зеле червено",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 2000,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 755,
+		"article_name" : "дюли",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 600,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 757,
+		"article_name" : "боя сладкарска",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 100,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 758,
+		"article_name" : "стафиди тъмни",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	},
+	{
+		"article_id" : 759,
+		"article_name" : "радичо",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 190,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 760,
+		"article_name" : "маслини каламон",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 4,
+		"article_category" : 49
+	},
+	{
+		"article_id" : 762,
+		"article_name" : "сланина осолена",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 763,
+		"article_name" : "копър див /луковица/",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 450,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 764,
+		"article_name" : "боб белен",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 37
+	},
+	{
+		"article_id" : 765,
+		"article_name" : "бахар",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "зрн.",
+		"article_measure_altsize" : 1,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 766,
+		"article_name" : "св. каре стек",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 85,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 767,
+		"article_name" : "саздърма",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 24
+	},
+	{
+		"article_id" : 768,
+		"article_name" : "тел. бут",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 769,
+		"article_name" : "зелен пипер зърна",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "ч.л.",
+		"article_measure_altsize" : 2,
+		"article_category" : 23
+	},
+	{
+		"article_id" : 773,
+		"article_name" : "сьомга глави",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "бр.",
+		"article_measure_altsize" : 700,
+		"article_category" : 32
+	},
+	{
+		"article_id" : 774,
+		"article_name" : "девесил",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "с.л.",
+		"article_measure_altsize" : 5,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 775,
+		"article_name" : "извара кашкавалена",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 22
+	},
+	{
+		"article_id" : 776,
+		"article_name" : "св. гърди с кост",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 31
+	},
+	{
+		"article_id" : 777,
+		"article_name" : "мента прясна",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 21
+	},
+	{
+		"article_id" : 778,
+		"article_name" : "боровинки черв. суш.",
+		"article_measure_type" : 0,
+		"article_measure_alt" : "",
+		"article_measure_altsize" : 0,
+		"article_category" : 41
+	}
+]

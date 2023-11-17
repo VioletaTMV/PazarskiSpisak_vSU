@@ -1,0 +1,31 @@
+logging:
+    level:
+#        blog: WARN
+#        org: WARN
+        org.hibernate.SQL: DEBUG
+        org.hibernate.orm.jdbc.bind: TRACE
+        org.springframework.security: TRACE
+spring:
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        password: ${db_password}
+        username: ${db_username}
+        url: jdbc:mysql://localhost:3306/shopping-list-working-project?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&characterEncoding=UTF-8
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+                format_sql: true
+                show_sql: true
+    sql:
+        init:
+            mode: never
+    mvc:
+        hiddenmethod:
+            filter:
+                enabled: true
+PazarskiSpisak:
+    default.admin.pass: ${DEFAULT_ADMIN_PASS:viliadmin}
+    remember.me.key: ${REMEBER_ME_KEY:viliadmin}

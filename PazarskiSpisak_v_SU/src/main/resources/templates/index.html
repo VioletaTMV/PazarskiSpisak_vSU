@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec='http://www.thymeleaf.org/extras/spring-security'>
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+<header class="container-fluid">
+
+    <h2 class="text-15-left-padding text-white">Добре дошли
+        <th:block sec:authorize="isAuthenticated()">
+            ,
+            <th:block sec:authentication="name"></th:block>
+            !
+        </th:block>
+
+        <th:block sec:authorize="!isAuthenticated()">
+            , гост!
+        </th:block>
+    </h2>
+    <h3 class="text-15-left-padding text-white text-header-h3">тук можете да генерирате пазарски списък от избрани
+        рецепти</h3>
+
+</header>
+
+
+<main></main>
+<footer></footer>
+
+
+</body>
+
+</html>

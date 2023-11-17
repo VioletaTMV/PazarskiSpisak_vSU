@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+<main>
+    <div class="container-recipe r-add-container clr-grayish round-corners-25">
+        <section class="r-add-header row round-corners-25">
+            <h2 class="text-15-left-padding text-center text-white">Моята рецепта за:</h2>
+        </section>
+
+
+        <form
+                th:action="@{/recipe/add}"
+                th:method="post"
+                th:object="${recipeModel}">
+
+            <section class="row clr-beigeish round-corners-25">
+                <div class="form-group r-name text-black ">
+                    <label for="recipeName">Име на рецепта: </label>
+                    <input
+                            type="text"
+                            id="recipeName"
+                            name="recipeName"
+                            th:field="*{recipeName}"
+                            th:errorclass="is-invalid"
+                            class="form-control"
+                            maxlength="75"
+                            placeholder=" - Задай наименование на рецептата - ">
+
+                    <th:block th:if="${#fields.hasErrors('recipeName')}">
+                        <p class="invalid-feedback alert-message font-14"
+                           th:each="err: ${#fields.errors('recipeName')}"
+                           th:text="${err}"
+                        />
+                    </th:block>
+
+                    <!--                    <p class="invalid-feedback alert-message font-14">Задължително поле с дължина между 3 и 75-->
+                    <!--                        символа.</p>-->
+                </div>
+            </section>
+
+            <section class="row clr-beigeish round-corners-25">
+                <div class="table-container form-group product-name">
+                    <table class="tbl-pr-unit-qty-act" id="ingredientsWithQtyAndMUtable">
+                        <tr>
+                            <th>Съставка:</th>
+                            <th>Количество:</th>
+                            <th>Мерна единица:</th>
+                            <th></th>
+                        </tr>
+
+                        <tr class="row-fields-pr-unit-qty-act green"
+                            th:each="recipeIngrWithDetails, recipeIngrWithDetailsStat: *{recipeIngredientWithDetailsAddDTOList}">
+                            <td><label th:for=${#ids.next('ingredientSelect')} class="text-white"></label>
+
+                                <select
+                                        th:id="${#ids.seq('ingredientSelect')}"
+                                        class="form-control input-width-auto"
+                                        name="ingredient"
+                                        th:field="*{recipeIngredientWithDetailsAddDTOList[__${recipeIngrWithDetailsStat.index}__].ingredientId}"
+                                        onchange="limitMeasurementUnitsDropdownOptionsByIngredientId(this.id)">
+                                    <option value="0">- Избери продукт -</option>
+                                    <option th:each="i: ${ingredients}"
+                                            th:text="${i.name}"
+                                            th:value="${i.id}"
+                                            th:selected="${i} == *{recipeIngredientWithDetailsAddDTOList[__${recipeIngrWithDetailsStat.index}__].ingredientId}">
+                                    </option>
+                                </select>
+
+                                <th:block
+                                        th:if="${#fields.hasErrors('recipeIngredientWithDetailsAddDTOList[__${recipeIngrWithDetailsStat.index}__].ingredientId')}">
+                                    <div class="alert-message font-14"
+                                         th:each="err: ${#fields.errors('recipeIngredientWithDetailsAddDTOList[__${recipeIngrWithDetailsStat.index}__].ingredientId')}"
+                                         th:text="${err}">Error ingredient
+                                    </div>
+                                </th:block>
+
+
+                                <!--                                <p class="invalid-feedback alert-message font-14">избери поне 2 различни съставки</p>-->
+                            </td>
+                            <td>
+                                <label for="prQty" class="text-white"></label>
+                                <input
+                                        type="number"
+                                        id="prQty"
+                                        name="prQty"
+                                        th:field="*{recipeIngredientWithDetailsAddDTOList[__${recipeIngrWithDetailsStat.index}__].qty}"
+                                        th:errorclass="is-invalid"
+                                        maxlength="5"
+                                        size="4"
+                                        min="0"
+                                        max="99999"
+                                        step="0.01"
+                                        class="form-control input-width-auto"
+                                        placeholder=" - ">
+
+                                        <th:block
+                                                 th:if="${#fields.hasErrors('recipeIngredientWithDetailsAddDTOList[__${recipeIngrWithDetailsStat.index}__].qty')}">
+                                                  <div class="alert-message font-14"
+                                                       th:each="err: ${#fields.errors('recipeIngredientWithDetailsAddDTOList[__${recipeIngrWithDetailsStat.index}__].qty')}"
+                                                        th:text="${err}"> Error qty
+                                                   </div>
+                                        </th:block>
+<!--                                <div class="invalid-feedback alert-message font-14">Невалидно к-во.</div>-->
+
+
+                            </td>
+                            <td>
+                                <!--                                мерките да се показват само според възможните за избрания продукт-->
+                                <label th:for=${#ids.next('unitOfMeasure')} class="text-white"></label>
+                                <select
+                                        name="unitOfMeasure"
+                                        th:id="${#ids.seq('unitOfMeasure')}"
+                                        class="form-control input-width-auto"
+                                        th:field="*{recipeIngredientWithDetailsAddDTOList[__${recipeIngrWithDetailsStat.index}__].ingredientMeasurementUnitEnum}"
+                                >
+                                    <option value="">- Избери -</option>
+                                    <th:block th:if="${recipeIngrWithDetails.ingredientId} != null">
+                                        <option
+                                                th:each="ingr, ingrStat: ${recipeIngrWithDetails.allowedIngredientMeasurementUnitEnumForProductMap}"
+                                                th:text="${ingr.value}"
+                                                th:value="${ingr.key}">
+                                        </option>
+                                    </th:block>
+
+                                </select>
+
+                                <th:block
+                                        th:if="${#fields.hasErrors('recipeIngredientWithDetailsAddDTOList[__${recipeIngrWithDetailsStat.index}__].ingredientMeasurementUnitEnum')}">
+                                    <div class="alert-message font-14"
+                                         th:each="err: ${#fields.errors('recipeIngredientWithDetailsAddDTOList[__${recipeIngrWithDetailsStat.index}__].ingredientMeasurementUnitEnum')}"
+                                         th:text="${err}"
+                                    />
+                                </th:block>
+
+                                <!--                                <p class="invalid-feedback alert-message font-14">мярка.</p>-->
+                            </td>
+
+                            <td class="btn-action">
+                                <button type="submit"
+                                        name="rmvRecipeIngr"
+                                        th:value="${recipeIngrWithDetailsStat.index}"
+                                        class="btn-remove btn-bgrd-transparent font-18">
+                                    <i class="fa-solid fa-xmark" style="color: lightgray;"></i>
+                                </button>
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                    <th:block th:if="${#fields.hasErrors('recipeIngredientWithDetailsAddDTOList')}">
+                        <p class="alert-message font-14"
+                           th:each="err: ${#fields.errors('recipeIngredientWithDetailsAddDTOList')}"
+                           th:text="${err}"
+                        />
+                    </th:block>
+
+                    <button
+                            type="submit"
+                            name="addRecipeIngr"
+                            class="btn-add link-as-button recipe-pr-add">
+                        <i class="fa-solid fa-plus" style="color: #fafafa;"></i> Продукт
+                    </button>
+
+                    <!--                    <p class="tooltip-hidden alert-message font-14" id="js-control-3-fields-filled-msg">-->
+                    <!--                        Моля попълни трите полета (съставка, к-во, мерна единица).-->
+                    <!--                    </p>-->
+                    <!--                    <p class="tooltip-hidden alert-message font-14" id="js-control-product-qty-constr-msg">-->
+                    <!--                        Количеството трябва да е по-голямо от 0 и не повече от 99 999.-->
+                    <!--                    </p>-->
+                    <!--                    <p class="tooltip-hidden alert-message font-14" id="js-control-product-single-usage-msg">-->
+                    <!--                        Дадена съставка може да бъде използвана само веднъж в рецептата (със съответното общо к-во., необходимо за изпълнението на рецептата).-->
+                    <!--                    </p>-->
+
+                </div>
+            </section>
+
+            <section class="row clr-beigeish round-corners-25">
+                <div class="form-group servings">
+                    <p>Посочените к-ва са за:</p>
+                    <label for="servings" class="text-white"></label>
+                    <input
+                            type="number"
+                            id="servings"
+                            name="servings"
+                            th:field="*{servings}"
+                            th:errorclass="is-invalid"
+                            maxlength="2"
+                            size="2"
+                            min="0"
+                            max="99"
+                            step="1"
+                            placeholder=" - "
+                            class="form-control input-width-auto">
+                    <p>бр. порции.</p>
+
+                    <div th:if="${#fields.hasErrors('servings')}" class="invalid-feedback alert-message font-14">
+                        <p
+                                th:each="err: ${#fields.errors('servings')}"
+                                th:text="${err}"
+                        />
+                    </div>
+<!--                    <p class="invalid-feedback alert-message font-14">Задължително поле. Число м/у 1 и 99 </p>-->
+                </div>
+
+            </section>
+
+            <section class="row clr-beigeish round-corners-25">
+                <div class="form-group paragraphs-container round-corners-25">
+                    <label class="r-paragraph" for="cookSteps">Стъпки за
+                        приготовление:</label>
+                    <div class="grow-wrap">
+                                                    <textarea
+                                                            name="cookSteps"
+                                                            th:field="*{cookSteps}"
+                                                            th:errorclass="is-invalid"
+                                                            id="cookSteps"
+                                                            type="textarea"
+                                                            class="form-control paragraph-keep"
+                                                            placeholder="Опиши стъпките за приготовление... "
+                                                            maxlength="5000"
+                                                            onInput="this.parentNode.setAttribute('data-replicated-value', this.value)"></textarea>
+
+                        <div th:if="${#fields.hasErrors('cookSteps')}" class="invalid-feedback alert-message font-14">
+                            <p
+                                    th:each="err: ${#fields.errors('cookSteps')}"
+                                    th:text="${err}"
+                            />
+                        </div>
+<!--                        <p class="invalid-feedback alert-message font-14">Задължително поле. Максимална дължина 5000-->
+<!--                            символа.</p>-->
+                    </div>
+                </div>
+            </section>
+
+            <section class="row clr-beigeish round-corners-25">
+                <div class="form-group paragraphs-container r-notes round-corners-25">
+                    <label class="r-paragraph" for="recipeSource">Източник: </label>
+                    <div class="grow-wrap">
+                                                    <textarea
+                                                            name="recipeSource"
+                                                            id="recipeSource"
+                                                            type="textarea"
+                                                            th:field="*{recipeSource}"
+                                                            th:errorclass="is-invalid"
+                                                            class="form-control paragraph-keep"
+                                                            placeholder=" - От къде се вдъхнови за тази рецепта? - "
+                                                            maxlength="255"
+                                                            onInput="this.parentNode.setAttribute('data-replicated-value', this.value)"></textarea>
+
+                        <div th:if="${#fields.hasErrors('recipeSource')}" class="invalid-feedback alert-message font-14">
+                            <p
+                                    th:each="err: ${#fields.errors('recipeSource')}"
+                                    th:text="${err}"
+                            />
+                        </div>
+<!--                        <p class="invalid-feedback alert-message font-14">Максимум 255 символа</p>-->
+                    </div>
+                </div>
+            </section>
+
+            <section class="row clr-beigeish round-corners-25">
+                <div class="form-group">
+                    <div class="r-prep-time">
+                        <p>Време за подготовка / отлежаване: </p>
+                        <table>
+                            <tr>
+                                <td><label class="text-white" for="prepTimeDD"></label>
+                                    <input
+                                            type="number"
+                                            name="prepTimeDD"
+                                            id="prepTimeDD"
+                                            th:field="*{prepTimeDD}"
+                                            th:errorclass="is-invalid"
+                                            class="form-control"
+                                            maxlength="3"
+                                            size="2"
+                                            min="0"
+                                            max="120"
+                                            step="1"
+                                            placeholder="0">
+
+                                    <div th:if="${#fields.hasErrors('prepTimeDD')}" class="invalid-feedback alert-message font-14">
+                                        <p
+                                                th:each="err: ${#fields.errors('prepTimeDD')}"
+                                                th:text="${err}"
+                                        />
+                                    </div>
+<!--                                    <p class="invalid-feedback alert-message font-14">М/у 0 и 120</p>-->
+                                </td>
+                                <td>
+                                    <p>дни</p>
+                                </td>
+
+                                <td><label class="text-white" for="prepTimeHH"></label>
+                                    <input
+                                            type="number"
+                                            name="prepTimeHH"
+                                            id="prepTimeHH"
+                                            th:field="*{prepTimeHH}"
+                                            th:errorclass="is-invalid"
+                                            class="form-control"
+                                            maxlength="2"
+                                            size="2"
+                                            min="0"
+                                            max="23"
+                                            step="1"
+                                            placeholder="00">
+
+                                    <div th:if="${#fields.hasErrors('prepTimeHH')}" class="invalid-feedback alert-message font-14">
+                                        <p
+                                                th:each="err: ${#fields.errors('prepTimeHH')}"
+                                                th:text="${err}"
+                                        />
+                                    </div>
+<!--                                    <p class="invalid-feedback alert-message font-14">М/у 0 и 23</p>-->
+                                </td>
+                                <td>
+                                    <p>ч.</p>
+                                </td>
+                                <td><label class="text-white" for="prepTimeMM"></label>
+                                    <input
+                                            type="number"
+                                            name="prepTimeMM"
+                                            id="prepTimeMM"
+                                            th:field="*{prepTimeMM}"
+                                            th:errorclass="is-invalid"
+                                            class="form-control"
+                                            maxlength="2"
+                                            size="2"
+                                            min="0"
+                                            max="59"
+                                            step="15"
+                                            placeholder="00">
+
+                                    <div th:if="${#fields.hasErrors('prepTimeMM')}" class="invalid-feedback alert-message font-14">
+                                        <p
+                                                th:each="err: ${#fields.errors('prepTimeMM')}"
+                                                th:text="${err}"
+                                        />
+                                    </div>
+<!--                                    <p class="invalid-feedback alert-message font-14">М/у 0 и 59</p>-->
+                                </td>
+                                <td>
+                                    <p>мин.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="r-cook-time">
+                        <p>Време за готвене: </p>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label class="text-white" for="cookTimeHH"></label>
+                                    <input
+                                            type="number"
+                                            name="cookTimeHH"
+                                            id="cookTimeHH"
+                                            th:field="*{cookTimeHH}"
+                                            th:errorclass="is-invalid"
+                                            class="form-control"
+                                            maxlength="2"
+                                            size="2"
+                                            min="0"
+                                            max="23"
+                                            step="1"
+                                            placeholder="00">
+
+                                    <div th:if="${#fields.hasErrors('cookTimeHH')}" class="invalid-feedback alert-message font-14">
+                                        <p
+                                                th:each="err: ${#fields.errors('cookTimeHH')}"
+                                                th:text="${err}"
+                                        />
+                                    </div>
+<!--                                    <p class="invalid-feedback alert-message font-14">М/у 0 и 23</p>-->
+                                </td>
+                                <td>
+                                    <p>ч.</p>
+                                </td>
+                                <td>
+                                    <label class="text-white" for="cookTimeMM"></label>
+                                    <input
+                                            type="number"
+                                            name="cookTimeMM"
+                                            id="cookTimeMM"
+                                            th:field="*{cookTimeMM}"
+                                            th:errorclass="is-invalid"
+                                            class="form-control"
+                                            maxlength="2"
+                                            size="2"
+                                            min="0"
+                                            max="59"
+                                            step="15"
+                                            placeholder="00">
+
+                                    <div th:if="${#fields.hasErrors('cookTimeMM')}" class="invalid-feedback alert-message font-14">
+                                        <p
+                                                th:each="err: ${#fields.errors('cookTimeMM')}"
+                                                th:text="${err}"
+                                        />
+                                    </div>
+<!--                                    <p class="invalid-feedback alert-message font-14">М/у 0 и 59</p>-->
+                                </td>
+                                <td>
+                                    <p>мин.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="row clr-beigeish round-corners-25">
+                <div class="form-group round-corners-25">
+                    <label class="pic-upl-btn" for="r-pic-upl">Снимка <span class="font-12">(до 25 KB)</span>:
+                    </label>
+                    <input type="file" id="r-pic-upl" name="r-picture">
+
+                    <p class="invalid-feedback alert-message font-14">Размерът на снимката трябва да е по-малък от 25
+                        KB</p>
+                </div>
+            </section>
+
+            <section class="row clr-beigeish round-corners-25">
+                <div class="grid-container r-categories form-group round-corners-25">
+                    <div class="bottom-space">
+                        <p>Избери категориите, които са приложими за рецептата:</p>
+                    </div>
+
+                    <div class="bottom-space"
+                         th:each="rCatGr: ${recipeCategoriesWithGrouping}">
+                        <div
+                                th:text="${rCatGr.groupName}"></div>
+
+                        <div
+                                class="grid-el"
+                                th:each="rc: ${rCatGr.recipeCategories}">
+                            <input
+                                    class="form-control"
+                                    type="checkbox"
+                                    id="categories"
+                                    name="categories"
+                                    th:field="*{categories}"
+                                    th:errorclass="is-invalid"
+                                    th:value="${rc}"
+                            >
+                            <label
+                                    class="r-categories"
+                                    for="categories"
+                                    th:text="${rc.categoryBG}"
+                            >
+                            </label>
+
+                        </div>
+                    </div>
+                    <div th:if="${#fields.hasErrors('categories')}" class="invalid-feedback alert-message font-14">
+                        <p
+                                th:each="err: ${#fields.errors('categories')}"
+                                th:text="${err}"
+                        />
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="row clr-beigeish round-corners-25">
+                <div class="form-group paragraphs-container r-notes round-corners-25">
+                    <label class="r-paragraph" for="notes">Бележки: </label>
+                    <div class="grow-wrap">
+                                                    <textarea
+                                                            name="notes"
+                                                            id="notes" type="textarea"
+                                                            th:field="*{notes}"
+                                                            th:errorclass="is-invalid"
+                                                            class="form-control paragraph-keep"
+                                                            placeholder="Място за бележки, препоръки или др..."
+                                                            maxlength="1000"
+                                                            onInput="this.parentNode.setAttribute('data-replicated-value', this.value)"></textarea>
+
+                        <p class="invalid-feedback alert-message font-14">Максимум 1000 символа</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row button-row">
+                <div class="col /*col-md-4*/">
+                    <div class="button-holder d-flex">
+                        <input class="font-18 btn" type="submit" value="Изпрати"/>
+                    </div>
+                </div>
+
+            </section>
+
+        </form>
+    </div>
+</main>
+
+
+<footer></footer>
+
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+
+<!--<head>-->
+<!--    <title>ShoppingListProject</title>-->
+<!--    <th:block th:replace="~{fragments/head}"></th:block>-->
+<!--</head>-->
+
+<!--<body>-->
+
+
+<!--<div th:replace="~{fragments/navbar}">Navbar</div>-->
+
+<!--<th:block th:replace="~{fragments/navbar-admin}">Admin SubNavbar</th:block>-->
+
+<!--<main>-->
+<!--    <div class="container-account r-add-container clr-grayish round-corners-25">-->
+
+<!--        <th:block th:replace="~{fragments/navbar-admin-ingredients}">Administer Ingredients</th:block>-->
+
+
+<!--        <div class="edit-zone clr-greenish round-corners-25">-->
+
+
+<!--            <form-->
+<!--                    th:action="@{/admin-ingredient-add}"-->
+<!--                    th:method="post"-->
+<!--                    th:object="${ingredientModel}">-->
+
+
+<!--                <section class="row clr-beigeish round-corners-25">-->
+<!--                    <div class="form-group r-name text-black ">-->
+<!--                        <label for="name">Име на продукт </label>-->
+<!--                        <div class="font-12">-->
+<!--                            <p>(до 50 символа)</p>-->
+<!--                        </div>-->
+<!--                        <input-->
+<!--                                type="text"-->
+<!--                                id="name"-->
+<!--                                name="name"-->
+<!--                                th:field="*{name}"-->
+<!--                                th:errorclass="is-invalid"-->
+<!--                                class="form-control"-->
+<!--                                maxlength="50">-->
+
+<!--                        <p class="invalid-feedback alert-message font-14">Продукта трябва да бъде между 2 и 50 символа.-->
+<!--                            Или продукта вече съществува.</p>-->
+<!--                    </div>-->
+<!--                </section>-->
+
+<!--                <div th:fragment="AdminIngredientsCategories">-->
+<!--                    <section class="admin-edit-menu row clr-beigeish round-corners-25">-->
+<!--                        <div class="form-group r-name text-black admin width-100">-->
+
+<!--                            <label for="item-category-supermarket">Категория продукт</label>-->
+<!--                            <select-->
+<!--                                    name="product"-->
+<!--                                    th:field="*{itemCategorySupermarketName}"-->
+<!--                                    th:errorclass="is-invalid"-->
+<!--                                    id="item-category-supermarket"-->
+<!--                                    class="form-control">-->
+<!--                                <option th:value=null>- Избери категория продукт -</option>-->
+<!--                                <option th:each="c: ${productCategories}"-->
+<!--                                        th:text="${c.name}"-->
+<!--                                        th:value="${c.name}"-->
+<!--                                        th:selected="${c.id} == *{itemCategorySupermarketName}">-->
+
+<!--                                </option>-->
+
+<!--                            </select>-->
+
+<!--                            <p class="invalid-feedback alert-message font-14">Не е избрана категория</p>-->
+
+<!--                        </div>-->
+<!--                    </section>-->
+
+<!--                    <section class="row clr-beigeish round-corners-25 ingredient">-->
+
+<!--                        <div class="form-group r-name text-black admin width-100">-->
+
+<!--                            <label for="mainUnitOfMeasurement">Основна мерна единица</label>-->
+<!--                            <select-->
+<!--                                    name="mainUnitOfMeasurement"-->
+<!--                                    id="mainUnitOfMeasurement"-->
+<!--                                    th:field="*{mainUnitOfMeasurement}"-->
+<!--                                    th:errorclass="is-invalid"-->
+<!--                                    class="form-control">-->
+<!--                                <option value="">- Избери основна мерна единица -</option>-->
+<!--                                <option-->
+<!--                                        th:each="unit: ${limitedMainUnitsOfMeasureForCalcs}"-->
+<!--                                        th:text="${unit.measureBG}"-->
+<!--                                        th:value="${unit}"-->
+<!--                                        th:selected="${unit.measureBG} == *{mainUnitOfMeasurement}"></option>-->
+<!--                            </select>-->
+
+<!--                            <p class="invalid-feedback alert-message font-14">Не е избрана основната мерна единица,-->
+<!--                                която ще-->
+<!--                                се ползва и за пресмятане</p>-->
+
+<!--                            <div class="empty-div-spacing">-->
+
+<!--                            </div>-->
+
+<!--                            <div class="table-container form-group product-name">-->
+<!--                                <table class="tbl-pr-unit-qty-act" id="alternativeProductMeasures">-->
+<!--                                    <tr>-->
+<!--                                        <th></th>-->
+<!--                                        <th>Алтернативна мерна единица:</th>-->
+<!--                                        <th></th>-->
+<!--                                        <th>К-во. спрямо основната мерна единица:</th>-->
+<!--                                        <th></th>-->
+<!--                                        <th></th>-->
+<!--                                    </tr>-->
+<!--                                    <template id="template-row">-->
+<!--                                        <tr class="row-pr-unit-qty-act">-->
+<!--                                            <td>1</td>-->
+<!--                                            <td class="alt-measure-unit"> -</td>-->
+<!--                                            <td> =</td>-->
+<!--                                            <td class="alt-measure-qty"> -</td>-->
+<!--                                            <td class="alt-per-main-unit">осн.м.ед</td>-->
+<!--                                            <td class="btn-action">-->
+<!--                                                <button type="button"-->
+<!--                                                        class="btn-remove btn-bgrd-transparent font-18"-->
+<!--                                                        onclick="deleteRowAndContent(this)"><i-->
+<!--                                                        class="fa-solid fa-xmark" style="color: lightgray;"></i>-->
+<!--                                                </button>-->
+<!--                                            </td>-->
+<!--                                        </tr>-->
+<!--                                    </template>-->
+
+<!--                                    &lt;!&ndash;                                th:each="entrySet : *{ingredientAlternativeMeasurementUnitAndValueMap.entrySet()}"&ndash;&gt;-->
+<!--                                    <tr class="green" id="dropFields">-->
+
+
+<!--                                        <script th:field="*{ingredientAlternativeMeasurementUnitAndValueMap}" th:inline="javascript">-->
+<!--      let mapFromControllerObject = [[${ingredientModel.ingredientAlternativeMeasurementUnitAndValueMap}]];-->
+<!--                                        </script>-->
+
+<!--                                        <td>1</td>-->
+<!--                                        <td class="width-100">-->
+<!--                                            <label for="ingredientAlternativeMUnit"-->
+<!--                                                   class="text-white"></label>-->
+<!--                                            <select-->
+<!--                                                    name="ingredientAlternativeMeasurementUnitAndValueMap"-->
+<!--                                                    id="ingredientAlternativeMUnit"-->
+<!--                                                    class="form-control">-->
+<!--                                                &lt;!&ndash;          th:field="*{ingredientAlternativeMeasurementUnitAndValueListOfDTOs}" &ndash;&gt;-->
+<!--                                                <option value="">- Избери мярка -</option>-->
+<!--                                                <option-->
+<!--                                                        th:each="unit: ${alternativeIngredientUnitsOfMeasure}"-->
+<!--                                                        th:text="${unit.measureBG}"-->
+<!--                                                        th:value="${unit}"-->
+<!--                                                &lt;!&ndash;                                                        th:selected="${unit} == *{ingredientAlternativeMeasurementUnitAndValueMap}"&ndash;&gt;-->
+<!--                                                ></option>-->
+<!--                                            </select>-->
+
+<!--                                        </td>-->
+<!--                                        <td> =</td>-->
+<!--                                        <td class="width-100">-->
+<!--                                            <label for="alt-m-qty" class="text-white"></label>-->
+<!--                                            <input-->
+<!--                                                    type="number"-->
+<!--                                                    id="alt-m-qty"-->
+<!--                                                    name="alt-m-qty"-->
+<!--                                                    maxlength="5"-->
+<!--                                                    size="4"-->
+<!--                                                    min="0" max="99999" step="0.10" placeholder=" - "-->
+<!--                                            &lt;!&ndash;                                                    th:field="*{ingredientAlternativeMeasurementUnitAndValueMap}"&ndash;&gt;-->
+<!--                                            >-->
+<!--                                        </td>-->
+<!--                                        <td><span id="alt-per-main-unit">осн.м.ед</span></td>-->
+<!--                                        <td class="btn-action">-->
+<!--                                            <button onclick="insertRowAndSelection()" type="button"-->
+<!--                                                    class="btn-add btn-bgrd-transparent font-20"><i-->
+<!--                                                    class="fa-solid fa-plus" style="color: #fafafa;"></i></button>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+<!--                                </table>-->
+<!--                                <p class="tooltip-hidden alert-message font-14" id="js-control-adminProductAdd-msg">Не е-->
+<!--                                    задължително да добавяте алтернативна мярка,-->
+<!--                                    но ако желаете да добавите трябва и двете полета (алт. мярка и к-во) трябва да са-->
+<!--                                    попълнени. Една алтернативна мярка не може да бъде дублирана за продукта.-->
+<!--                                    Количеството може да е по-голямо от 0 и не повече от 99 999. </p>-->
+<!--                            </div>-->
+
+<!--                            <div class="empty-div-spacing">-->
+<!--                            </div>-->
+
+<!--                            <label for="item-shopping-display-measure-unit">Мерна единица в пазарски списък</label>-->
+<!--                            <select-->
+<!--                                    name="item-shopping-display-measure-unit"-->
+<!--                                    id="item-shopping-display-measure-unit"-->
+<!--                                    th:field="*{shoppingListDisplayUnitOfMeasurement}"-->
+<!--                                    th:errorclass="is-invalid"-->
+<!--                                    class="form-control">-->
+<!--                                <option value="">- Избери мерна единица за пазарски списък -</option>-->
+<!--                                <option-->
+<!--                                        th:each="unit: ${T(com.pazarskispisak.PazarskiSpisak.models.enums.IngredientMeasurementUnitEnum).values()}"-->
+<!--                                        th:value="${unit}"-->
+<!--                                        th:text="${unit.measureBG}"-->
+<!--                                        th:selected="${unit} == *{shoppingListDisplayUnitOfMeasurement}"></option>-->
+<!--                            </select>-->
+
+<!--                            <p class="invalid-feedback alert-message font-14">Само някоя от избраните по-горе в Основна-->
+<!--                                или-->
+<!--                                Алтернативни мерни единици за този продукт-->
+<!--                                може да бъде избрана тук, или Empty опцията (за продукти като подправки например или-->
+<!--                                вода-->
+<!--                                или др.)</p>-->
+
+<!--                        </div>-->
+<!--                    </section>-->
+<!--                </div>-->
+
+<!--                <section class="row button-row">-->
+<!--                    <div class="col /*col-md-4*/">-->
+<!--                        <div class="button-holder d-flex">-->
+<!--                            <input class="font-18 btn" type="submit" value="Добави"/>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </section>-->
+
+
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</main>-->
+
+
+<!--<footer></footer>-->
+
+
+<!--</body>-->
+
+<!--</html>-->

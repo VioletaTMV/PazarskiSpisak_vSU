@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+<th:block th:replace="~{fragments/navbar-admin}">Admin SubNavbar</th:block>
+
+<main>
+    <div class="container-account r-add-container clr-grayish round-corners-25">
+
+        <th:block th:replace="~{fragments/navbar-admin-product-categories}">Administer Product Categories</th:block>
+
+
+        <div class="edit-zone clr-greenish round-corners-25">
+
+            <form
+                    th:action="@{/admin/product-categories/add}"
+                    th:method="post"
+                    th:object="${addProductCategoryModel}">
+
+                <section class="row clr-beigeish round-corners-25">
+                    <div class="form-group r-name text-black ">
+                        <label for="product-category-name">Име на нова продуктова категория </label>
+                        <div class="font-12">
+                            <p>(до 50 символа)</p>
+                        </div>
+                        <input
+                                type="text"
+                                id="product-category-name"
+                                name="name"
+                                th:field="*{name}"
+                                maxlength="50">
+                    </div>
+
+                    <div class="alert-message font-14"
+                         th:each="err: ${#fields.errors('name')}"
+                         th:text="${err}">Error messages
+                    </div>
+
+                </section>
+
+                <section class="row clr-beigeish round-corners-25">
+                    <div class="grid-container r-categories form-group round-corners-25">
+                        <div class="bottom-space">
+                            <p>Категорията е за:</p>
+                        </div>
+
+                        <div>
+
+                            <input
+                                    type="radio"
+                                    id="product-non-food"
+                                    name="isFood"
+                                    th:field="*{isFood}"
+                                    th:value="0">
+
+                            <label class="r-categories" for="product-food">Нехранителни продукти</label>
+                        </div>
+                        <div><input
+                                type="radio"
+                                id="product-food"
+                                name="isFood"
+                                th:field="*{isFood}"
+                                th:value="1">
+
+                            <label class="r-categories" for="product-food">Хранителни съставки</label>
+                        </div>
+                    </div>
+
+                    <div class="alert-message font-14">
+                        <p th:each="err: ${#fields.errors('isFood')}"
+                           th:text="${err}">Error messages</p>
+                    </div>
+
+                </section>
+
+                <section class="row button-row">
+                    <div class="col /*col-md-4*/">
+                        <div class="button-holder d-flex">
+                            <input class="font-18 btn" type="submit" value="Добави"/>
+                        </div>
+                    </div>
+                </section>
+
+
+            </form>
+        </div>
+    </div>
+</main>
+
+
+<footer></footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+    <th:block th:replace="~{fragments/navbar-admin}">Admin SubNavbar</th:block>
+
+    <main>
+        <div class="container-account r-add-container clr-grayish round-corners-25">
+
+            <th:block th:replace="~{fragments/navbar-admin-users}">Administer users</th:block>
+
+            <form action="">
+                <div class="edit-zone clr-reddish round-corners-25">
+
+                    <section class="row clr-beigeish round-corners-25">
+                        <div class="form-group r-name text-black admin">
+
+                            <label for="admin-user-select">Потребител за изтриване</label>
+                            <p class="alert-message font-14"></p>
+                            <select name="admin-user-select" id="admin-user-select" class="form-control">
+                                <option value="">- Избери потребител -</option>
+                            </select>
+                        </div>
+                    </section>
+
+                    <section class="row button-row red-gamma">
+                        <div class="col /*col-md-4*/">
+                            <div class="button-holder d-flex">
+                                <input class="font-18 btn" type="submit" value="Изтрий" />
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <footer></footer>
+
+
+</body>
+
+</html>

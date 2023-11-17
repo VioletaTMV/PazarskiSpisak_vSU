@@ -1,0 +1,26 @@
+<th:block>
+
+    <section class="r-add-header row round-corners-25">
+        <h2 class="text-15-left-padding text-center text-white">Администрация на категории продукти</h2>
+    </section>
+
+    <section class="admin-edit-menu">
+        <ul class="admin-edit-menu-list clr-beigeish">
+            <li>
+                <a th:href="@{/admin/product-categories/edit}">
+                    <h3 class="font-orange">Редактирай</h3>
+                </a>
+            </li>
+            <li>
+                <a th:href="@{/admin/product-categories/add}">
+                    <h3 class="font-green">Добави</h3>
+                </a>
+            </li>
+            <li>
+                <a th:href="@{/admin/product-categories/delete}">
+                    <h3 class="font-red">Изтрий</h3>
+                </a>
+            </li>
+        </ul>
+    </section>
+</th:block>

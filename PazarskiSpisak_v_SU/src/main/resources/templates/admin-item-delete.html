@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+<th:block th:replace="~{fragments/navbar-admin}">Admin SubNavbar</th:block>
+
+<main>
+    <div class="container-account r-add-container clr-grayish round-corners-25">
+
+        <th:block th:replace="~{fragments/navbar-admin-items}">Administer non-food products</th:block>
+
+        <div class="edit-zone clr-reddish round-corners-25">
+
+
+            <form>
+
+                <section class="row clr-beigeish round-corners-25">
+                    <div class="form-group r-name text-black admin width-100">
+
+                        <label for="product">Продукт за премахване </label>
+                        <p class="alert-message font-14">Продукта се използва в рецепта и не може да бъде изтрит</p>
+                        <select name="product" id="product" class="form-control">
+                            <option value="">- Избери продукт -</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- <section class="row clr-beigeish round-corners-25">
+                    <div class="form-group r-name text-black ">
+                        <label for="product-name">Име на продукт </label>
+                        <p class="alert-message font-14">Продукта вече съществува</p>
+                        <div class="font-12">
+                            <p>(до 50 символа)</p>
+                        </div>
+                        <input type="text" id="product-name" name="product-name" maxlength="50" disabled>
+                    </div>
+                </section>
+
+                <section class="row clr-beigeish round-corners-25">
+                    <div class="form-group r-name text-black admin">
+
+                        <label for="item-category-supermarket">Категория продукт</label>
+                        <select name="product" id="item-category-supermarket" class="form-control" disabled>
+                            <option value="">- Избери категория продукт -</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="row clr-beigeish round-corners-25 ingredient">
+                    <div class="form-group r-name text-black admin">
+
+                        <label for="item-main-measure-unit">Основна мерна единица</label>
+                        <select name="item-main-measure-unit" id="item-main-measure-unit" class="form-control" disabled>
+                            <option value="">- Избери основна мерна единица -</option>
+                        </select>
+
+
+                        <div class="empty-div-spacing">
+
+                        </div>
+
+                        <div class="table-container form-group product-name">
+                            <table class="tbl-pr-unit-qty-act">
+                                <tr>
+                                    <th>Алтернативна мерна единица:</th>
+                                    <th>К-во. спрямо основната мерна единица:</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr class="row-pr-unit-qty-act">
+                                    <td class="alt-measure-unit"> - </td>
+                                    <td class="alt-measure-qty"> - </td>
+                                    <td></td>
+                                    <td class="btn-action"><button type="button"
+                                            class="btn-remove btn-bgrd-transparent font-18" disabled> <i
+                                                class="fa-solid fa-xmark" style="color: lightgray;"></i></button>
+                                    </td>
+                                </tr>
+
+                                <tr class="row-fields-pr-unit-qty-act green">
+                                    <td><label for="Alt-m-units-without-main" class="text-white"></label>
+                                        <select name="Alt-m-units-without-main" id="Alt-m-units-without-main"
+                                            class="form-control" disabled>
+                                            <option value="">- Избери мярка -</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <label for="alt-m-qty" class="text-white"></label>
+                                        <input type="number" id="alt-m-qty" name="alt-m-qty" maxlength="5" size="4"
+                                            min="0" max="99999" step="0.10" placeholder=" - " disabled>
+                                    </td>
+                                    <td><span>осн.м.ед</span></td>
+                                    <td class="btn-action">
+                                        <button type="button" class="btn-add btn-bgrd-transparent font-20" disabled><i
+                                                class="fa-solid fa-plus" style="color: #fafafa;"></i> </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="empty-div-spacing">
+                        </div>
+
+                        <label for="item-shopping-display-measure-unit">Мерна единица в пазарски списък</label>
+                        <select name="item-shopping-display-measure-unit" id="item-shopping-display-measure-unit"
+                            class="form-control" disabled>
+                            <option value="">- Избери мерна единица за пазарски списък -</option>
+                            само някоя от избраните по-горе в Основна или Алтернативни за този продукт -->
+                </select>
+<!--        </div>-->
+        </section> -->
+
+        <section class="row button-row ">
+            <div class="col /*col-md-4*/">
+                <div class="button-holder d-flex red-gamma">
+                    <input class="font-18 btn" type="submit" value="Изтрий"/>
+                </div>
+            </div>
+        </section>
+
+
+        </form>
+    </div>
+    </div>
+</main>
+
+
+<footer></footer>
+
+
+</body>
+
+</html>

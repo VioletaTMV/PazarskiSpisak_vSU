@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+<main>
+    <div class="container-account r-add-container clr-grayish round-corners-25">
+        <section class="r-add-header row round-corners-25">
+            <h2 class="text-15-left-padding text-center text-white">Вход</h2>
+        </section>
+
+
+        <form
+                th:action="@{/user/login}"
+                th:method="post">
+
+            <section class="row clr-beigeish round-corners-25">
+                <div class="form-group r-name text-black ">
+
+                    <label for="emailLogin">Имейл </label>
+                    <input
+                            type="email"
+                            id="emailLogin"
+                            name="email"
+                            th:value="${email}"
+                            class="form-control"
+                            maxlength="75"
+                            placeholder="email">
+
+                    <!--                    <div class="invalid-feedback alert-message font-14">-->
+                    <!--                        <p-->
+                    <!--&lt;!&ndash;                                th:each="err: ${#fields.errors('email')}"&ndash;&gt;-->
+                    <!--&lt;!&ndash;                                th:text="${err}">&ndash;&gt;-->
+                    <!--                        -->
+                    <!--                        </p>-->
+                    <!--                    </div>-->
+
+                    <label for="password">Парола </label>
+                    <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            class="form-control"
+                            maxlength="75"
+                            placeholder="password">
+
+                </div>
+
+                <p th:if="${bad_credentials}" class="alert-message font-14">Грешна комбинация от имейл и парола!</p>
+
+                <div class="form-group r-name text-black ">
+
+                    <label for="rememberme">Запомни ме </label>
+                    <input
+                            type="checkbox"
+                            id="rememberme"
+                            name="rememberme"
+                            class="form-control">
+                </div>
+
+            </section>
+
+            <section class="row button-row">
+                <div class="col /*col-md-4*/">
+                    <div class="button-holder d-flex">
+                        <input class="font-18 btn" type="submit" value="Влез"/>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row round-corners-25 bottom">
+                <div class="text-white">
+                    <a href="/user/register">Нямаш акаунт?</a>
+                </div>
+            </section>
+
+        </form>
+    </div>
+</main>
+
+
+<footer></footer>
+
+
+</body>
+
+</html>

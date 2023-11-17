@@ -1,0 +1,267 @@
+[
+	{
+		"article_id" : 88,
+		"article_name" : "препарат за съдове",
+		"article_category" : 38
+	},
+	{
+		"article_id" : 89,
+		"article_name" : "прах за пране",
+		"article_category" : 38
+	},
+	{
+		"article_id" : 90,
+		"article_name" : "омекотител",
+		"article_category" : 38
+	},
+	{
+		"article_id" : 91,
+		"article_name" : "сапун",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 117,
+		"article_name" : "салфетки",
+		"article_category" : 39
+	},
+	{
+		"article_id" : 118,
+		"article_name" : "кърпички кутия",
+		"article_category" : 39
+	},
+	{
+		"article_id" : 119,
+		"article_name" : "тоалетна хартия",
+		"article_category" : 39
+	},
+	{
+		"article_id" : 120,
+		"article_name" : "памперси",
+		"article_category" : 39
+	},
+	{
+		"article_id" : 121,
+		"article_name" : "паста за зъби",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 122,
+		"article_name" : "шампоан",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 123,
+		"article_name" : "балсам за коса",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 136,
+		"article_name" : "кухненска хартия",
+		"article_category" : 39
+	},
+	{
+		"article_id" : 142,
+		"article_name" : "хидратиращ лосион",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 143,
+		"article_name" : "дезодорант",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 144,
+		"article_name" : "крем за лице",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 145,
+		"article_name" : "крем за ръце",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 146,
+		"article_name" : "маска за лице",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 147,
+		"article_name" : "маска за коса",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 148,
+		"article_name" : "памук",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 149,
+		"article_name" : "лакочистител",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 151,
+		"article_name" : "друго",
+		"article_category" : 43
+	},
+	{
+		"article_id" : 155,
+		"article_name" : "торби за смет",
+		"article_category" : 45
+	},
+	{
+		"article_id" : 156,
+		"article_name" : "попивателни кърпи",
+		"article_category" : 45
+	},
+	{
+		"article_id" : 157,
+		"article_name" : "гъба за съдове",
+		"article_category" : 45
+	},
+	{
+		"article_id" : 242,
+		"article_name" : "препарат за WC",
+		"article_category" : 38
+	},
+	{
+		"article_id" : 255,
+		"article_name" : "пликове за фризер",
+		"article_category" : 45
+	},
+	{
+		"article_id" : 256,
+		"article_name" : "пликове за сандвич",
+		"article_category" : 45
+	},
+	{
+		"article_id" : 285,
+		"article_name" : "гъба за баня",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 394,
+		"article_name" : "презервативи",
+		"article_category" : 43
+	},
+	{
+		"article_id" : 632,
+		"article_name" : "конец за зъби",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 633,
+		"article_name" : "четка за зъби",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 634,
+		"article_name" : "душ гел",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 635,
+		"article_name" : "нож",
+		"article_category" : 45
+	},
+	{
+		"article_id" : 636,
+		"article_name" : "вилици",
+		"article_category" : 45
+	},
+	{
+		"article_id" : 637,
+		"article_name" : "лъжици",
+		"article_category" : 45
+	},
+	{
+		"article_id" : 638,
+		"article_name" : "прибори",
+		"article_category" : 45
+	},
+	{
+		"article_id" : 639,
+		"article_name" : "чаши",
+		"article_category" : 45
+	},
+	{
+		"article_id" : 677,
+		"article_name" : "препарат за баня",
+		"article_category" : 38
+	},
+	{
+		"article_id" : 678,
+		"article_name" : "препарат за стъкло",
+		"article_category" : 38
+	},
+	{
+		"article_id" : 680,
+		"article_name" : "сапун за WC",
+		"article_category" : 38
+	},
+	{
+		"article_id" : 684,
+		"article_name" : "вода за уста",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 686,
+		"article_name" : "клечки за уши с огр.",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 687,
+		"article_name" : "клечки за уши",
+		"article_category" : 40
+	},
+	{
+		"article_id" : 688,
+		"article_name" : "клечки за зъби",
+		"article_category" : 43
+	},
+	{
+		"article_id" : 690,
+		"article_name" : "препарат за миялна",
+		"article_category" : 38
+	},
+	{
+		"article_id" : 718,
+		"article_name" : "мокри кърпички",
+		"article_category" : 39
+	},
+	{
+		"article_id" : 719,
+		"article_name" : "мокри кърпички бебе",
+		"article_category" : 39
+	},
+	{
+		"article_id" : 731,
+		"article_name" : "марля",
+		"article_category" : 43
+	},
+	{
+		"article_id" : 756,
+		"article_name" : "батерии",
+		"article_category" : 43
+	},
+	{
+		"article_id" : 761,
+		"article_name" : "списание",
+		"article_category" : 43
+	},
+	{
+		"article_id" : 770,
+		"article_name" : "ренде",
+		"article_category" : 45
+	},
+	{
+		"article_id" : 771,
+		"article_name" : "сламки",
+		"article_category" : 45
+	},
+	{
+		"article_id" : 772,
+		"article_name" : "белачка",
+		"article_category" : 45
+	}
+]

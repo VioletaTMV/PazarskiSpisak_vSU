@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec='http://www.thymeleaf.org/extras/spring-security'>
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+<main class="container-fluid">
+    <article>
+
+        <div class="container-recipe">
+            <section class="recipe row round-corners-25 /*mx-auto d-flex flex-row justify-content-center*/">
+                <div class="recipe-name round-corners-25">
+                    <h2 class="text-center"><span th:text="${recipe.name}">Име на рецепта</span></h2>
+                </div>
+
+                <div class="recipe-img-top-wrapper col-rcp">
+                    <div class="img-center-wrapper col-rcp">
+                        <img class="recipe-img-top round-corners-25"
+                             src="/images/evie-s-gXPcOgp723g-unsplash.jpg" alt="Recipe image">
+                    </div>
+
+                </div>
+                <div class="recipe-info round-corners-25 col-rcp">
+                    <ul>
+                        <li class="li-1">
+                            <div class="username">
+                                <h3 class="p-1"><i class="fa-solid fa-pencil"></i> От: <span
+                                        th:text="${recipe.publishedBy}">Автор</span></h3>
+                            </div>
+                        </li>
+                        <li class="li-2">
+                            <div class="r-updated">
+                                <p class="p-2">Последно редактирана <i class="fa-solid fa-calendar-days"></i> :
+                                    <span th:text="${recipe.dateLastModified}">--/--/----</span> г.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="li-1">
+                            <div>
+                                <p class="p-1">Време за подготовка <i class="fa-solid fa-user-clock"></i> :
+                                    <span th:text="${recipe.prepTime}">-</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="li-2">
+                            <div>
+                                <p class="p-2">Време за готвене <i class=" fa-solid fa-stopwatch"></i> : <span
+                                        th:text="${recipe.cookTime}">-</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="li-1">
+                            <div>
+                                <p class="p-1">Порции <i class="fa-solid fa-utensils"></i> : <span
+                                        th:text="${recipe.servings}">Порции</span> бр.</p>
+                            </div>
+                        </li>
+                        <li class="li-2">
+
+                            <!--//TODO: adjust @MediaTypes in CSS for this view as it is displaced after adding the добави в моя списък button-->
+                            <form
+                                    sec:authorize="isAuthenticated()"
+                                    class="inline-display"
+                                    th:method="post"
+                                    th:action="@{/list/add-recipe(id=${recipe.id})}">
+                                <button class="dropbtn success link-to-list button-as-link"
+                                        th:name="addRecipeToShopList"
+                                        th:data-id="${recipe.id}"
+                                        th:onclick="blinkShopListRecipeAdd()">
+                                    <i class=" fa-solid fa-pen-to-square"></i> <a> Добави в моя списък</a>
+                                </button>
+                            </form>
+
+                            <!--                            <p class="p-2"><a class="link-to-list" href="/"><i class=" fa-solid fa-pen-to-square"></i>-->
+                            <!--                                Добави в моя списък</a></p>-->
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section
+                    class="recipe-ingredients row round-corners-25 /*mx-auto d-flex flex-row justify-content-center*/">
+                <div class="grid-container round-corners-25">
+                    <div th:each="riv : ${recipe.recipeIngredientWithDetailsDTOSet}" class="grid-el round-corners-25">
+                        <p><span th:text="${riv.qty}"></span>
+                            <span th:text="${riv.measureBG}"></span>
+                            <span th:text="${riv.ingredientName}"></span></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section class="recipe-method row round-corners-25">
+                <div class="paragraphs-container round-corners-25">
+                    <div class="recipe-paragraph round-corners-25">
+                        <h4>Метод на приготвяне</h4>
+                    </div>
+                    <div class="recipe-paragraph round-corners-25">
+                        <p>Cooking instructions cooking instructions cooking instructions Cooking instructions
+                            cooking instructions cooking instructions Cooking instructions cooking instructions
+                            cooking instructions </p>
+                    </div>
+
+                </div> -->
+
+            <section class="recipe-method row round-corners-25">
+                <div class="paragraphs-container round-corners-25">
+                    <div class="recipe-paragraph">
+                        <h4>Метод на приготвяне: </h4>
+                    </div>
+                    <div class="recipe-paragraph">
+                        <p><span th:text="${recipe.cookSteps}">Стъпки за приготвяне</span></p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section th:if="${recipe.isSourcePresent}" class="recipe-method row round-corners-25">
+                <div class="paragraphs-container round-corners-25">
+                    <div class="recipe-paragraph round-corners-25">
+                        <h4>Източник: </h4>
+                        <p><span th:text="${recipe.recipeSource}">По идея от ...</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section th:if="${recipe.isNotesPresent}" class="recipe-method row round-corners-25">
+                <div class="paragraphs-container round-corners-25">
+                    <div class="recipe-paragraph round-corners-25">
+                        <h4>Бележки: </h4>
+                        <p><span th:text="${recipe.notes}">Бележки</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recipe-method row round-corners-25 bottom">
+                <div class="paragraphs-container round-corners-25">
+                    <div class="text-white round-corners-25 float-right"
+                         id="recipe-actions"
+                         sec:authorize="isAuthenticated()">
+                        <a href="#recipe-update" class="dropbtn">Редактиране</a>
+                        <p> | </p>
+                        <button class="dropbtn danger text-white"
+                                th:data-id="${recipe.id}"
+                                th:onclick="confirmDeletionForRecipe()"><a> Изтриване</a>
+                        </button>
+                    </div>
+
+                    <div class="text-white round-corners-25 float-right jsNoDisplay"
+                         id="confirm-delete-action-js"
+                         sec:authorize="isAuthenticated()">
+                        <div class="float-right bg-danger">Сигурни ли сте, че искате да изтриете тази рецепта?</div>
+                        <div class="text-white round-corners-25 float-right">
+                            <div class="float-right">
+                                <button class="dropbtn success text-white"
+                                        th:onclick="CancelAndReturnToPreviousScreen()"><a> Откажи </a>
+                                </button>
+                                <p> | </p>
+                                <form class="inline-display"
+                                      th:method="delete"
+                                      th:action="@{/recipe(id=${recipe.id})}">
+                                    <button class="dropbtn danger text-white"
+                                            type="submit"
+                                            value="Delete">
+                                        <a> Изтрий </a>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </article>
+</main>
+
+
+<footer></footer>
+
+<script src="/js/recipe-delete.js"></script>
+
+</body>
+
+</html>

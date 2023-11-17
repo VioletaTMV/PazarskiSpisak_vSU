@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<nav th:fragment="navigationBar">
+    <ul class="navbar" id="myTopnav">
+        <li><a th:href="@{/}"><i class="fa-solid fa-house"></i> Начало </a></li>
+        <li><a th:href="@{/list/recipes}"><i class="fa-solid fa-list-ul"></i> Моят списък</a></li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">Рецепти
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="header">
+                        <ul class="mega-menu-header-nav">
+                            <li class="mega-menu-header-li">
+                                <a class="active">Kатегории</a>
+                            </li>
+                            <li class="mega-menu-header-li">
+                                <a th:href="@{/recipe/add}">Добави рецепта</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div th:each="rcg : ${recipeCategoryGroups}" class="column">
+                            <h4 th:text="${rcg.groupName}"></h4>
+                            <div th:each="rc: ${rcg.recipeCategories}">
+                                <a th:text="${rc.categoryBG}" th:href="@{/recipes-by-category(id=${rc})}"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li><a href="#"><span><i class="fa-solid fa-magnifying-glass"></i></span> Търси</a></li>
+        <li sec:authorize="hasRole('ADMIN')">
+            <a th:href="@{/admin}"><i class="fa-solid fa-screwdriver-wrench"></i></a>
+        </li>
+        <li class="user-account" id="account" sec:authorize="!isAuthenticated()">
+            <a th:href="@{/user/login}">
+                <i class="fa-regular fa-user"></i> Вход
+            </a>
+        </li>
+        <li class="user-account" sec:authorize="isAuthenticated()">
+            <form
+                    th:method="post"
+                    th:action="@{/user/logout}">
+                <button class="dropbtn" type="submit">
+                    <i class="fa-solid fa-user"></i> Изход
+                </button>
+            </form>
+        </li>
+        <li id="icon">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </li>
+
+    </ul>
+
+
+</nav>
+
+
+</body>
+</html>

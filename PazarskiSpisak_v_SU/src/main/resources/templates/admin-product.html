@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+<th:block th:replace="~{fragments/navbar-admin}">Admin SubNavbar</th:block>
+
+<main>
+    <div class="container-account r-add-container clr-grayish round-corners-25">
+
+        <section class="r-add-header row round-corners-25">
+            <h2 class="text-15-left-padding text-center text-white">Избери тип продукт за администриране</h2>
+            <h3 class="text-center text-white">или използвай оранжевото меню за друго</h3>
+        </section>
+
+
+        <section class="row button-row bottom">
+            <a href="/admin/item/add">
+            <button class="link-as-button font-18" type="button">Нехранителни продукти</button>
+                </a>
+        </section>
+
+
+        <section class="row button-row bottom">
+            <a href="/admin/ingredient/add">
+                <button class="link-as-button font-18" type="button">Хранителни съставки</button>
+            </a>
+        </section>
+
+
+    </div>
+</main>
+
+<footer></footer>
+
+
+</body>
+
+</html>

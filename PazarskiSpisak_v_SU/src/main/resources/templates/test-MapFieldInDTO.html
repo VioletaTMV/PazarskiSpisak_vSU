@@ -1,0 +1,82 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en"-->
+<!--      xmlns:th="http://www.thymeleaf.org">-->
+
+<!--<head>-->
+<!--    <title>test</title>-->
+
+<!--</head>-->
+
+<!--<body>-->
+
+<!--test-->
+
+<!--<form-->
+<!--        th:action="@{/test}"-->
+<!--        th:method="post"-->
+<!--        th:object="${testModel}">-->
+
+
+<!--    <table>-->
+<!--        <tr class="green"-->
+<!--            th:each="mu: *{mapIngrMU.entrySet()}">-->
+
+<!--            <td>1</td>-->
+<!--            <td class="width-100">-->
+<!--&lt;!&ndash;                <select&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        th:field="${mu.key}"&ndash;&gt;-->
+<!--&lt;!&ndash;                        class="form-control ingredientAlternativeMUnit"&ndash;&gt;-->
+<!--&lt;!&ndash;                        onchange="showOnlyOneOfTheAlreadySelectedMainOrAltUnits()">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <option value="">- Избери мярка -</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <option&ndash;&gt;-->
+<!--&lt;!&ndash;                            th:each="k: ${mu.key}"&ndash;&gt;-->
+<!--&lt;!&ndash;                            th:value="${k}"&ndash;&gt;-->
+<!--&lt;!&ndash;                            th:text="${k}"&ndash;&gt;-->
+<!--&lt;!&ndash;                            th:selected="${k} == ${mapIngrMU[__${mu.key}__]}">&ndash;&gt;-->
+<!--&lt;!&ndash;                    </option>&ndash;&gt;-->
+<!--&lt;!&ndash;                </select>&ndash;&gt;-->
+
+<!--            </td>-->
+<!--            <td class="width-100">-->
+<!--                <label th:for="*{mapIngrMU[__${mu.key}__]}" th:text="${mu.key.measureBG}">ime na mqrkata</label>-->
+<!--                <input-->
+<!--                        th:type="number"-->
+<!--                        maxlength="5"-->
+<!--                        size="4"-->
+<!--                        min="0" max="99999" step="0.10" placeholder=" - "-->
+<!--                        th:field="*{mapIngrMU['__${mu.key}__']}"/>-->
+<!--            </td>-->
+<!--            <td><span id="alt-per-main-unit" class="alt-per-main-unit">осн.м.ед</span></td>-->
+<!--            <td class="btn-action">-->
+<!--                <button type="submit"-->
+<!--                        name="rmvAlt"-->
+<!--                        th:value="${mu.key}"-->
+<!--                        class="btn-remove btn-bgrd-transparent font-18">-->
+<!--                    <i class="fa-solid fa-xmark" style="color: lightgray;"></i>-->
+<!--                </button>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--    </table>-->
+
+<!--    <button-->
+<!--            type="submit"-->
+<!--            name="addTestBtn"-->
+<!--            class="btn-add link-as-button">-->
+<!--        <i class="fa-solid fa-plus" style="color: #fafafa;"></i> Мярка-->
+<!--    </button>-->
+
+<!--    <section class="row button-row">-->
+<!--        <div class="col">-->
+<!--            <div class="button-holder d-flex">-->
+<!--                <input class="font-18 btn" type="submit" value="Добави"/>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+
+<!--</form>-->
+
+<!--</body>-->
+
+<!--</html>-->

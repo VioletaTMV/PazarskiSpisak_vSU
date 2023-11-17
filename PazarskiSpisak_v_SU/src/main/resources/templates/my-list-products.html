@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec='http://www.thymeleaf.org/extras/spring-security'>
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+<main class="container-fluid">
+    <article>
+
+        <div class="container-account">
+            <h2 class="text-white text-center">Моят списък </h2>
+
+            <div class="container-account">
+
+                <div class="round-corners-25 row clr-beigeish">
+                    <div class="round-corners-25 gray-text">
+
+                        <p class="text-light-gray padding-left-5">Избрани рецепти <i class="fa-solid fa-ellipsis"></i>
+                        </p>
+                        <p class="float-right text-bold padding-right-5"><i
+                                class="fa-solid fa-arrow-right-to-bracket"></i>
+                            Пазарски списък</p>
+
+                    </div>
+                </div>
+
+                <div class="empty-div-spacing"></div>
+
+                <form
+                        th:action="@{/list/products}"
+                        th:method="put"
+                        th:object="${shopListProductsModel}">
+
+                    <section
+                            class="recipe-ingredients row round-corners-25 /*mx-auto d-flex flex-row justify-content-center*/">
+
+
+                        <div>
+                            <p class="text-white">Скрий отметнати </p>
+                            <!-- Rounded switch -->
+                            <label class="switch">
+
+                                <input
+                                        th:type="checkbox"
+                                        id="hideCheckedSlider"
+                                        name="hideCheckedSlider"
+                                        onchange="hideChecked(this)"/>
+                                <span class="slider round"></span>
+                            </label>
+                            <!--                                <p class="text-white"> покажи </p>-->
+
+                        </div>
+
+                        <div>
+                            <p class="text-white">По азбучен ред </p>
+                            <!-- Rounded switch -->
+                            <label class="switch">
+                                <input
+                                        th:type="checkbox"
+                                        th:checked="*{pureAlphabetOrder}"
+                                        >
+                                <span class="slider round"></span>
+                            </label>
+                            <!--                                <p class="text-white"> азбучен ред </p>-->
+                        </div>
+
+
+                        <div class="cart-ingredients-list-container round-corners-25"
+                             th:each="mapEntry, mapEntryStat: *{ingredientsPurchaseStatusListByProductCategoryMap}">
+
+                            <p th:text="${mapEntry.key}"
+                               th:id="${#ids.seq('shop-list-ingredient-category')}"
+                               class="text-white"></p>
+
+
+                            <div class="cart-ingredients-list-el round-corners-25 input-paragraph"
+                                 th:each="ingr, ingrStat: *{ingredientsPurchaseStatusListByProductCategoryMap['__${mapEntry.key}__']}">
+
+                                <label th:for=${#ids.next('shop-list-ingredient-checkbox')}></label>
+                                <input
+                                        type="checkbox"
+                                        th:id="${#ids.seq('shop-list-ingredient-checkbox')}"
+                                        th:value="${ingr.ingredientName}"
+                                        th:checked="${ingr.checked}"
+                                        name="checkboxStatusUpdate"
+                                        class="card-ingredient-checkbox"
+                                        onclick="strikeUnstrike(this.id)">
+                                <p class="card-ingredient-p"
+                                   th:id="${#ids.seq('shop-list-ingredient-info')}"
+                                   th:text="${ingr.ingredientName} + ': ' + ${ingr.totalQty} + ' ' + ${ingr.measurementUnitForShopList}">
+                                    Ingredient name: qty unit
+                                </p>
+
+                            </div>
+                        </div>
+
+
+                    </section>
+
+
+                    <!-- <section class="recipe-method row round-corners-25 bottom">
+                        <div class="paragraphs-container round-corners-25">
+                            <div class="text-white round-corners-25 float-right">
+                                <a href="#recipe-update">Редактиране</a>
+                            </div>
+                        </div>
+                    </section> -->
+
+                    <section class="row button-row">
+                        <div class="col /*col-md-4*/">
+                            <div class="button-holder d-flex">
+                                <input class="font-18 btn"
+                                       th:type="submit"
+                                       th:name="returnToRecipeList"
+                                       value="Назад към избрани рецепти"/>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section class="row button-row">
+                        <div class="col /*col-md-4*/">
+                            <div class="button-holder d-flex">
+                                <input class="font-18 btn"
+                                       th:type="submit"
+                                       th:name="checkboxStatusUpdate"
+                                       value="Запомни и продължи покупките друг път"/>
+                                <p class="text-white">*Списъкът се пази до 1 месец, считано от последната активност по
+                                    него,
+                                    след което се изтрива.</p>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+            </div>
+
+        </div>
+
+
+    </article>
+</main>
+
+
+<footer></footer>
+
+<script src="/js/shop-list-products.js"></script>
+
+</body>
+
+</html>

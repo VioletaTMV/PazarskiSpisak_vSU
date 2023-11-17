@@ -1,0 +1,1221 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(../images/shopping_list.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #515F5A;
+    font-family: Arial;
+
+
+}
+
+li {
+    display: inline-block;
+}
+
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: #119B12;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+/* #account {
+    float: right;
+    padding-right: 50px;
+} */
+
+.user-account {
+    float: right;
+}
+
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    /* color: #515F5A; */
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    /* Important for vertical align on mobile phones */
+    margin: 0;
+    /* Important for vertical align on mobile phones */
+}
+
+/* Add a darker background color to navbar links on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #E3963E;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: fixed;
+    /* background-color: transparent; */
+    background-color: #FFF5EE;
+    width: 70%;
+    left: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Mega Menu header, if needed */
+.dropdown-content .header {
+    background: #E3963E;
+    /* padding: 1px 1px 1px 20px; */
+}
+
+.dropdown-content .header a {
+    color: #515F5A;
+}
+
+.mega-menu-header-nav a:hover {
+    color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Create container size and scrollbar for the "row" (i.e. the container with categories))*/
+.navbar .row {
+    height: 400px;
+    overflow-y: auto;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    margin: 0px 4px 8px 4px;
+    float: left;
+    width: 30%;
+    padding: 10px;
+    /* background-color: #FFF5EE; */
+    background-color: #FBCEB1;
+    height: 250px;
+    /* color: #515F5A; */
+    overflow: auto;
+}
+
+/* Style links inside the columns */
+.column a {
+    float: none;
+    color: #515F5A;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    padding: 5px 5px;
+}
+
+/* Add a background color on hover */
+.column a:hover {
+    background-color: #FFF5EE;
+}
+
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Add an active class to highlight the current page */
+.navbar a.active {
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+#myTopnav>li:last-child {
+    display: none;
+}
+
+/* The below adapts for middle-size screens, reducing the mega menu columns to 2 columns instead of three for readability, for tablets for example */
+@media screen and (min-width:690px) and (max-width:1225px) {
+
+    .column {
+        width: 43%;
+    }
+
+}
+
+/* When the screen is less than 640 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 695px) {
+    .navbar li:not(:first-child) {
+        display: none;
+    }
+
+    #myTopnav>li:last-child {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width: 695px) {
+    .navbar.responsive {
+        position: relative;
+    }
+
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive li,
+    .navbar.responsive {
+        float: none;
+        display: block;
+        overflow: auto;
+
+        /* #account {
+            float: left;
+        } */
+
+        .user-account {
+            float: left;
+        }
+
+        .mega-menu-header-nav {
+            padding: 5px;
+        }
+
+        .mega-menu-header-li {
+            display: inline-block;
+        }
+
+        .mega-menu-header-li a {
+            padding: 14px 10px;
+        }
+
+        .column {
+            width: 90%;
+        }
+
+
+    }
+
+}
+
+
+/* site-header*/
+header {
+    width: 100%;
+}
+
+.text-15-left-padding,
+.text-white {
+    padding-right: 15px;
+    padding-left: 3%;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    margin-top: 5rem;
+}
+
+.text-header-h3 {
+    margin-top: 0% !important;
+    padding-right: 57%;
+}
+
+
+/* recipes-by-category main */
+
+main .text-15-left-padding,
+.text-white {
+    margin-top: 2rem;
+}
+
+/*making a centeren container where to display the recipe cards*/
+.container-cards {
+    width: 90%;
+    position: relative;
+    background-color: transparent;
+    margin: 0 10% 0 3%;
+}
+
+.recipes.row {
+    background-color: transparent;
+    height: auto;
+}
+
+.recipe.card {
+    float: left;
+    overflow: hidden;
+    width: 250px;
+    height: 350px;
+    padding: 5px;
+    margin: 5px 8px;
+    background-image: linear-gradient(to bottom right, rgba(220, 220, 220, 0.9), rgba(255, 255, 255, 0.9));
+    border-radius: 0.25rem;
+}
+
+.card-body a {
+    color: #f1f1f1;
+}
+
+.card-img-top-wrapper {
+    height: 70%;
+    position: relative;
+}
+
+.card-img-top-wrapper img {
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+
+.card-body {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    /* Fallback color */
+    background: rgba(0, 0, 0, 0.5);
+    /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 94%;
+    padding: 8px;
+    height: 20%;
+    overflow: hidden;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    word-break: break-word;
+    border-radius: 0.25rem;
+
+}
+
+.card-title {
+    margin-block: 0;
+}
+
+.list-group {
+    list-style: none;
+}
+
+.recipe-details {
+    margin-block-start: 8px;
+    margin-block-end: 8px;
+    padding-inline-start: 20px;
+    color: slategray;
+}
+
+.recipe-details .recipe-info div {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.add-to-list-link {
+    float: right;
+}
+
+.recipe-body {
+    padding: 7px 50px;
+}
+
+.recipe-body a {
+    color: dimgray;
+}
+
+/*Recipe */
+
+.container-recipe {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.recipe-img-top-wrapper {
+    height: 350px;
+    width: 300px;
+    position: relative;
+}
+
+.img-center-wrapper {
+    display: flex;
+    height: inherit;
+    width: inherit;
+    justify-content: center;
+    vertical-align: middle;
+
+}
+
+.recipe-img-top-wrapper img {
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+    /* background-color: #FFF5EE; */
+}
+
+.round-corners-25 {
+    border-radius: 0.25rem;
+}
+
+
+.recipe.row div:not(.recipe-name, .img-center-wrapper) {
+    display: inline-block;
+}
+
+
+.recipe-info {
+    height: 250px;
+    /* background-color: #FFF5EE; */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: green;
+    margin-top: 100px;
+    position: absolute;
+    width: -webkit-fill-available;
+    margin-right: 5px;
+}
+
+.recipe-info h3,
+p {
+    display: inline-block;
+}
+
+.recipe-info .li-1 {
+    padding-right: 50px;
+}
+
+.recipe-info .li-2 {
+    padding-right: 10px;
+}
+
+/* .username{
+    padding-right: 80px;
+} */
+
+.recipe-name {
+    background-color: transparent;
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 80px;
+    left: 300px;
+    margin-right: 305px;
+    color: #FFF5EE;
+}
+
+.recipe.row {
+    height: 440px;
+    position: relative;
+    background: rgb(0, 0, 0);
+    /* Fallback color */
+    background: rgba(0, 0, 0, 0.5);
+    /* Black background with 0.5 opacity */
+}
+
+.col-rcp {
+    vertical-align: top;
+}
+
+.recipe h2 {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    font-size: 25px;
+}
+
+.recipe-info .p-2 {
+    margin-block-start: 0;
+}
+
+.recipe-info .link-to-list {
+    color: green;
+}
+
+.recipe-info .p-1 {
+    margin-block-end: 0;
+}
+
+/* The below adapts for middle-size screens*/
+
+@media screen and (max-width: 740px) {
+
+    .recipe-name {
+        top: 0;
+        left: 0;
+        margin-right: 0;
+    }
+
+    .recipe-info {
+        height: 350px;
+        margin-top: 0px;
+    }
+
+}
+
+@media screen and (max-width: 572px) {
+
+    .recipe-info .p-2 {
+        margin-block-end: 0;
+    }
+
+    .recipe-info h3 {
+        margin-block-start: 0;
+    }
+
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .recipe.row {
+        height: 627px;
+    }
+
+    .recipe-info {
+        display: block !important;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    .recipe-info.col-rcp {
+        margin-top: 50px;
+    }
+
+    .recipe-name {
+        height: auto;
+        margin-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .recipe-img-top-wrapper {
+        display: block !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+}
+
+@media screen and (max-width: 522px) {
+       .recipe.row {
+              height: 644px
+          }
+}
+
+@media screen and (max-width: 444px) {
+    .recipe.row {
+        height: 675px
+    }
+}
+
+
+@media screen and (max-width: 404px) {
+    .recipe.row {
+        height: 693px;
+    }
+
+}
+
+/* Recipe ingredients*/
+
+.recipe-ingredients {
+    position: relative;
+}
+
+.recipe-ingredients .grid-container {
+    display: grid;
+    gap: 3px;
+    background: rgb(0, 0, 0);
+    /* Fallback color */
+    background: rgba(0.1, 255, 0.1, 0.3);
+    padding: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(295px, auto));
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.recipe-ingredients .grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+}
+
+.recipe-ingredients p {
+    margin-block-start: 3px;
+    margin-block-end: 3px;
+}
+
+.grid-el {
+    padding: 0 3px;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*recipe  cooking steps*/
+
+.recipe-method.row {
+    /* background-color: aquamarine; */
+    background: rgb(0, 0, 0);
+    /* Fallback color */
+    background: rgba(0, 0, 0, 0.5);
+    /* Black background with 0.5 opacity */
+}
+
+.recipe-method .paragraphs-container {
+    padding: 5px 10px;
+}
+
+.recipe-paragraph {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.recipe-paragraph p,
+h4 {
+    text-indent: 50px;
+    padding: 5px 10px;
+    margin-block-start: 5px;
+    margin-block-end: 0;
+    color: black;
+}
+
+
+/*add recipe form*/
+
+.clr-grayish {
+    background: rgb(0, 0, 0);
+    /* Fallback color */
+    background: rgba(0, 0, 0, 0.5);
+    /* Black background with 0.5 opacity */
+}
+
+.clr-beigeish {
+    background: rgb(245, 245, 220);
+    /* Fallback color */
+    background-color: rgba(255, 255, 255, 0.8);
+    /*Beigeish background*/
+}
+
+input[type=text],
+input[type=number],
+select,
+textarea,
+input[type=password],
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid green;
+    box-shadow: 1px 1px green;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group label {
+    padding: 0;
+}
+
+.form-group p {
+    margin: 0;
+}
+
+.r-add-container .row {
+    padding: 20px 10px 10px 10px;
+    margin: 10px 20px;
+}
+
+r-add-container table,
+th,
+td {
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.product-name td {
+    border-bottom: 1px solid green;
+}
+
+.row-fields-pr-unit-qty-act input[type=text],
+input[type=number],
+select {
+    width: auto;
+    padding: 5px 5px;
+    margin: 3px 0;
+}
+
+.width-100>select {
+    width: 100%;
+}
+
+/* only chane the input type number which is directly in element with class width-100*/
+.width-100>input[type=number] {
+    width: 100%;
+}
+
+.product-name tr:hover {
+    background-color: #45a049;
+}
+
+.btn-bgrd-transparent {
+    background-color: transparent;
+    border: none;
+}
+
+.btn-remove,
+.btn-add {
+    cursor: pointer;
+}
+
+.table-container {
+    overflow: auto;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+/*for preserving line breaks entered by user in textarea ??? */
+.paragraph-keep {
+    white-space: pre;
+}
+
+.grow-wrap {
+    display: grid;
+}
+
+.grow-wrap>textarea,
+.grow-wrap::after {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid green;
+    box-shadow: 1px 1px green;
+    border-radius: 4px;
+    box-sizing: border-box;
+    min-height: 100px;
+
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.grow-wrap::after {
+    /* Note the weird space! Needed to preventy jumpy behavior */
+    content: attr(data-replicated-value) " ";
+
+    /* This is how textarea text behaves */
+    white-space: pre-wrap;
+
+    /* Hidden from view, clicks, and screen readers */
+    visibility: hidden;
+}
+
+.grow-wrap>textarea {
+    /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+    resize: none;
+}
+
+.r-categories div:not(:first-child) {
+    display: inline-block;
+}
+
+.bottom-space {
+    margin-bottom: 10px;
+}
+
+.r-notes .grow-wrap>textarea,
+.r-notes .grow-wrap::after {
+    min-height: auto;
+}
+
+.r-add-container .button-row {
+    padding: 0;
+}
+
+/* Style the submit button */
+input[type=submit] {
+    width: 100%;
+    background-color: #45a049;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Add a background color to the submit button on mouse-over */
+input[type=submit]:hover {
+    background-color: green;
+}
+
+/*recipe-update*/
+
+.r-update-container input[type=submit] {
+    background-color: #FBCEB1;
+    color: dimgray;
+}
+
+/* Add a background color to the submit button on mouse-over */
+.r-update-container input[type=submit]:hover {
+    background-color: #E3963E;
+    color: white;
+}
+
+.r-update-container .product-name tr:hover {
+    background-color: #E3963E;
+}
+
+.r-update-container .product-name td {
+    border-bottom: 1px solid #E3963E;
+}
+
+/* Login */
+
+.container-account {
+    max-width: 650px;
+    margin: auto;
+}
+
+.alert-message {
+    padding-left: 10px;
+    padding-right: 10px;
+    /* margin: 0 20px; */
+    color: red;
+}
+
+.row.clr-reddish {
+    padding: 5px;
+    background-color: #ffe0e0;
+    /* visibility: hidden; */
+}
+
+.row.bottom {
+    padding: 0 10px 25px 10px;
+    margin: 0;
+}
+
+.text-white a {
+    color: rgba(255, 255, 255, 0.8);
+    font-style: oblique;
+}
+
+.float-right {
+    float: right;
+}
+
+/* Admin */
+
+.admin-subnav {
+    background-color: #E3963E;
+    width: fit-content;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding: 2px 30px 2px 3px; */
+}
+
+.admin-subnav ul li {
+    padding: 10px 20px;
+}
+
+.admin-subnav a {
+    color: white;
+
+}
+
+.admin-subnav ul li:hover {
+    background-color: #d68b35;
+}
+
+/* Products admin */
+
+.admin-edit-menu {
+    color: dimgray;
+    min-width: fit-content;
+}
+
+.admin-edit-menu-list {
+    display: flex;
+    justify-content: space-between;
+    padding-inline-start: 0;
+    padding: 0 10px;
+    margin: 0 20px;
+}
+
+.admin-edit-menu li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+select.admin {
+    width: 100%;
+}
+
+.font-orange {
+    color: #E3963E;
+}
+
+.font-green {
+    color: green;
+}
+
+.font-red {
+    color: red;
+}
+
+.empty-div-spacing {
+    padding-bottom: 20px;
+}
+
+.clr-orangeish {
+    background-color: transparent;
+    border-style: solid;
+    border-color: #E3963E;
+}
+
+.edit-zone {
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.clr-greenish {
+    border-style: solid;
+    border-color: #45a049;
+}
+
+.clr-reddish {
+    border-style: solid;
+    border-color: #CB4335;
+}
+
+.red-gamma input[type=submit] {
+    background-color: #CB4335;
+}
+
+.red-gamma input[type=submit]:hover {
+    background-color: red;
+}
+
+.card-recipe-img>.recipe-img-top-wrapper {
+    height: 50px;
+    width: 40px;
+    position: relative;
+}
+
+.tbl-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-table {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.no-text-indent>p {
+    text-indent: 0;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.float-right.text-light-gray {
+    color: dimgray;
+}
+
+.gray-text>p {
+    color: dimgray;
+}
+
+.gray-text>.text-bold {
+    color: black;
+}
+
+.cart-ingredients-list-container {
+    background: rgb(0, 0, 0);
+    /* Fallback color */
+    background: rgba(0.1, 255, 0.1, 0.3);
+    padding: 5px;
+}
+
+.cart-ingredients-list-el {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    margin-bottom: 1px;
+}
+
+/* .recipe-ingredients .grid-container {
+    display: grid;
+    gap: 3px;
+    background: rgb(0, 0, 0);
+    Fallback color
+    background: rgba(0.1, 255, 0.1, 0.3);
+    padding: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(295px, auto));
+
+}
+
+.recipe-ingredients .grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+}
+
+.recipe-ingredients p {
+    margin-block-start: 3px;
+    margin-block-end: 3px;
+}
+
+.grid-el {
+    padding: 0 3px;
+} */
+
+
+.invalid-feedback {
+    display: none;
+}
+
+.form-control.is-invalid~.invalid-feedback {
+    display: block;
+}
+
+.r-categories .grid-el{
+    width: 250px;
+}
+
+.tooltip-hidden{
+display: none;
+}
+
+.unhidden.tooltip-hidden{
+display: inline-block;
+}
+
+.link-as-button {
+    width:100%;
+    background-color: #45a049;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+
+}
+
+.link-as-button:hover{
+    background-color: green;
+}
+
+.link-as-button.recipe-pr-add{
+    width: auto;
+}
+
+.jsNoDisplay{
+   display: none;
+}
+
+.jsNoDisplay.unhide{
+   display: block;
+}
+
+/*стайлинга на логаут бутона*/
+.dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    /* color: #515F5A; */
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    /* Important for vertical align on mobile phones */
+    margin: 0;
+    /* Important for vertical align on mobile phones */
+}
+
+.dropbtn:hover {
+    background-color: #E3963E;
+    cursor: pointer;
+}
+
+.error-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(../images/pear.jpg);
+   }
+
+.link-as-button.link-width-wrap-text {
+    width: auto;
+}
+
+.error-page-404 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(../images/eggs_eyes.jpg);
+}
+
+.error-page-500 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(../images/broken_dish.jpg);
+}
+
+.dropbtn.danger:hover{
+    background-color: red;
+}
+
+.dropbtn.success:hover{
+    background-color: green;
+}
+
+.bg-danger{
+  background-color: red;
+  font-size: 16px;
+      border: none;
+      outline: none;
+      /* color: #515F5A; */
+      color: white;
+      padding: 14px 16px;
+      font: inherit;
+      /* Important for vertical align on mobile phones */
+      margin: 0;
+      /* Important for vertical align on mobile phones */
+}
+
+.inline-display{
+    display: inline;
+}
+
+
+/*надолу е за toggle swith бутон*/
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #119B12;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #119B12;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  /*край на toggle switch бутон*/
+
+  .padding-left-5{
+    padding-left: 5px;
+  }
+
+  .padding-right-5{
+    padding-right: 5px;
+  }
+
+  .link-to-list:hover{
+    color: white;
+  }
+
+  .button-as-link{
+      background: none;
+      border: none;
+      padding: 0;
+      /*optional*/
+      /*font-family: arial, sans-serif;*/
+      /*input has OS specific font-family*/
+      /*color: #069;*/
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+  }
+
+.strikethrough {
+  text-decoration: line-through;
+}

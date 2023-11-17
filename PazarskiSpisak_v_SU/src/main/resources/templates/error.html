@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec='http://www.thymeleaf.org/extras/spring-security'>
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body class="error-page">
+
+<header class="container-fluid">
+
+    <h2 class="text-15-left-padding text-white">Възникна грешка...</h2>
+
+
+
+    <section class="row button-row bottom ">
+        <a th:href="@{/}">
+            <button class="link-as-button link-width-wrap-text font-18" type="button"><i class="fa-solid fa-house"></i> Върни се на начална страница...</button>
+        </a>
+    </section>
+
+<!--    <img th:src="@{/images/pear.jpg}" alt="Error">-->
+
+</header>
+
+
+<main></main>
+<footer></footer>
+
+
+</body>
+
+</html>

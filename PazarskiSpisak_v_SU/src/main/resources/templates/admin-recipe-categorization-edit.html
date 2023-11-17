@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+    <th:block th:replace="~{fragments/navbar-admin}">Admin SubNavbar</th:block>
+
+    <main>
+        <div class="container-account r-add-container clr-grayish round-corners-25">
+
+            <th:block th:replace="~{fragments/navbar-admin-recipe-categorization}">Administer recipe categorization</th:block>
+
+            <div class="edit-zone clr-orangeish round-corners-25">
+
+
+                <form>
+
+                    <section class="row clr-beigeish round-corners-25">
+                        <div class="form-group r-name text-black admin width-100">
+
+                            <label for="admin-r-categorization-update">Рецепта за актуализиране на категории</label>
+                            <p class="alert-message font-14"></p>
+                            <select name="admin-r-categorization-update" id="admin-r-categorization-update" class="form-control">
+                                <option value="">- Избери рецепта -</option>
+                            </select>
+                        </div>
+                    </section>
+
+                    <section class="row clr-beigeish round-corners-25">
+                        <div class="grid-container r-categories form-group round-corners-25">
+                            <div class="bottom-space">
+                                <p>Редактирай категориите, които са приложими за рецептата:</p>
+                            </div>
+                            <div class="grid-el"><input type="checkbox" id="r-categories" name="r-categories[]"
+                                    value="categoryNameFromDB">
+                                <label class="r-categories" for="r-categories[]">categoryNameFromDB</label>
+                            </div>
+                            <div class="grid-el"><input type="checkbox" id="r-categories" name="r-categories"
+                                    value="categoryNameFromDB">
+                                <label class="r-categories" for="r-categories">categoryNameFromDB</label>
+                            </div>
+                            <div class="grid-el"><input type="checkbox" id="r-categories" name="r-categories"
+                                    value="categoryNameFromDB">
+                                <label class="r-categories" for="r-categories">categoryNameFromDB</label>
+                            </div>
+                            <div class="grid-el"><input type="checkbox" id="r-categories" name="r-categories"
+                                    value="categoryNameFromDB">
+                                <label class="r-categories" for="r-categories">categoryNameFromDB</label>
+                            </div>
+                            <div class="grid-el"><input type="checkbox" id="r-categories" name="r-categories"
+                                    value="categoryNameFromDB">
+                                <label class="r-categories" for="r-categories">categoryNameFromDB</label>
+                            </div>
+                            <div class="grid-el"><input type="checkbox" id="r-categories" name="r-categories"
+                                    value="categoryNameFromDB">
+                                <label class="r-categories" for="r-categories">categoryNameFromDB</label>
+                            </div>
+                        </div>
+    
+                    </section>
+
+                   
+                
+
+                    <section class="row button-row r-update-container">
+                        <div class="col /*col-md-4*/">
+                            <div class="button-holder d-flex">
+                                <input class="font-18 btn" type="submit" value="Актуализирай" />
+                            </div>
+                        </div>
+                    </section>
+
+
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <footer></footer>
+
+
+</body>
+
+</html>

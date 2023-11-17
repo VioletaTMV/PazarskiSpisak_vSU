@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+<th:block th:replace="~{fragments/navbar-admin}">Admin SubNavbar</th:block>
+
+<main>
+    <div class="container-recipe r-add-container clr-grayish round-corners-25">
+
+        <th:block th:replace="~{fragments/navbar-admin-recipes}">Administer recipes</th:block>
+
+
+        <div class="edit-zone clr-greenish round-corners-25">
+
+            <section class="row clr-beigeish round-corners-25 ingredient">
+                <div class="table-container form-group product-name">
+                    <table class="tbl-pr-unit-qty-act">
+                        <tr>
+                            <th>Име на рецепта:</th>
+                            <th>Публикувана на:</th>
+                            <th>Последно редактирана:</th>
+                            <th>Бр. прегледи:</th>
+                            <th>Скрита:</th>
+                        </tr>
+                        <tr class="row-pr-unit-qty-act">
+                            <td class="recipe-name-display"> -</td>
+                            <td class="recipe-published"> -</td>
+                            <td class="recipe-edited"> -</td>
+                            <td class="recipe-views"> -</td>
+                            <td class="recipe-hidden"> -</td>
+                        </tr>
+                        <tr class="row-pr-unit-qty-act">
+                            <td class="recipe-name-display"> -</td>
+                            <td class="recipe-published"> -</td>
+                            <td class="recipe-edited"> -</td>
+                            <td class="recipe-views"> -</td>
+                            <td class="recipe-hidden"> -</td>
+                        </tr>
+                        <tr class="row-pr-unit-qty-act">
+                            <td class="recipe-name-display"> -</td>
+                            <td class="recipe-published"> -</td>
+                            <td class="recipe-edited"> -</td>
+                            <td class="recipe-views"> -</td>
+                            <td class="recipe-hidden"> -</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="empty-div-spacing">
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+</main>
+
+
+<footer></footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+<th:block th:replace="~{fragments/navbar-admin}">Admin SubNavbar</th:block>
+
+<main>
+    <div class="container-account r-add-container clr-grayish round-corners-25">
+
+        <th:block th:replace="~{fragments/navbar-admin-items}">Administer non-food products</th:block>
+
+
+        <div class="edit-zone clr-greenish round-corners-25">
+
+
+            <form
+                    th:action="@{/admin/item/add}"
+                    th:method="post"
+                    th:object="${nonFoodItemModel}">
+
+                <section class="row clr-beigeish round-corners-25">
+                    <div class="form-group r-name text-black ">
+                        <label for="name">Име на продукт </label>
+                        <div class="font-12">
+                            <p>(до 50 символа)</p>
+                        </div>
+                        <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                th:field="*{name}"
+                                th:errorclass="is-invalid"
+                                class="form-control"
+                                maxlength="50">
+
+                        <div class="invalid-feedback alert-message font-14">
+                            <p th:each="err: ${#fields.errors('name')}"
+                               th:text="${err}">Продукта трябва да бъде между 2 и 50 символа.
+                                Или продукта вече съществува.</p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="row clr-beigeish round-corners-25">
+                    <div class="form-group r-name text-black admin width-100">
+
+                        <label for="item-category-supermarket">Категория продукт</label>
+                        <select
+                                name="product"
+                                th:field="*{itemCategorySupermarketName}"
+                                th:errorclass="is-invalid"
+                                id="item-category-supermarket"
+                                class="form-control">
+                            <option th:value=null>- Избери категория продукт -</option>
+                            <option th:each="c: ${nonFoodItemCategories}"
+                                    th:text="${c.name}"
+                                    th:value="${c.name}"
+                                    th:selected="${c.id} == *{itemCategorySupermarketName}">
+
+                            </option>
+
+                        </select>
+
+                        <div class="invalid-feedback alert-message font-14">
+                            <p th:each="err: ${#fields.errors('itemCategorySupermarketName')}"
+                               th:text="${err}">Не е избрана категория</p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="row button-row">
+                    <div class="col /*col-md-4*/">
+                        <div class="button-holder d-flex">
+                            <input class="font-18 btn" type="submit" value="Добави"/>
+                        </div>
+                    </div>
+                </section>
+
+            </form>
+        </div>
+    </div>
+</main>
+
+
+<footer></footer>
+
+
+</body>
+
+</html>

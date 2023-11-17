@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec='http://www.thymeleaf.org/extras/spring-security'>
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+<main class="container-fluid">
+    <article>
+        <h2 class="text-white text-center">Моят списък</h2>
+
+        <th:block th:if="${emptyShopListMessage}">
+            <h3
+                    class="text-white text-center"
+                    th:text="${emptyShopListMessage}">Списъка е празен.</h3>
+        </th:block>
+
+        <th:block th:if="${userNotRegisteredMessage}">
+            <h3
+                    class="text-white text-center"
+                    th:text="${userNotRegisteredMessage}">Списъка е празен. Регистрирай се.</h3>
+        </th:block>
+
+        <div
+                th:unless="${emptyShopListMessage} or ${userNotRegisteredMessage}"
+                class="container-account">
+
+            <form th:action="@{/list/recipes}"
+                  th:method="put"
+                  th:object="${shopListRecipesModel}">
+
+                <div class="round-corners-25 row clr-beigeish">
+                    <div class="recipe-paragraph round-corners-25 no-text-indent">
+
+                        <p class="text-bold">Избрани рецепти <i class="fa-solid fa-arrow-right-from-bracket"></i></p>
+                        <p class="float-right text-light-gray"><i class="fa-solid fa-ellipsis"></i>
+                            Пазарски списък</p>
+
+                    </div>
+                </div>
+
+                <div class="empty-div-spacing"></div>
+
+                <section class="row clr-beigeish round-corners-25">
+
+
+                    <div class="table-container form-group product-name">
+
+
+                        <table
+                                class="card-table tbl-pr-unit-qty-act tbl-center">
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th>Порции</th>
+                                <th></th>
+                            </tr>
+
+
+                            <tr class="row-pr-unit-qty-act"
+                                th:each="recipeShort, recipeShortStat: *{shopListRecipes}">
+
+                                <td class="card-recipe-img">
+                                    <div class="recipe-img-top-wrapper col-rcp">
+                                        <div class="img-center-wrapper col-rcp">
+                                            <img class="recipe-img-top round-corners-25"
+                                                 src="../images/evie-s-gXPcOgp723g-unsplash.jpg"
+                                                 alt="R_pic">
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td class="card-recipe-name"
+                                    th:text="${recipeShort.name}">Име на рецептата
+                                </td>
+                                <td class="card-recipe-servings">
+                                    <input
+                                            th:type="number"
+                                            name="card-recipe-servings"
+                                            th:field="*{shopListRecipes[__${recipeShortStat.index}__].desiredServings}"
+                                            maxlength="2"
+                                            size="2" min="0" max="99" step="1"
+                                            class="input-width-auto"
+                                            value="">
+                                    <input type="hidden" th:value="*{shopListRecipes[__${recipeShortStat.index}__].id}"
+                                           th:attr="name='shopListRecipes[__${recipeShortStat.index}__].id'"/>
+                                </td>
+
+                                <td class="card-btn-delete ">
+                                    <button type="submit"
+                                            name="rmvRecipeFromShopList"
+                                            th:value="${recipeShortStat.index}"
+                                            class="card-btn-delete btn-remove btn-bgrd-transparent font-18">
+                                        <i class="fa-solid fa-trash-can"></i></button>
+                                </td>
+
+                            </tr>
+
+                        </table>
+                    </div>
+                </section>
+
+                <section class="row button-row">
+                    <div class="col /*col-md-4*/">
+                        <div class="button-holder d-flex">
+                            <!--                        //ъпдейт в базата - Put или Patch...-->
+                            <input class="font-18 btn"
+                                   th:type="submit"
+                                   value="Към пазарски списък"/>
+                        </div>
+                    </div>
+
+                </section>
+
+            </form>
+
+        </div>
+    </article>
+</main>
+
+
+<footer></footer>
+
+
+</body>
+
+</html>

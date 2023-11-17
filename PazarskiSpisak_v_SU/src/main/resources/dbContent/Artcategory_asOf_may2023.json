@@ -1,0 +1,146 @@
+[
+	{
+		"artcategory_id" : 37,
+		"artcategory_name" : "Варива, брашно, захар, сол",
+		"artcategory_food" : 1,
+		"artcategory_order" : 5
+	},
+	{
+		"artcategory_id" : 40,
+		"artcategory_name" : "Козметични продукти",
+		"artcategory_food" : 0,
+		"artcategory_order" : 21
+	},
+	{
+		"artcategory_id" : 35,
+		"artcategory_name" : "Замразени продукти",
+		"artcategory_food" : 1,
+		"artcategory_order" : 16
+	},
+	{
+		"artcategory_id" : 36,
+		"artcategory_name" : "Напитки",
+		"artcategory_food" : 1,
+		"artcategory_order" : 15
+	},
+	{
+		"artcategory_id" : 38,
+		"artcategory_name" : "Почистващи и перилни препарати",
+		"artcategory_food" : 0,
+		"artcategory_order" : 20
+	},
+	{
+		"artcategory_id" : 39,
+		"artcategory_name" : "Салфетки, тоалетна хартия, памперси",
+		"artcategory_food" : 0,
+		"artcategory_order" : 10
+	},
+	{
+		"artcategory_id" : 31,
+		"artcategory_name" : "Охладени меса и птици",
+		"artcategory_food" : 1,
+		"artcategory_order" : 14
+	},
+	{
+		"artcategory_id" : 32,
+		"artcategory_name" : "Охладени риби",
+		"artcategory_food" : 1,
+		"artcategory_order" : 13
+	},
+	{
+		"artcategory_id" : 30,
+		"artcategory_name" : "Детски храни",
+		"artcategory_food" : 1,
+		"artcategory_order" : 11
+	},
+	{
+		"artcategory_id" : 29,
+		"artcategory_name" : "Кафе, чай",
+		"artcategory_food" : 1,
+		"artcategory_order" : 8
+	},
+	{
+		"artcategory_id" : 27,
+		"artcategory_name" : "Захарни изделия",
+		"artcategory_food" : 1,
+		"artcategory_order" : 7
+	},
+	{
+		"artcategory_id" : 28,
+		"artcategory_name" : "Диетични и диабетични продукти",
+		"artcategory_food" : 1,
+		"artcategory_order" : 4
+	},
+	{
+		"artcategory_id" : 26,
+		"artcategory_name" : "Консерви, туршии, буркани",
+		"artcategory_food" : 1,
+		"artcategory_order" : 2
+	},
+	{
+		"artcategory_id" : 24,
+		"artcategory_name" : "Месни деликатеси",
+		"artcategory_food" : 1,
+		"artcategory_order" : 12
+	},
+	{
+		"artcategory_id" : 22,
+		"artcategory_name" : "Яйца и млечни продукти",
+		"artcategory_food" : 1,
+		"artcategory_order" : 3
+	},
+	{
+		"artcategory_id" : 23,
+		"artcategory_name" : "Подправки",
+		"artcategory_food" : 1,
+		"artcategory_order" : 9
+	},
+	{
+		"artcategory_id" : 21,
+		"artcategory_name" : "Плодове и зеленчуци",
+		"artcategory_food" : 1,
+		"artcategory_order" : 0
+	},
+	{
+		"artcategory_id" : 41,
+		"artcategory_name" : "Ядки",
+		"artcategory_food" : 1,
+		"artcategory_order" : 1
+	},
+	{
+		"artcategory_id" : 42,
+		"artcategory_name" : "Други хранителни продукти",
+		"artcategory_food" : 1,
+		"artcategory_order" : 22
+	},
+	{
+		"artcategory_id" : 43,
+		"artcategory_name" : "Други",
+		"artcategory_food" : 0,
+		"artcategory_order" : 23
+	},
+	{
+		"artcategory_id" : 45,
+		"artcategory_name" : "Домакински потреби",
+		"artcategory_food" : 0,
+		"artcategory_order" : 19
+	},
+	{
+		"artcategory_id" : 47,
+		"artcategory_name" : "Хляб",
+		"artcategory_food" : 1,
+		"artcategory_order" : 17
+	},
+	{
+		"artcategory_id" : 48,
+		"artcategory_name" : "Паста, спагети, макарони",
+		"artcategory_food" : 1,
+		"artcategory_order" : 6
+	},
+	{
+		"artcategory_id" : 49,
+		"artcategory_name" : "Щанд маслини, салати, деликатеси ",
+		"artcategory_food" : 1,
+		"artcategory_order" : 18
+	}
+]
