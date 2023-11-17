@@ -55,29 +55,29 @@ public class ShopListController {
         return rcgModel;
     }
 
-    @ModelAttribute("shopListProductsModel")
-    public ShopListProductsDTO initShopListProductsModel(Principal principal){
-
-        Optional<UserBasicDTO> userBasicDTOOpt = userBasicDTOOpt = this.userService.getBasicUserData(principal.getName());
-
-        ShopListProductsDTO shopListProductsDTO = new ShopListProductsDTO();
-        shopListProductsDTO.setCookerId(userBasicDTOOpt.get().getId());
-
-        ShopListProductsDTO shopListProductsRetrievedFromEntity = this.shoppingListFromRecipesService.getShopListProductsForUser(principal.getName());
-
-        shopListProductsDTO.setIngredientsPurchaseStatusListByProductCategoryMap(shopListProductsRetrievedFromEntity.getIngredientsPurchaseStatusListByProductCategoryMap());
-        shopListProductsDTO.setHideChecked(shopListProductsRetrievedFromEntity.getHideChecked());
-        shopListProductsDTO.setPureAlphabetOrder(shopListProductsRetrievedFromEntity.getPureAlphabetOrder());
-
-        return shopListProductsDTO;
-    }
+//    @ModelAttribute("shopListProductsModel")
+//    public ShopListProductsDTO initShopListProductsModel(Principal principal){
+//
+//        Optional<UserBasicDTO> userBasicDTOOpt = userBasicDTOOpt = this.userService.getBasicUserData(principal.getName());
+//
+//        ShopListProductsDTO shopListProductsDTO = new ShopListProductsDTO();
+//        shopListProductsDTO.setCookerId(userBasicDTOOpt.get().getId());
+//
+//        ShopListProductsDTO shopListProductsRetrievedFromEntity = this.shoppingListFromRecipesService.getShopListProductsForUser(principal.getName());
+//
+//        shopListProductsDTO.setIngredientsPurchaseStatusListByProductCategoryMap(shopListProductsRetrievedFromEntity.getIngredientsPurchaseStatusListByProductCategoryMap());
+//        shopListProductsDTO.setHideChecked(shopListProductsRetrievedFromEntity.getHideChecked());
+//        shopListProductsDTO.setPureAlphabetOrder(shopListProductsRetrievedFromEntity.getPureAlphabetOrder());
+//
+//        return shopListProductsDTO;
+//    }
 
 
     @GetMapping("/list/recipes")
     public String showListOfChosenRecipes(@ModelAttribute("shopListRecipesModel") ShopListRecipesDTO shopListRecipesDTO,
                                           Model model,
                                           Principal principal) {
-
+        System.out.println();
         if (principal == null) {
             model.addAttribute("userNotRegisteredMessage", "Списъка е празен. Започни да добавяш рецепти. Необходимо е да си регистриран потребител за тази функционалност.");
             return "my-list-recipes";
@@ -212,52 +212,5 @@ public class ShopListController {
     }
 
 
-    @GetMapping("/list/products")
-    public String showListOfProducts(@ModelAttribute("shopListProductsModel") ShopListProductsDTO shopListProductsDTO,
-                                     Model model,
-                                     Principal principal) {
-        //TODO: да преместя ModelAttribute да не се инициализира най-отгоре за ShopListProductsDTO тъй като е релевантен само за този метод
 
-//        Optional<UserBasicDTO> userBasicDTOOpt = userBasicDTOOpt = this.userService.getBasicUserData(principal.getName());
-//        shopListProductsDTO.setCookerId(userBasicDTOOpt.get().getId());
-//
-//       ShopListProductsDTO shopListProductsRetrievedFromEntity = this.shoppingListFromRecipesService.getShopListProductsForUser(principal.getName());
-//
-//       shopListProductsDTO.setIngredientsPurchaseStatusListByProductCategoryMap(shopListProductsRetrievedFromEntity.getIngredientsPurchaseStatusListByProductCategoryMap());
-//       shopListProductsDTO.setHideChecked(shopListProductsRetrievedFromEntity.getHideChecked());
-//       shopListProductsDTO.setPureAlphabetOrder(shopListProductsRetrievedFromEntity.getPureAlphabetOrder());
-
-        return "my-list-products";
-    }
-
-    @PutMapping(value = "/list/products",  params = {"checkboxStatusUpdate"})
-    public String updatedCheckedStatusOfItemsInShopList (Principal principal,
-                                              HttpServletRequest httpServletRequest){
-
-        System.out.println();
-        String[] checkboxStatusUpdates = httpServletRequest.getParameterMap().get("checkboxStatusUpdate");
-        String hideCheckedSlider = httpServletRequest.getParameter("hideCheckedSlider");
-
-        this.shoppingListFromRecipesService.updateCheckedStatusOfProductsBought(checkboxStatusUpdates, principal.getName());
-
-        return "redirect:/list/products";
-    }
-
-    @PutMapping(value = "/list/products",  params = {"returnToRecipeList", "checkboxStatusUpdate"})
-    public String updatedCheckedStatusOfItemsInShopListAndReturnToRecipesList (Principal principal,
-                                                         HttpServletRequest httpServletRequest){
-
-        System.out.println();
-
-        String[] checkboxStatusUpdates = httpServletRequest.getParameterMap().get("checkboxStatusUpdate");
-
-        if (checkboxStatusUpdates.length == 0){
-            checkboxStatusUpdates[0]= "dummyEntryToProduceLength1";
-        }
-
-        this.shoppingListFromRecipesService.updateCheckedStatusOfProductsBought(checkboxStatusUpdates, principal.getName());
-
-
-        return "redirect:/list/recipes";
-    }
 }

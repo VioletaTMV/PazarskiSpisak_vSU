@@ -29,8 +29,6 @@ public interface UserService {
 
     boolean register(UserRegisterDTO userRegisterDTO);
 
-    void encryptPasswordMigratedUsers();
-
     Optional<User> findByDisplayNickname(String displayNickname);
 
 

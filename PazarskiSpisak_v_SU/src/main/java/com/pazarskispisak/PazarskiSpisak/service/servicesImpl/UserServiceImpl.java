@@ -126,16 +126,6 @@ public class UserServiceImpl implements UserService {
         return true;
     }
 
-    @Override
-    public void encryptPasswordMigratedUsers() {
-        List<User> migratedUsers = this.userRepository.findByIdBetween(1, 15);
-
-        for (int i = 0; i < migratedUsers.size(); i++) {
-            User currentUser = migratedUsers.get(i);
-            this.userRepository.updateUserPasswordWithEncodedOne(this.passwordEncoder.encode(currentUser.getPassword()), currentUser.getId());
-        }
-
-    }
 
     @Override
     public Optional<User> findByDisplayNickname(String displayNickname) {

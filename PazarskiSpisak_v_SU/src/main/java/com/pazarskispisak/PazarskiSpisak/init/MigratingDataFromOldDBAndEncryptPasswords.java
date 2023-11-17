@@ -31,8 +31,6 @@
 //            //migrating data
 //         this.seedService.seedDatabase();
 //
-//            //encrypting migrated passwords
-//        this.userService.encryptPasswordMigratedUsers();
 //
 //    }
 //}

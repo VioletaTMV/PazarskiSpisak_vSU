@@ -4,11 +4,11 @@ import java.nio.file.Path;
 
 public class ImportPathLegacyData {
 
-    public static final Path importUsersPath = Path.of("src", "main", "resources", "dbContent", "Users_with_recipes_asOf_may2023.json");
+//    public static final Path importUsersPath = Path.of("src", "main", "resources", "dbContent", "Users_with_recipes_asOf_may2023.json");
     public static final Path importItemCategoriesPath = Path.of("src", "main", "resources", "dbContent", "Artcategory_asOf_may2023.json");
     public static final Path importIngredientsPath = Path.of("src", "main", "resources", "dbContent", "Ingredients_asOf_may2023.json");
     public static final Path importItemsPath = Path.of("src", "main", "resources", "dbContent", "Items_non_food_asOf_may2023.json");
-    public static final Path importRecipesPath = Path.of("src", "main", "resources", "dbContent", "Recipes_as_Of_may2023.json");
+    public static final Path importRecipesPath = Path.of("src", "main", "resources", "dbContent", "recipes_limit50.json");
     public static final Path importRecipeIngredientsPath = Path.of("src", "main", "resources", "dbContent", "Recipe_Ingredients_as_Of_may2023.json");
     public static final Path importSaladCategoryRecipesPath = Path.of("src", "main", "resources", "dbContent", "RecipeCategories", "RecipeCategories_Salad_RecipeLegacyCookIDs_as_Of_may2023.json");
     public static final Path importAppetizersCategoryRecipesPath = Path.of("src", "main", "resources", "dbContent", "RecipeCategories", "RecipeCategories_Appetizers_RecipeLegacyCookIDs_as_Of_may2023.json");

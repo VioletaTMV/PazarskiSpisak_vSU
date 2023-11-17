@@ -19,7 +19,7 @@ public class SecurityConfiguration {
 
     private String rememberMeKey;
 
-    public SecurityConfiguration(@Value("${PazarskiSpisak.remember.me.key}") String rememberMeKey) {
+    public SecurityConfiguration(@Value("${PazarskiSpisak_v_SU.remember.me.key}") String rememberMeKey) {
         this.rememberMeKey = rememberMeKey;
     }
 

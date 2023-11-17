@@ -49,32 +49,6 @@ public class SeedServiceImpl implements SeedService {
 
 
     @Override
-    public void importUsers() throws FileNotFoundException {
-
-        if (this.userService.areImported()) {
-            return;
-        }
-
-        User userVilcho = new User();
-        userVilcho.setEmail("vilcho@yahoo.com");
-        userVilcho.setPassword("viliadmin");
-        userVilcho.setDisplayNickname("PS");
-        userVilcho.setLegacyUserLogname("vili");
-
-        this.userService.save(userVilcho);
-
-        ImportUserDTO[] importUserDTOS = this.gson.fromJson(new FileReader(importUsersPath.toFile()), ImportUserDTO[].class);
-
-        List<User> usersToImportToDB = Arrays.stream(importUserDTOS)
-                .filter(importUserDTO -> !importUserDTO.getEmail().equals("vilcho@yahoo.com"))
-                .map(importUserDTO -> this.modelMapper.map(importUserDTO, User.class))
-                .toList();
-
-        this.userService.saveAll(usersToImportToDB);
-
-    }
-
-    @Override
     public void importItemCategories() throws FileNotFoundException {
 
         if (this.itemCategoryService.areImported()) {
@@ -97,8 +71,8 @@ public class SeedServiceImpl implements SeedService {
     @Transactional(rollbackFor = Throwable.class)
     public void importIngredientsAndTheirAltMeasurements() throws FileNotFoundException {
 
-        if (this.ingredientService.areImported()){
-          //  && this.ingredientMeasuresValuesService.areImported()) {
+        if (this.ingredientService.areImported()) {
+            //  && this.ingredientMeasuresValuesService.areImported()) {
             return;
         }
 
@@ -190,14 +164,8 @@ public class SeedServiceImpl implements SeedService {
             Recipe recipe = this.modelMapper.map(importRecipeDTO, Recipe.class);
 
             recipe.setVisible(importRecipeDTO.isVisible() == 1 ? true : false);
-
-            User recipePublisher;
-
-            if (importRecipeDTO.getCook_userId() == 10 || importRecipeDTO.getCook_userId() == 4 || importRecipeDTO.getCook_userId() == 5) {
-                recipePublisher = this.userService.findByEmail("vilcho@yahoo.com").get();
-            } else {
-                recipePublisher = this.userService.findByLegacyId(importRecipeDTO.getCook_userId());
-            }
+            System.out.println();
+            User recipePublisher = this.userService.findByLegacyId(importRecipeDTO.getCook_userId());
 
             recipe.setPublishedBy(recipePublisher);
 

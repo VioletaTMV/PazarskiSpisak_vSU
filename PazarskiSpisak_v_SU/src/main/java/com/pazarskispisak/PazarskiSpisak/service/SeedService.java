@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public interface SeedService {
 
-    void importUsers() throws FileNotFoundException;
+//    void importUsers() throws FileNotFoundException;
     void importItemCategories() throws FileNotFoundException;
     void importIngredientsAndTheirAltMeasurements() throws FileNotFoundException;
     void importItems() throws FileNotFoundException;
@@ -14,7 +14,7 @@ public interface SeedService {
     void fillRecipeCategoriesGroup();
 
     default void seedDatabase() throws IOException {
-        importUsers();
+//        importUsers();
         importItemCategories();
         importIngredientsAndTheirAltMeasurements();
         importItems();
