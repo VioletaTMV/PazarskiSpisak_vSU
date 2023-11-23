@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec='http://www.thymeleaf.org/extras/spring-security'>
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+<main>
+    <div class="container-account r-add-container clr-grayish round-corners-25">
+
+        <section class="r-add-header row round-corners-25">
+            <h2 class="text-15-left-padding text-center text-white">Твоята рецепта за
+                <span th:text="${recipePictureModel.recipeName}">Recipe name</span>
+                беше добавена успешно!</h2>>
+
+            <h3 class="text-center text-white">Добави снимка за
+                <span th:text="${recipePictureModel.recipeName}">Recipe name</span></h3>
+        </section>
+
+
+        <form
+                th:action="@{/recipe/add/picture}"
+                th:method="patch"
+                th:object="${recipePictureModel}"
+                enctype="multipart/form-data">
+
+            <section class="row clr-beigeish round-corners-25">
+                <div class="form-group round-corners-25">
+                    <label class="pic-upl-btn" for="r-pic-upl">Снимка <span class="font-12">(до 25 KB)</span>:
+                    </label>
+                    <input type="file"
+                           id="r-pic-upl"
+                           name="r-picture"
+                           accept="image/png, image/jpeg, image/jpg"
+                           class="form-control"
+                           th:field="*{multipartFile}">
+
+                    <input th:type="hidden" th:field="${recipePictureModel.recipeId}">
+                    <input th:type="hidden" th:field="${recipePictureModel.recipeName}">
+                    <input th:type="hidden" th:field="${recipePictureModel.recipePublishedById}">
+
+                    <div th:if="${operationNotAllowed}"
+                         th:text="${operationNotAllowed}"
+                         class="alert-message font-14">
+                        Unauthorized operation.
+                    </div>
+
+                    <div th:if="${invalidFile}"
+                         th:text="${invalidFile}"
+                         class="alert-message font-14">
+                        Invalid file.
+                    </div>
+
+                    <div th:if="${uploadFailed}"
+                         th:text="${uploadFailed}"
+                         class="alert-message font-14">
+                        Upload failed.
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="row button-row">
+                <div class="col /*col-md-4*/">
+                    <div class="button-holder d-flex">
+                        <input class="font-18 btn" type="submit" value="Добави снимка"/>
+                    </div>
+                </div>
+
+            </section>
+
+        </form>
+    </div>
+</main>
+
+
+<footer></footer>
+
+</body>
+
+</html>

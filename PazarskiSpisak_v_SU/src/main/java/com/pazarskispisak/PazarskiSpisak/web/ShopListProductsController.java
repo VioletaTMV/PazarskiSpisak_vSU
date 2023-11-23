@@ -74,7 +74,7 @@ public class ShopListProductsController {
         String[] checkboxStatusUpdates = httpServletRequest.getParameterMap().get("checkboxStatusUpdate");
         String hideCheckedSlider = httpServletRequest.getParameter("hideCheckedSlider");
 
-        this.shoppingListFromRecipesService.updateCheckedStatusOfProductsBought(checkboxStatusUpdates, principal.getName());
+        this.shoppingListFromRecipesService.updateCheckedStatusOfProductsBought(checkboxStatusUpdates, principal.getName(), hideCheckedSlider);
 
         return "redirect:/list/products";
     }
@@ -87,11 +87,13 @@ public class ShopListProductsController {
 
         String[] checkboxStatusUpdates = httpServletRequest.getParameterMap().get("checkboxStatusUpdate");
 
+        String hideCheckedSlider = httpServletRequest.getParameter("hideCheckedSlider");
+
         if (checkboxStatusUpdates.length == 0){
             checkboxStatusUpdates[0]= "dummyEntryToProduceLength1";
         }
 
-        this.shoppingListFromRecipesService.updateCheckedStatusOfProductsBought(checkboxStatusUpdates, principal.getName());
+        this.shoppingListFromRecipesService.updateCheckedStatusOfProductsBought(checkboxStatusUpdates, principal.getName(), hideCheckedSlider);
 
 
         return "redirect:/list/recipes";

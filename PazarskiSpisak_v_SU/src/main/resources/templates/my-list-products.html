@@ -59,19 +59,6 @@
 
                         </div>
 
-                        <div>
-                            <p class="text-white">По азбучен ред </p>
-                            <!-- Rounded switch -->
-                            <label class="switch">
-                                <input
-                                        th:type="checkbox"
-                                        th:checked="*{pureAlphabetOrder}"
-                                        >
-                                <span class="slider round"></span>
-                            </label>
-                            <!--                                <p class="text-white"> азбучен ред </p>-->
-                        </div>
-
 
                         <div class="cart-ingredients-list-container round-corners-25"
                              th:each="mapEntry, mapEntryStat: *{ingredientsPurchaseStatusListByProductCategoryMap}">

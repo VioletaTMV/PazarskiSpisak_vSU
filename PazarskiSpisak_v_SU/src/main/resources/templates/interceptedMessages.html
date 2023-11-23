@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec='http://www.thymeleaf.org/extras/spring-security'>
+
+<head>
+    <title>ShoppingListProject</title>
+    <th:block th:replace="~{fragments/head}"></th:block>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar}">Navbar</div>
+
+<header class="container-fluid">
+
+    <h1 th:if="fileUploadTooLargeInterceptorHandled"
+        th:text="${fileUploadTooLargeInterceptorHandled}"
+        class="text-white">Interceptor error</h1>
+
+</header>
+
+
+<main></main>
+<footer></footer>
+
+
+</body>
+
+</html>
+
+
+

@@ -19,9 +19,6 @@ public class RecipeAddDTO {
     @UniqueElements(message = "Не може да се въвежда един продукт повече от веднъж в рецепта.")
     private List<@Valid RecipeIngredientWithDetailsAddDTO> recipeIngredientWithDetailsAddDTOList;
 
-    //размера да не е повече от 25KB??
-    private String picture;
-
     @NotNull(message = "Задължително поле.")
     @Min(value = 1, message = "Минимум 1 порция.")
     @Max(value = 99, message = "Броят порции трябва да бъде под 100.")
@@ -70,15 +67,6 @@ public class RecipeAddDTO {
 
     public RecipeAddDTO setRecipeName(String recipeName) {
         this.recipeName = recipeName;
-        return this;
-    }
-
-    public String getPicture() {
-        return picture;
-    }
-
-    public RecipeAddDTO setPicture(String picture) {
-        this.picture = picture;
         return this;
     }
 

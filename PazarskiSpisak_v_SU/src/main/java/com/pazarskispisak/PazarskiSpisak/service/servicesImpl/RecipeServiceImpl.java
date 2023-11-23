@@ -1,9 +1,6 @@
 package com.pazarskispisak.PazarskiSpisak.service.servicesImpl;
 
-import com.pazarskispisak.PazarskiSpisak.models.dtos.RecipeAddDTO;
-import com.pazarskispisak.PazarskiSpisak.models.dtos.RecipeIngredientWithDetailsAddDTO;
-import com.pazarskispisak.PazarskiSpisak.models.dtos.RecipeIngredientWithDetailsDTO;
-import com.pazarskispisak.PazarskiSpisak.models.dtos.RecipeViewDTO;
+import com.pazarskispisak.PazarskiSpisak.models.dtos.*;
 import com.pazarskispisak.PazarskiSpisak.models.entities.Recipe;
 import com.pazarskispisak.PazarskiSpisak.models.entities.RecipeIngredientWithDetails;
 import com.pazarskispisak.PazarskiSpisak.models.entities.User;
@@ -15,15 +12,21 @@ import com.pazarskispisak.PazarskiSpisak.service.RecipeIngredientsService;
 import com.pazarskispisak.PazarskiSpisak.service.RecipeService;
 import com.pazarskispisak.PazarskiSpisak.service.UserService;
 import com.pazarskispisak.PazarskiSpisak.service.exception.ObjectNotFoundException;
+import com.pazarskispisak.PazarskiSpisak.util.FileUploadUtil;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.time.Duration;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+
+import static com.pazarskispisak.PazarskiSpisak.constants.UploadDirectory.UPLOAD_DIRECTORY;
 
 @Service
 public class RecipeServiceImpl implements RecipeService {
@@ -70,7 +73,7 @@ public class RecipeServiceImpl implements RecipeService {
         Optional<Recipe> recipe = this.recipeRepository.findById(id);
 
         if (recipe.isEmpty() || recipe.get().isDeleted()) {
-            throw new ObjectNotFoundException("Оферта с id " + id + " не съществува.");
+            throw new ObjectNotFoundException("Рецепта с id " + id + " не съществува.");
         }
 
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -101,6 +104,9 @@ public class RecipeServiceImpl implements RecipeService {
         }
 
         recipeViewDTO.setRecipeIngredientWithDetailsDTOSet(recipeIngredientWithDetailsDTOSet);
+
+        //добавяме пълния път до снимката
+        recipeViewDTO.setPicture(getRecipeImgPath(recipe.get().getPicture()));
 
         this.recipeRepository.increaseViewTimesByOne(recipe.get().getViewCount() + 1, recipe.get().getId());
 
@@ -189,7 +195,8 @@ public class RecipeServiceImpl implements RecipeService {
             RecipeViewDTO recipeViewDTO = this.modelMapper.map(recipe, RecipeViewDTO.class)
                     .setCookTime(cookTime)
                     .setPrepTime(prepTime)
-                    .setPublishedBy(recipe.getPublishedBy().getDisplayNickname());
+                    .setPublishedBy(recipe.getPublishedBy().getDisplayNickname())
+                    .setPicture(getRecipeImgPath(recipe.getPicture()));
 
             recipeViewDTOSet.add(recipeViewDTO);
         }
@@ -223,6 +230,49 @@ public class RecipeServiceImpl implements RecipeService {
     public Optional<Recipe> findById(Long recipeId) {
 
         return this.recipeRepository.findById(recipeId);
+    }
+
+    @Override
+    public String uploadPictureToDirAndGetFileName(MultipartFile multipartFile,
+                                                   UserBasicDTO userBasicDTO,
+                                                   RecipePictureAddDTO recipePictureAddDTO) throws IOException {
+        String recipeImageName = null;
+        System.out.println();
+//        //долното дали не е излишно , дали не се проверява във Валидацията? Или не, защото не е задължително поле
+//        if (multipartFile.isEmpty()) {
+//            return Optional.empty();
+//        }
+        String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+        recipeImageName = userBasicDTO.getId()
+                + "_"
+                + recipePictureAddDTO.getRecipeName().replaceAll(" ", "_");
+        FileUploadUtil.saveFile(UPLOAD_DIRECTORY, recipeImageName, multipartFile);
+        return recipeImageName;
+    }
+    @Override
+    public RecipePictureAddDTO getRecipePictureAddDTO(Long recipeId) {
+        Optional<Recipe> byId = this.recipeRepository.findById(recipeId);
+        RecipePictureAddDTO recipePictureAddDTO = this.modelMapper.map(byId, RecipePictureAddDTO.class);
+        System.out.println();
+        return recipePictureAddDTO;
+    }
+    @Override
+    @Transactional
+    public void savePictureNameForRecipeInDB(Long recipeId, Long logedUserId, String recipeImageName) {
+        Optional<Recipe> byIdOpt = this.recipeRepository.findById(recipeId);
+        byIdOpt.get().setPicture(recipeImageName);
+        this.recipeRepository.save(byIdOpt.get());
+    }
+
+    @Override
+    public boolean isCurrentUserAllowedToUploadPictureForCurrentRecipe(UserBasicDTO userBasicDTO, RecipePictureAddDTO recipePictureAddDTO) {
+        Optional<Recipe> recipeOpt = this.recipeRepository.findById(recipePictureAddDTO.getRecipeId());
+        boolean isCurrentUserThePublisherOfCurrentRecipe = userBasicDTO.getId().equals(recipePictureAddDTO.getRecipePublishedById());
+        if (recipeOpt.isEmpty() ||
+                !isCurrentUserThePublisherOfCurrentRecipe) {
+            return false;
+        }
+        return true;
     }
 
     private Duration getDuration(Short... modelPrepTimesFromMinutesToDays) {
@@ -282,5 +332,13 @@ public class RecipeServiceImpl implements RecipeService {
         }
 
         return cookTime.toString();
+    }
+
+    @Override
+    public String getRecipeImgPath(String pictureName) {
+        if (pictureName == null) {
+            return null;
+        }
+        return "/" + UPLOAD_DIRECTORY + "/" + pictureName;
     }
 }

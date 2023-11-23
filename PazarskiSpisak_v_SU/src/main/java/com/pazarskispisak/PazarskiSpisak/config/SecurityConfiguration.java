@@ -31,10 +31,11 @@ public class SecurityConfiguration {
       return httpSecurity.authorizeHttpRequests(
                 authorizeRequests -> authorizeRequests
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
+                        .requestMatchers("/recipe-pictures/**").permitAll()
                         .requestMatchers("/", "/user/register", "/user/login", "/user/login-error").permitAll()
                         .requestMatchers("/recipes-by-category").permitAll()
-//                        само за регистрирани потребители ще могат да добавят в списък за сега
-                        .requestMatchers(HttpMethod.GET, "/list/recipes").permitAll()
+//                        само за регистрирани потребители ще могат да добавят в списък за сега, затова долното е закоментирано, да го изтрия направо
+//                        .requestMatchers(HttpMethod.GET, "/list/recipes").permitAll()
                         .requestMatchers(HttpMethod.GET, "/recipe").permitAll()
                         .requestMatchers("/error").permitAll()
                         //да изтрия долния ред когато го изтествам в постман така че Products да си е достъпно само за логнати юзъри

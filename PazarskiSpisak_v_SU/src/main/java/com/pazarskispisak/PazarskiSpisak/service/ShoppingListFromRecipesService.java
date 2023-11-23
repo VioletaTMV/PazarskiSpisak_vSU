@@ -27,5 +27,5 @@ public interface ShoppingListFromRecipesService {
 
     ShopListProductsDTO getShopListProductsForUser(String userEmail);
 
-    void updateCheckedStatusOfProductsBought(String[] checkboxStatusUpdates, String userEmail);
+    void updateCheckedStatusOfProductsBought(String[] checkboxStatusUpdates, String userEmail, String hideCheckedStatus);
 }

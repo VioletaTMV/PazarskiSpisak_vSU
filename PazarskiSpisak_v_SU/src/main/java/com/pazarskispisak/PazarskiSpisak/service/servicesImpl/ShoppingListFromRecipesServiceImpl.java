@@ -76,6 +76,8 @@ public class ShoppingListFromRecipesServiceImpl implements ShoppingListFromRecip
             Short desiredServingsQty = recipeEntry.getValue();
             recipeShortInfoDTO.setDesiredServings(desiredServingsQty);
 
+            recipeShortInfoDTO.setPicture(this.recipeService.getRecipeImgPath(recipeEntry.getKey().getPicture()));
+
             recipeShortInfoDTOList.add(recipeShortInfoDTO);
         }
 
@@ -240,7 +242,7 @@ public class ShoppingListFromRecipesServiceImpl implements ShoppingListFromRecip
 
     @Override
     @Transactional
-    public void updateCheckedStatusOfProductsBought(String[] checkboxStatusUpdates, String userEmail) {
+    public void updateCheckedStatusOfProductsBought(String[] checkboxStatusUpdates, String userEmail, String hideCheckedStatus) {
 
         Optional<ShoppingListFromRecipes> shopListOpt = this.shoppingListFromRecipesRepository.findByCookerEmail(userEmail);
         System.out.println();
