@@ -131,7 +131,7 @@ public class ShopListController {
     public String addToShopList(@RequestParam("id") Long id,
                                 @ModelAttribute("shopListRecipesModel") ShopListRecipesDTO shopListRecipesDTO,
                                 Principal principal) {
-
+        System.out.println();
         if (principal == null) {
             return "redirect:/user/login";
         }
