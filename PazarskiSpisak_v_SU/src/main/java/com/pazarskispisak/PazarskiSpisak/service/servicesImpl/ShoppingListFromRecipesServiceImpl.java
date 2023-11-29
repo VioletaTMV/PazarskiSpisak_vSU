@@ -261,6 +261,34 @@ public class ShoppingListFromRecipesServiceImpl implements ShoppingListFromRecip
 
     }
 
+    @Override
+    @Transactional
+    public void findAndDeleteShopListsInactiveByLastAccessedDate(LocalDate inactiveShoplistDate) {
+
+        List<ShoppingListFromRecipes> byLastAccessedDateBefore = this.shoppingListFromRecipesRepository.findByLastAccessedDateBefore(inactiveShoplistDate);
+
+        if (byLastAccessedDateBefore.isEmpty()) {
+            return;
+        }
+
+        List<User> usersToResetShopListToNull = byLastAccessedDateBefore
+                .stream()
+                .map(ShoppingListFromRecipes::getCooker)
+                .toList();
+
+        for (User user : usersToResetShopListToNull) {
+
+            user.setShoppingListFromRecipes(null);
+            this.userService.save(user);
+
+            //ako горното не работи да го изтрия и да ползвам долното. Т.е. ако репозиторито не си познава
+            //извадения юзър.
+//            this.userService.resetShopList(user);
+        }
+
+        this.shoppingListFromRecipesRepository.deleteAll(byLastAccessedDateBefore);
+    }
+
 
     private Double calculateTotalQtyOfProductNeeded(Ingredient ingredient, Map<Recipe, Short> recipesSelectedWithDesiredServingsMap) {
 

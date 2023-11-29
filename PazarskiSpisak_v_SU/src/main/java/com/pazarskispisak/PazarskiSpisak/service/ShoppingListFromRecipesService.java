@@ -6,6 +6,7 @@ import com.pazarskispisak.PazarskiSpisak.models.dtos.ShopListRecipesDTO;
 import com.pazarskispisak.PazarskiSpisak.models.dtos.UserBasicDTO;
 import com.pazarskispisak.PazarskiSpisak.models.entities.ShoppingListFromRecipes;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,4 +29,6 @@ public interface ShoppingListFromRecipesService {
     ShopListProductsDTO getShopListProductsForUser(String userEmail);
 
     void updateCheckedStatusOfProductsBought(String[] checkboxStatusUpdates, String userEmail, String hideCheckedStatus);
+
+    void findAndDeleteShopListsInactiveByLastAccessedDate(LocalDate inactiveShoplistDate);
 }

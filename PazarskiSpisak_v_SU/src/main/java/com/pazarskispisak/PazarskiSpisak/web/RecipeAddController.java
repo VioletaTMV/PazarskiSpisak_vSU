@@ -106,6 +106,8 @@ public class RecipeAddController {
     @GetMapping("/recipe/add/picture")
     public String recipePictureAdd(@RequestParam("id") Long recipeId,
                                    @ModelAttribute("recipePictureModel") RecipePictureAddDTO recipePictureAddDTO) {
+
+
         RecipePictureAddDTO recipePictureAddDTOfromDB = this.recipeService.getRecipePictureAddDTO(recipeId);
         recipePictureAddDTO.setRecipeId(recipePictureAddDTOfromDB.getRecipeId());
         recipePictureAddDTO.setRecipeName(recipePictureAddDTOfromDB.getRecipeName());
