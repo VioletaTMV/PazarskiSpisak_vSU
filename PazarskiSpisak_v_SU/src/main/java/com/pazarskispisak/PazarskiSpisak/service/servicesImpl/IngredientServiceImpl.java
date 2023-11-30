@@ -19,9 +19,9 @@ import java.util.stream.Collectors;
 @Service
 public class IngredientServiceImpl implements IngredientService {
 
-    private IngredientRepository ingredientRepository;
-    private ModelMapper modelMapper;
-    private ItemCategoryService itemCategoryService;
+    private final IngredientRepository ingredientRepository;
+    private final ModelMapper modelMapper;
+    private final ItemCategoryService itemCategoryService;
 
     @Autowired
     public IngredientServiceImpl(IngredientRepository ingredientRepository, ModelMapper modelMapper, ItemService itemService, ItemCategoryService itemCategoryService) {
@@ -50,23 +50,20 @@ public class IngredientServiceImpl implements IngredientService {
         return this.ingredientRepository.findByLegacyArticleId(legacyArticleId);
     }
 
-    @Override
-    public IngredientMeasurementUnitEnum findMainUnitOfMeasurement(Ingredient ingredient) {
-        return this.ingredientRepository.findIngredientMainUnitOfMeasurementById(ingredient.getId());
-    }
+//    @Override
+//    public IngredientMeasurementUnitEnum findMainUnitOfMeasurement(Ingredient ingredient) {
+//        return this.ingredientRepository.findIngredientMainUnitOfMeasurementById(ingredient.getId());
+//    }
 
     @Override
     public List<IngredientDTO> getAllIngredientsSortedAlphabetically() {
 
-        //да го коригирам така че да не връща цялото ентити а само имената на продуктите
         List<Ingredient> allIngredients = this.ingredientRepository.findAll();
 
-        List<IngredientDTO> ingredientDTOS = allIngredients.stream()
+        return allIngredients.stream()
                 .map(i -> this.modelMapper.map(i, IngredientDTO.class))
                 .sorted(Comparator.comparing(IngredientDTO::getName))
                 .toList();
-
-        return ingredientDTOS;
     }
 
     @Override

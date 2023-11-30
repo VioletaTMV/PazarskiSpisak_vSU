@@ -66,7 +66,7 @@ public class ShopListProductsController {
         return "my-list-products";
     }
 
-    @PutMapping(value = "/list/products",  params = {"checkboxStatusUpdate"})
+    @PutMapping(value = "/list/products",  params = {"saveProductStatusToDB", "checkboxStatusUpdate"})
     public String updatedCheckedStatusOfItemsInShopList (Principal principal,
                                                          HttpServletRequest httpServletRequest){
 
@@ -88,10 +88,6 @@ public class ShopListProductsController {
         String[] checkboxStatusUpdates = httpServletRequest.getParameterMap().get("checkboxStatusUpdate");
 
         String hideCheckedSlider = httpServletRequest.getParameter("hideCheckedSlider");
-
-        if (checkboxStatusUpdates.length == 0){
-            checkboxStatusUpdates[0]= "dummyEntryToProduceLength1";
-        }
 
         this.shoppingListFromRecipesService.updateCheckedStatusOfProductsBought(checkboxStatusUpdates, principal.getName(), hideCheckedSlider);
 

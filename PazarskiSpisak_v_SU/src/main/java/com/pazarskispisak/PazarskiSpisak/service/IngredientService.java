@@ -21,7 +21,7 @@ public interface IngredientService{
 
     Optional<Ingredient> findByLegacyArticleId(int legacyArticleId);
 
-    IngredientMeasurementUnitEnum findMainUnitOfMeasurement(Ingredient ingredient);
+//    IngredientMeasurementUnitEnum findMainUnitOfMeasurement(Ingredient ingredient);
 
     List<IngredientDTO> getAllIngredientsSortedAlphabetically();
 

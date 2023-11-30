@@ -21,11 +21,10 @@ import java.util.Optional;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
-
-    private UserRepository userRepository;
-    private ModelMapper modelMapper;
-    private PasswordEncoder passwordEncoder;
+    private final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
+    private final UserRepository userRepository;
+    private final ModelMapper modelMapper;
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
     public UserServiceImpl(UserRepository userRepository, ModelMapper modelMapper, PasswordEncoder passwordEncoder) {
@@ -61,55 +60,13 @@ public class UserServiceImpl implements UserService {
         return this.userRepository.findByEmail(email);
     }
 
-    //login i logout ги изтриваме, защото вече ги имплементираме посредством Spring security!!! Закоментирам ги за да имам за справка ако реша
-//    @Override
-//    public void login(UserLoginDTO userLoginDTO) {
-//
-//        User currentUser = this.userRepository.findByEmail(userLoginDTO.getEmail()).get();
-//
-//        doLogin(currentUser);
-//
-////        Optional<User> userOpt = findByEmail(userLoginDTO.getEmail());
-////
-////        if (userOpt.isEmpty()) {
-////            // върни съобщение за грешка
-////            LOGGER.info("User with name [{}] not found", userLoginDTO.getEmail());
-////            return false;
-////        }
-////
-////        String rawPassword = userLoginDTO.getPassword();
-////        String existingUserEncryptedPassword = userOpt.get().getPassword();
-////
-////        boolean passwordsAreEqual = this.passwordEncoder.matches(rawPassword, existingUserEncryptedPassword);
-//
-////        if (passwordsAreEqual) {
-////            doLogin(userOpt.get());
-////        }
-////        else {
-////            logout();
-////        }
-////
-////        return passwordsAreEqual;
-//    }
-//
-//
-//    private void doLogin(User user) {
-//
-//        this.currentUser.setDisplayNickname(user.getDisplayNickname()).setLoggedIn(true);
-//
-//        updateLastLogTimeForUserInDB(user);
-//    }
-
+    //Долното или да го променя, да не следи самия процес по логин, защото римембърме куки не би го отразило...
+    //ами ...или да го махна, а пък да си следя кой има активен пазарски списък...
+    //ако го махам, да го махна и като поле в ентитито
     private void updateLastLogTimeForUserInDB(User user) {
 
         this.userRepository.updateLastTimeLoggedIn(LocalDateTime.now(), user.getId());
     }
-
-    //login i logout ги изтриваме, защото вече ги имплементираме посредством Spring security!!! Закоментирам ги за да имам за справка ако реша
-//    @Override
-//    public void logout() {
-//        this.currentUser.clearCurrentUser();
-//    }
 
     @Override
     public boolean register(UserRegisterDTO userRegisterDTO) {
@@ -120,19 +77,12 @@ public class UserServiceImpl implements UserService {
 
         this.userRepository.save(newUser);
 
-        //вече не можем да правим до логин
-//        doLogin(newUser);
-
         return true;
     }
 
-
     @Override
     public Optional<User> findByDisplayNickname(String displayNickname) {
-
-        Optional<User> byDisplayNickname = this.userRepository.findByDisplayNickname(displayNickname);
-
-        return byDisplayNickname;
+        return this.userRepository.findByDisplayNickname(displayNickname);
     }
 
     @Override

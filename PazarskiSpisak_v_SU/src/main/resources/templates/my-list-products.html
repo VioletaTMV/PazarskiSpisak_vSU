@@ -89,6 +89,10 @@
                             </div>
                         </div>
 
+                        <input
+                               th:type="hidden"
+                               th:name="checkboxStatusUpdate"
+                               />
 
                     </section>
 
@@ -118,11 +122,10 @@
                             <div class="button-holder d-flex">
                                 <input class="font-18 btn"
                                        th:type="submit"
-                                       th:name="checkboxStatusUpdate"
+                                       th:name="saveProductStatusToDB"
                                        value="Запомни и продължи покупките друг път"/>
                                 <p class="text-white">*Списъкът се пази до 1 месец, считано от последната активност по
-                                    него,
-                                    след което се изтрива.</p>
+                                    него, след което се изтрива.</p>
                             </div>
                         </div>
                     </section>

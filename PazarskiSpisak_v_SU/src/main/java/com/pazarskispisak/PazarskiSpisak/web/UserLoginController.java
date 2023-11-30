@@ -51,42 +51,4 @@ public class UserLoginController {
 
         return "login";
     }
-
-
-
-    //целия PostMapping за Login вече се поема от Spring Security
-//    @PostMapping("/login")
-//    public String login(@Valid UserLoginDTO userLoginModel,
-//                        BindingResult bindingResult,
-//                        RedirectAttributes redirectAttributes) {
-//
-//        if (bindingResult.hasErrors()){
-//
-//            redirectAttributes.addFlashAttribute("userLoginModel", userLoginModel);
-//            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.userLoginModel", bindingResult);
-//
-//            return "redirect:/user/login";
-//        }
-//
-//        this.userService.login(userLoginModel);
-//
-////        System.out.println("User: " + userLoginDTO.getEmail() + " is logged: " + userService.login(userLoginDTO));
-//
-////        if (!loginSuccessful) {
-////            //без да редиректва да изпише съобщение за грешни данни???
-////            return "redirect:/user/login";
-////        }
-//
-//        return "redirect:/";
-//    }
-
-    //Целия Logout се поема вече с Post метод от Spring Security
-//    @GetMapping("/logout")
-//    public String logout() {
-//
-//        this.userService.logout();
-//
-//        return "redirect:/";
-//    }
-
 }

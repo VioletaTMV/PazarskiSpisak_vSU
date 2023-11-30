@@ -27,21 +27,15 @@ public class IngredientDTO {
     @IngredientsMeasurementUnitsEnumSubset(anyOf = {IngredientMeasurementUnitEnum.GRAM, IngredientMeasurementUnitEnum.MILLILITER}, message = "Изберете между гр. или мл.")
     private IngredientMeasurementUnitEnum mainUnitOfMeasurement;
 
-    //някаква къстъм валидация може би че или и key и value трябва да са попълнени, или нито едното от тях?
-//    private List<IngredientAlternativeMeasurementUnitAndValueDTO> ingredientAlternativeMeasurementUnitAndValueListOfDTOs;
-
-//    @MapValueFloatPositiveOrNull(message = "К-вото трябва да е позитивно число, с до 2 символа след десетичния знак. Ако съответната алт.м.ед. не е приложима за продукта оставете полето за к-во празно.")
     private Map<IngredientMeasurementUnitEnum,
         @FloatPositiveOrNullWithMax2DecimalDigits(message = "К-вото трябва да е положително число, с до 2 символа след десетичния знак. Ако съответната алт.м.ед. не е приложима за продукта оставете полето празно.")
                 Float> ingredientAltMUVMap;
 
-    //Къстъм валидация да проверява да може да бъде избрана само някоя от избраните по-горе в Основна или Алтернативни за този продукт
     @NotNull(message = "Задължително поле.")
     private IngredientMeasurementUnitEnum shoppingListDisplayUnitOfMeasurement;
 
 
     public IngredientDTO() {
-//        this.ingredientAlternativeMeasurementUnitAndValueListOfDTOs = new ArrayList<>();
         this.ingredientAltMUVMap = new LinkedHashMap<>();
     }
 
@@ -80,15 +74,6 @@ public class IngredientDTO {
         this.mainUnitOfMeasurement = mainUnitOfMeasurement;
         return this;
     }
-
-//    public List<IngredientAlternativeMeasurementUnitAndValueDTO> getIngredientAlternativeMeasurementUnitAndValueListOfDTOs() {
-//        return ingredientAlternativeMeasurementUnitAndValueListOfDTOs;
-//    }
-//
-//    public IngredientDTO setIngredientAlternativeMeasurementUnitAndValueListOfDTOs(List<IngredientAlternativeMeasurementUnitAndValueDTO> ingredientAlternativeMeasurementUnitAndValueListOfDTOs) {
-//        this.ingredientAlternativeMeasurementUnitAndValueListOfDTOs = ingredientAlternativeMeasurementUnitAndValueListOfDTOs;
-//        return this;
-//    }
 
     public IngredientMeasurementUnitEnum getShoppingListDisplayUnitOfMeasurement() {
         return shoppingListDisplayUnitOfMeasurement;

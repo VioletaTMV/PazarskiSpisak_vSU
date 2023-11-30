@@ -16,9 +16,6 @@ public class Ingredient extends Item {
     @Column(name = "main_unit_of_measure" /*, nullable = false*/)
     private IngredientMeasurementUnitEnum mainUnitOfMeasurement;
 
-//    @OneToMany(mappedBy = "ingredient", cascade = CascadeType.ALL)
-//    private Map<IngredientMeasurementUnitEnum, IngredientMeasuresValues> alternativeMeasurementUnitAndValueMap;
-
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "ingredient_measures_values",
             joinColumns = {@JoinColumn(name = "ingredient_id", referencedColumnName = "id")})
@@ -26,9 +23,6 @@ public class Ingredient extends Item {
     @MapKeyEnumerated(EnumType.STRING)
     @Column(name = "alt_measure_value")
     private Map<IngredientMeasurementUnitEnum, Float> ingredientAltMUVMap;
-
-//    @OneToMany(mappedBy = "ingredient", cascade = CascadeType.ALL)
-//    private Set<IngredientMeasuresValues> alternativeMeasurementUnitAndValueSet;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "shopping_list_display_measure_unit" /*, nullable = false*/)
