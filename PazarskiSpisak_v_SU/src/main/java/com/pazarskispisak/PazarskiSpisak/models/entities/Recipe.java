@@ -50,15 +50,8 @@ public class Recipe {
     @CollectionTable(name = "recipe_categories",
             joinColumns = @JoinColumn(name = "recipe_id"))
     @Enumerated(EnumType.STRING)
-//    @Column(name = "category_name")
     private Set<RecipeCategoryEnum> recipeCategories;
 
-//    @Enumerated(EnumType.STRING)
-//    @Column(name = "main_ingredient_type")
-//    private RecipeMainIngredientType mainIngredientType;
-
-    //с CascadeType Remove като изтрия рецепта се трият и RecipeIngredients табличните редове, но самите продукти си остават в Items
-    //bez Cascade Type Remove хвръля грешка и не изтрива рецептата, зашото казва constraint violation
     @OneToMany(mappedBy = "recipe", cascade = CascadeType.REMOVE)
     private Set<RecipeIngredientWithDetails> recipeIngredientWithDetails;
 
@@ -68,18 +61,6 @@ public class Recipe {
 
     @Column(name = "recipe_source")
     private String recipeSource;
-
-//    @Column(name = "cooking_method")
-//    @Enumerated(EnumType.STRING)
-//    private CookingMethod cookingMethod;
-
-//    @Column
-//    @Enumerated(EnumType.STRING)
-//    private Cuisine cuisine;
-
-//    @Column
-//    @Enumerated(EnumType.STRING)
-//    private RecipeVariety variety;
 
     @Column(name = "prep_time")
     private Duration prepTime;
@@ -198,22 +179,6 @@ public class Recipe {
         this.recipeCategories = recipeCategories;
     }
 
-//    public Set<Ingredient> getIngredients() {
-//        return ingredients;
-//    }
-//
-//    public void setIngredients(Set<Ingredient> ingredients) {
-//        this.ingredients = ingredients;
-//    }
-//
-//    public RecipeMainIngredientType getMainIngredientType() {
-//        return mainIngredientType;
-//    }
-//
-//    public void setMainIngredientType(RecipeMainIngredientType mainIngredientType) {
-//        this.mainIngredientType = mainIngredientType;
-//    }
-
     public User getPublishedBy() {
         return publishedBy;
     }
@@ -229,30 +194,6 @@ public class Recipe {
     public void setRecipeSource(String recipeSource) {
         this.recipeSource = recipeSource;
     }
-
-//    public CookingMethod getCookingMethod() {
-//        return cookingMethod;
-//    }
-//
-//    public void setCookingMethod(CookingMethod cookingMethod) {
-//        this.cookingMethod = cookingMethod;
-//    }
-//
-//    public Cuisine getCuisine() {
-//        return cuisine;
-//    }
-//
-//    public void setCuisine(Cuisine cuisine) {
-//        this.cuisine = cuisine;
-//    }
-//
-//    public RecipeVariety getVariety() {
-//        return variety;
-//    }
-//
-//    public void setVariety(RecipeVariety variety) {
-//        this.variety = variety;
-//    }
 
     public Duration getPrepTime() {
         return prepTime;

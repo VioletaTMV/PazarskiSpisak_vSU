@@ -6,28 +6,21 @@ import com.pazarskispisak.PazarskiSpisak.models.entities.User;
 import com.pazarskispisak.PazarskiSpisak.models.entities.UserRoleEntity;
 import com.pazarskispisak.PazarskiSpisak.models.enums.UserRoleEnum;
 import com.pazarskispisak.PazarskiSpisak.repository.UserRepository;
-import jakarta.validation.constraints.AssertTrue;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.time.LocalDate;
-import java.util.Collections;
 import java.util.Optional;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -49,14 +42,7 @@ public class UserServiceImplTests {
 
     @Test
     void testFindByEmailOptionalUserEmpty() {
-        //Arrange
-        User testUser = createTestUser();
-        when(mockedUserRepository.findByEmail(testUser.getEmail()))
-                .thenReturn(Optional.of(testUser));
-        //Act
-        Optional<User> userOpt = serviceToTest.findByEmail("nonexistent@test.com");
-        //Assert
-        Assertions.assertTrue(userOpt.isEmpty());
+        Assertions.assertTrue(() -> serviceToTest.findByEmail("nonexistent@test.com").isEmpty());
     }
 
     @Test
@@ -104,6 +90,11 @@ public class UserServiceImplTests {
     }
 
     @Test
+    void testFindByDisplayNickname_whenNonExistingUser(){
+        assertTrue(() -> serviceToTest.findByDisplayNickname("nonexistent").isEmpty());
+    }
+
+    @Test
     void testFindByDisplayNickname_whenUserExists(){
         //Arrange
         User testUser = createTestUser();
@@ -119,20 +110,6 @@ public class UserServiceImplTests {
        assertEquals(testUser.getPassword(), userOpt.get().getPassword());
        assertEquals(testUser.getRegisteredOn(), userOpt.get().getRegisteredOn());
 
-    }
-
-    @Test
-    void testFindByDisplayNickname_whenNonExistingUser(){
-        //Arrange
-        User testUser = createTestUser();
-        when(mockedUserRepository.findByDisplayNickname(testUser.getDisplayNickname()))
-                .thenReturn(Optional.of(testUser));
-
-        //Act
-        Optional<User> userOpt = serviceToTest.findByDisplayNickname("nonexistent");
-
-        //Assert
-        assertTrue(userOpt.isEmpty());
     }
 
 

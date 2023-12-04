@@ -50,11 +50,6 @@ public class IngredientServiceImpl implements IngredientService {
         return this.ingredientRepository.findByLegacyArticleId(legacyArticleId);
     }
 
-//    @Override
-//    public IngredientMeasurementUnitEnum findMainUnitOfMeasurement(Ingredient ingredient) {
-//        return this.ingredientRepository.findIngredientMainUnitOfMeasurementById(ingredient.getId());
-//    }
-
     @Override
     public List<IngredientDTO> getAllIngredientsSortedAlphabetically() {
 
@@ -105,7 +100,7 @@ public class IngredientServiceImpl implements IngredientService {
 
         Ingredient newIngredient = this.modelMapper.map(ingredientDTO, Ingredient.class);
 
-        newIngredient.setItemCategory(this.itemCategoryService.findByName(newIngredient.getItemCategory().getName()).get());
+       newIngredient.setItemCategory(this.itemCategoryService.findByName(ingredientDTO.getItemCategorySupermarketName()).orElse(null));
 
         Map<IngredientMeasurementUnitEnum, Float> onlyNonNullAltMUValues = newIngredient.getIngredientAltMUVMap().entrySet().stream()
                 .filter(entry -> entry.getValue() != null)

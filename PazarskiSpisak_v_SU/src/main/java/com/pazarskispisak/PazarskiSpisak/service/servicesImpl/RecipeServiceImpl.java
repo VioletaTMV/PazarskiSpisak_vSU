@@ -153,16 +153,20 @@ public class RecipeServiceImpl implements RecipeService {
     @Override
     public Optional<Recipe> findByRecipeNameAndCurrentlyLoggedUser(String recipeName, String email) {
 
-        //Има ли по-добър вариант за намиране на текущо логнатия юзър (долния ред)
-//        String currentlyLoggedUserEmail = SecurityContextHolder.getContext().getAuthentication().getName();
+//        Optional<User> byDisplayNicknameOpt = this.userService.findByDisplayNickname(email);
 
-        Optional<User> byDisplayNicknameOpt = this.userService.findByDisplayNickname(email);
+//        if (byDisplayNicknameOpt.isEmpty()) {
+//            return Optional.empty();
+//        }
 
-        if (byDisplayNicknameOpt.isEmpty()) {
+//        return this.recipeRepository.findByNameAndPublishedBy(recipeName, byDisplayNicknameOpt.get());
+
+        Optional<User> byEmail = this.userService.findByEmail(email);
+
+        if (byEmail.isEmpty()) {
             return Optional.empty();
         }
-
-        return this.recipeRepository.findByNameAndPublishedBy(recipeName, byDisplayNicknameOpt.get());
+        return this.recipeRepository.findByNameAndPublishedBy(recipeName, byEmail.get());
     }
 
 //    @Override

@@ -22,7 +22,8 @@
             <div class="recipes row /*mx-auto d-flex flex-row justify-content-center*/">
                 <div th:each="r: ${recipes}" class="recipe card col-sm-6 col-md-3  col-lg-2 m-1 p-0">
                     <div class="card-img-top-wrapper">
-                        <img class="card-img-top" src="/images/evie-s-gXPcOgp723g-unsplash.jpg"
+                        <img class="card-img-top"
+                             th:src="@{${r.picture}}"
                              alt="Recipe image">
                         <div class="card-body pb-1">
                             <a th:href="@{/recipe(id=${r.id})}">
