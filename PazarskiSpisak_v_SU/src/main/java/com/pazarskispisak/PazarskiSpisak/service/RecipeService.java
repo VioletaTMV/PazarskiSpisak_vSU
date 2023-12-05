@@ -37,7 +37,7 @@ public interface RecipeService {
 
     boolean existsByRecipeCategory(RecipeCategoryEnum recipeCategoryEnum);
 
-    void deleteRecipeById(Long id);
+    void deleteRecipeById(Long id, String loggedUserEmail);
 
     Optional<Recipe> findById(Long recipeId);
 

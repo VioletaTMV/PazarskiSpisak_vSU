@@ -62,11 +62,6 @@ public class RecipeServiceImpl implements RecipeService {
         return this.recipeRepository.findByLegacyCookId(legacyCookId);
     }
 
-//    @Override
-//    public void save(Recipe recipe) {
-//        this.recipeRepository.save(recipe);
-//    }
-
     @Override
     public RecipeViewDTO getByRecipeId(Long id) {
 
@@ -153,14 +148,6 @@ public class RecipeServiceImpl implements RecipeService {
     @Override
     public Optional<Recipe> findByRecipeNameAndCurrentlyLoggedUser(String recipeName, String email) {
 
-//        Optional<User> byDisplayNicknameOpt = this.userService.findByDisplayNickname(email);
-
-//        if (byDisplayNicknameOpt.isEmpty()) {
-//            return Optional.empty();
-//        }
-
-//        return this.recipeRepository.findByNameAndPublishedBy(recipeName, byDisplayNicknameOpt.get());
-
         Optional<User> byEmail = this.userService.findByEmail(email);
 
         if (byEmail.isEmpty()) {
@@ -168,21 +155,6 @@ public class RecipeServiceImpl implements RecipeService {
         }
         return this.recipeRepository.findByNameAndPublishedBy(recipeName, byEmail.get());
     }
-
-//    @Override
-//    public Long saveAndView(RecipeAddDTO recipeModel, String email) {
-//        boolean saved = save(recipeModel);
-//
-//        if (!saved) {
-//            return false;
-//        }
-//
-//        Long recipeID = findByRecipeNameAndCurrentlyLoggedUser(recipeModel.getRecipeName(), this.).get().getId();
-//
-//        getByRecipeId(recipeID);
-//
-//        return true;
-//    }
 
     @Override
     public Set<RecipeViewDTO> findAllByCategoryOrderedByDateLastModified(RecipeCategoryEnum recipeCategoryEnum) {
@@ -206,7 +178,6 @@ public class RecipeServiceImpl implements RecipeService {
         }
 
         return recipeViewDTOSet;
-
     }
 
     @Override
@@ -216,23 +187,21 @@ public class RecipeServiceImpl implements RecipeService {
 
     @Override
     @Transactional
-    public void deleteRecipeById(Long id) {
-
+    public void deleteRecipeById(Long id, String userEmail) {
         Optional<Recipe> byId = this.recipeRepository.findById(id);
 
-        if (byId.isEmpty()){
+        if (byId.isEmpty()) {
             throw new ObjectNotFoundException("Recipe with Id " + id + " doesn't exist.");
         }
-        //да направя проверка дали юзъра, който се опитва да трие е автор на рецептата???
+        if (!byId.get().getPublishedBy().getEmail().equals(userEmail)) {
+            throw new ObjectNotFoundException("User with email " + userEmail + " has no recipe with Id " + id + ".");
+        }
 
         this.recipeRepository.deleteById(id);
-
-
     }
 
     @Override
     public Optional<Recipe> findById(Long recipeId) {
-
         return this.recipeRepository.findById(recipeId);
     }
 
@@ -241,11 +210,7 @@ public class RecipeServiceImpl implements RecipeService {
                                                    UserBasicDTO userBasicDTO,
                                                    RecipePictureAddDTO recipePictureAddDTO) throws IOException {
         String recipeImageName = null;
-        System.out.println();
-//        //долното дали не е излишно , дали не се проверява във Валидацията? Или не, защото не е задължително поле
-//        if (multipartFile.isEmpty()) {
-//            return Optional.empty();
-//        }
+
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         recipeImageName = userBasicDTO.getId()
                 + "_"
@@ -253,13 +218,15 @@ public class RecipeServiceImpl implements RecipeService {
         FileUploadUtil.saveFile(UPLOAD_DIRECTORY, recipeImageName, multipartFile);
         return recipeImageName;
     }
+
     @Override
     public RecipePictureAddDTO getRecipePictureAddDTO(Long recipeId) {
         Optional<Recipe> byId = this.recipeRepository.findById(recipeId);
         RecipePictureAddDTO recipePictureAddDTO = this.modelMapper.map(byId, RecipePictureAddDTO.class);
-        System.out.println();
+
         return recipePictureAddDTO;
     }
+
     @Override
     @Transactional
     public void savePictureNameForRecipeInDB(Long recipeId, Long logedUserId, String recipeImageName) {
@@ -272,8 +239,7 @@ public class RecipeServiceImpl implements RecipeService {
     public boolean isCurrentUserAllowedToUploadPictureForCurrentRecipe(UserBasicDTO userBasicDTO, RecipePictureAddDTO recipePictureAddDTO) {
         Optional<Recipe> recipeOpt = this.recipeRepository.findById(recipePictureAddDTO.getRecipeId());
         boolean isCurrentUserThePublisherOfCurrentRecipe = userBasicDTO.getId().equals(recipePictureAddDTO.getRecipePublishedById());
-        if (recipeOpt.isEmpty() ||
-                !isCurrentUserThePublisherOfCurrentRecipe) {
+        if (recipeOpt.isEmpty() || !isCurrentUserThePublisherOfCurrentRecipe) {
             return false;
         }
         return true;
@@ -282,19 +248,15 @@ public class RecipeServiceImpl implements RecipeService {
     private Duration getDuration(Short... modelPrepTimesFromMinutesToDays) {
 
         Duration duration = Duration.ZERO;
-
         Short prepTimeMM = modelPrepTimesFromMinutesToDays[0];
         Short prepTimeHH = modelPrepTimesFromMinutesToDays[1];
         Short prepTimeDD = null;
-
         if (modelPrepTimesFromMinutesToDays.length == 3) {
             prepTimeDD = modelPrepTimesFromMinutesToDays[2];
         }
-
         if (prepTimeDD == null && prepTimeHH == null && prepTimeMM == null) {
             return null;
         }
-
         if (prepTimeMM != null) {
             duration = duration.plusMinutes(prepTimeMM);
         }
@@ -306,11 +268,8 @@ public class RecipeServiceImpl implements RecipeService {
         if (modelPrepTimesFromMinutesToDays.length == 3 && prepTimeDD != null) {
             duration = duration.plusDays(prepTimeDD);
         }
-
         return duration;
-
     }
-
 
     private String getStringTime(Duration duration) {
 

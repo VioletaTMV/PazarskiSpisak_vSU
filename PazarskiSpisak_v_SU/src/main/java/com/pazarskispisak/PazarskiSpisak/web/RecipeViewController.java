@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
+
 @Controller
 public class RecipeViewController {
 
@@ -35,9 +37,10 @@ public class RecipeViewController {
 
 
     @DeleteMapping("/recipe")
-    public String deleteRecipeByID(@RequestParam("id") Long id) {
+    public String deleteRecipeByID(@RequestParam("id") Long id,
+                                   Principal principal) {
 
-        this.recipeService.deleteRecipeById(id);
+        this.recipeService.deleteRecipeById(id, principal.getName());
 
         return "redirect:/";
     }
