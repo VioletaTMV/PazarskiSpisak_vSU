@@ -50,6 +50,12 @@ public class RecipeServiceImplTest {
     private IngredientService mockedIngredientService;
     @Mock
     private RecipeIngredientsService mockedRecipeIngredientsService;
+    private ItemCategorySupermarket testCategorySM;
+    private UserRoleEntity userRoleUser;
+    private User testUser;
+    private Recipe testRecipe;
+    private RecipeViewDTO testRecipeViewDTO;
+
 
     @BeforeEach
     void setUp() {
@@ -59,23 +65,25 @@ public class RecipeServiceImplTest {
                 mockedUserService,
                 mockedIngredientService,
                 mockedRecipeIngredientsService);
+
+        testCategorySM = createTestCategory("fish and seafood", (short) 1);
+        userRoleUser = createUserRoleEntityUser();
+        testUser = createTestUser("test@t.com", "testDisplayName", userRoleUser);
+        testRecipe = createTestRecipe(
+                "recipeName",
+                LocalDateTime.of(2023, Month.NOVEMBER, 3, 6, 30, 40, 50000),
+                testCategorySM,
+                testUser);
+        testRecipeViewDTO = createTestRecipeViewDTO("recipeName", "3/11/2023", testUser);
+
     }
 
     @Test
     void test_getByRecipeId() {
         //Arrange
-        ItemCategorySupermarket testCategorySM = createTestCategory("fish and seafood", (short) 1);
-        UserRoleEntity userRoleUser = createUserRoleEntityUser();
-        User testUser = createTestUser("test@t.com", "testDisplayName", userRoleUser);
-        Recipe testRecipe = createTestRecipe(
-                "recipeName",
-                LocalDateTime.of(2023, Month.NOVEMBER, 3, 6, 30, 40, 50000),
-                testCategorySM,
-                testUser);
-        RecipeViewDTO testRecipeViewDTO = createTestRecipeViewDTO("recipeName", "3/11/2023", testUser);
         RecipeViewDTO testRecipeViewDTObeforeManualSettings = createTestRecipeViewDTObefore(testUser);
 
-        when(mockedRecipeRepository.findById(testUser.getId()))
+                when(mockedRecipeRepository.findById(testUser.getId()))
                 .thenReturn(Optional.of(testRecipe));
         when(mockedModelMapper.map(Optional.of(testRecipe), RecipeViewDTO.class))
                 .thenReturn(testRecipeViewDTObeforeManualSettings);
@@ -94,14 +102,6 @@ public class RecipeServiceImplTest {
     @Test
     void test_findAllByCategoryOrderedByDateLastModified() {
         //Arrange
-        ItemCategorySupermarket testCategorySM = createTestCategory("fish and seafood", (short) 1);
-        UserRoleEntity userRoleUser = createUserRoleEntityUser();
-        User testUser = createTestUser("test@t.com", "testDisplayName", userRoleUser);
-        Recipe testRecipe = createTestRecipe(
-                "recipeName",
-                LocalDateTime.of(2023, Month.NOVEMBER, 3, 6, 30, 40, 50000),
-                testCategorySM,
-                testUser);
         Recipe anotherTestRecipe = createTestRecipe(
                 "recipeName2",
                 LocalDateTime.of(2023, Month.OCTOBER, 30, 6, 30, 40, 50000),
@@ -138,14 +138,6 @@ public class RecipeServiceImplTest {
     @Test
     void test_isCurrentUserAllowedToUploadPictureForCurrentRecipe() {
         //Arrange
-        ItemCategorySupermarket testCategorySM = createTestCategory("fish and seafood", (short) 1);
-        UserRoleEntity userRoleUser = createUserRoleEntityUser();
-        User testUser = createTestUser("test@t.com", "testDisplayName", userRoleUser);
-        Recipe testRecipe = createTestRecipe(
-                "recipeName",
-                LocalDateTime.of(2023, Month.NOVEMBER, 3, 6, 30, 40, 50000),
-                testCategorySM,
-                testUser);
         RecipePictureAddDTO testRecipePictureAddDTO = createRecipePictureAddDTO();
         UserBasicDTO testUserBasicDTO = createTestUserBasicDTO(1L, "testDisplayName");
         UserBasicDTO testUserBasicDTONonEx = createTestUserBasicDTO(333L, "testNonExName");
@@ -169,14 +161,6 @@ public class RecipeServiceImplTest {
     @Test
     void test_getRecipePictureAddDTO() {
 
-        ItemCategorySupermarket testCategorySM = createTestCategory("fish and seafood", (short) 1);
-        UserRoleEntity userRoleUser = createUserRoleEntityUser();
-        User testUser = createTestUser("test@t.com", "testDisplayName", userRoleUser);
-        Recipe testRecipe = createTestRecipe(
-                "recipeName",
-                LocalDateTime.of(2023, Month.NOVEMBER, 3, 6, 30, 40, 50000),
-                testCategorySM,
-                testUser);
         RecipePictureAddDTO testRecipePictureAddDTO = createRecipePictureAddDTO();
 
         when(mockedRecipeRepository.findById(1L))
