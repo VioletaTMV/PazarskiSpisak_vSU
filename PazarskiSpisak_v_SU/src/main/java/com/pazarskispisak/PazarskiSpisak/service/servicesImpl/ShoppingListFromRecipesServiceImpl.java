@@ -34,15 +34,6 @@ public class ShoppingListFromRecipesServiceImpl implements ShoppingListFromRecip
         this.itemCategoryService = itemCategoryService;
     }
 
-
-//    @Override
-//    public Optional<ShoppingListFromRecipes> findByCookerId(String name) {
-//
-//        Optional<ShoppingListFromRecipes> byCookerIdOpt = this.shoppingListFromRecipesRepository.findByCookerId(name);
-//
-//        return byCookerIdOpt;
-//    }
-
     public Optional<ShoppingListFromRecipes> findByCookerId(Long id) {
 
         Optional<ShoppingListFromRecipes> byCookerIdOpt = this.shoppingListFromRecipesRepository.findByCookerId(id);
@@ -62,13 +53,11 @@ public class ShoppingListFromRecipesServiceImpl implements ShoppingListFromRecip
         return true;
     }
 
-
     @Override
     public List<RecipeShortInfoDTO> getRecipesShortInfoWithDesiredServingsList(Long id) {
 
         ShoppingListFromRecipes shopListRecipes = findByCookerId(id).get();
 
-        ;
         List<RecipeShortInfoDTO> recipeShortInfoDTOList = new ArrayList<>();
         for (Map.Entry<Recipe, Short> recipeEntry : shopListRecipes.getRecipesSelectedWithDesiredServingsMap().entrySet()) {
 
@@ -82,8 +71,6 @@ public class ShoppingListFromRecipesServiceImpl implements ShoppingListFromRecip
         }
 
         return recipeShortInfoDTOList;
-
-
     }
 
     @Override
@@ -248,7 +235,7 @@ public class ShoppingListFromRecipesServiceImpl implements ShoppingListFromRecip
         System.out.println();
         for (Map.Entry<Ingredient, Boolean> ingredientBooleanEntry : shopListOpt.get().getIngredientsPurchaseStatusMap().entrySet()) {
 
-            if (checkboxStatusUpdates.length == 1){
+            if (checkboxStatusUpdates.length == 1) {
                 ingredientBooleanEntry.setValue(false);
             } else if (Arrays.stream(checkboxStatusUpdates).anyMatch(ingrName -> ingrName.equals(ingredientBooleanEntry.getKey().getName()))) {
                 ingredientBooleanEntry.setValue(true);

@@ -19,13 +19,6 @@ public class ShoppingListFromRecipes {
     @JoinColumn(name = "cooker_id", referencedColumnName = "id", nullable = false)
     private User cooker;
 
-//    @OneToMany
-//    @JoinColumn(name = "recipe_id")
-//    private Set<Recipe> recipesSelectedSet;
-//
-//    @Column(name = "desired_servings_amount")
-//    private Integer desiredServingsToCook;
-
     @ElementCollection
     @CollectionTable(name="shop_list_recipes_desired_servings_mapping", joinColumns={ @JoinColumn(name="shop_list_id", referencedColumnName = "id") })
     @MapKeyJoinColumn(name="recipe_id")
