@@ -232,7 +232,7 @@ public class ShoppingListFromRecipesServiceImpl implements ShoppingListFromRecip
     public void updateCheckedStatusOfProductsBought(String[] checkboxStatusUpdates, String userEmail, String hideCheckedStatus) {
 
         Optional<ShoppingListFromRecipes> shopListOpt = this.shoppingListFromRecipesRepository.findByCookerEmail(userEmail);
-        System.out.println();
+
         for (Map.Entry<Ingredient, Boolean> ingredientBooleanEntry : shopListOpt.get().getIngredientsPurchaseStatusMap().entrySet()) {
 
             if (checkboxStatusUpdates.length == 1) {
@@ -267,10 +267,6 @@ public class ShoppingListFromRecipesServiceImpl implements ShoppingListFromRecip
 
             user.setShoppingListFromRecipes(null);
             this.userService.save(user);
-
-            //ako горното не работи да го изтрия и да ползвам долното. Т.е. ако репозиторито не си познава
-            //извадения юзър.
-//            this.userService.resetShopList(user);
         }
 
         this.shoppingListFromRecipesRepository.deleteAll(byLastAccessedDateBefore);
@@ -339,12 +335,7 @@ public class ShoppingListFromRecipesServiceImpl implements ShoppingListFromRecip
 
             for (RecipeIngredientWithDetails recipeIngredient : recipeQtyEntry.getKey().getRecipeIngredients()) {
 
-//                if (!currentIngredientsPurchaseStatusMap.containsKey(recipeIngredient.getIngredient())){
-//                    currentIngredientsPurchaseStatusMap.put(recipeIngredient.getIngredient(), false);
-//                }
-//дори и да го съдържа трябва да променим ако е било true да стане false статуса на закупуване, затова няма нужда от проверка, то би трябвало да презапише продукта
                 currentIngredientsPurchaseStatusMap.put(recipeIngredient.getIngredient(), false);
-
             }
         }
 
@@ -377,47 +368,4 @@ public class ShoppingListFromRecipesServiceImpl implements ShoppingListFromRecip
         return userShopListFromRecipes;
 
     }
-
-//    private ShoppingListFromRecipes updateNeededIngredientsPurchaseStatusMap(ShoppingListFromRecipes userShopListFromRecipes) {
-//
-//        Map<Ingredient, Boolean> currentIngredientsPurchaseStatusMap = userShopListFromRecipes.getIngredientsPurchaseStatusMap();
-//
-//        List<Ingredient> ingredientsToRemoveFromCurrentIngredientsPurchaseStatusMap = new ArrayList<>();
-//
-//        Map<Recipe, Short> recipesSelectedWithDesiredServingsMap = userShopListFromRecipes.getRecipesSelectedWithDesiredServingsMap();
-//
-//        for (Map.Entry<Recipe, Short> recipeQtyEntry : recipesSelectedWithDesiredServingsMap.entrySet()) {
-//
-//            Long idOfRecipe = recipeQtyEntry.getKey().getId();
-//
-//            for (RecipeIngredientWithDetails recipeIngredient : recipeQtyEntry.getKey().getRecipeIngredients()) {
-//
-////                if (!currentIngredientsPurchaseStatusMap.containsKey(recipeIngredient.getIngredient())){
-////                    currentIngredientsPurchaseStatusMap.put(recipeIngredient.getIngredient(), false);
-////                }
-////дори и да го съдържа трябва да променим ако е било true да стане false статуса на закупуване, затова няма нужда от проверка, то би трябвало да презапише продукта
-//                currentIngredientsPurchaseStatusMap.put(recipeIngredient.getIngredient(), false);
-//
-//            }
-//        }
-//
-//
-//        for (Ingredient thisIngredient : currentIngredientsPurchaseStatusMap.keySet()) {
-//
-//            Optional<Recipe> anyRecipeContainingThisIngredient = recipesSelectedWithDesiredServingsMap.keySet().stream()
-//                    .filter(r -> r.getRecipeIngredients()
-//                            .stream()
-//                            .map(RecipeIngredientWithDetails::getIngredient)
-//                            .toList().contains(thisIngredient)).findAny();
-//
-//            if (anyRecipeContainingThisIngredient.isEmpty()){
-//                ingredientsToRemoveFromCurrentIngredientsPurchaseStatusMap.add(thisIngredient);
-//            }
-//        }
-//
-//        ingredientsToRemoveFromCurrentIngredientsPurchaseStatusMap.forEach(currentIngredientsPurchaseStatusMap.keySet()::remove);
-//
-////        this.shoppingListFromRecipesRepository.save(userShopListFromRecipes);
-//        return userShopListFromRecipes;
-//    }
 }

@@ -1,6 +1,7 @@
 package com.pazarskispisak.PazarskiSpisak.service.servicesImpl;
 
 import com.pazarskispisak.PazarskiSpisak.models.dtos.RecipeShortInfoDTO;
+import com.pazarskispisak.PazarskiSpisak.models.dtos.ShopListProductsDTO;
 import com.pazarskispisak.PazarskiSpisak.models.dtos.ShopListRecipesDTO;
 import com.pazarskispisak.PazarskiSpisak.models.dtos.UserBasicDTO;
 import com.pazarskispisak.PazarskiSpisak.models.entities.*;
@@ -14,6 +15,7 @@ import com.pazarskispisak.PazarskiSpisak.validations.ValidRecipe;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import org.hibernate.ObjectNotFoundException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -113,7 +115,7 @@ public class ShoppingListFromRecipesServiceImplTestIT {
 
     @Test
     @DirtiesContext
-    void test_updateShoppingListWithRecipesDesiredServingsQtyPossibleChanges(){
+    void test_updateShoppingListWithRecipesDesiredServingsQtyPossibleChanges() {
 
         ItemCategorySupermarket testCategorySM = createTestCategory("fish and seafood", (short) 1);
         UserBasicDTO testUserBasicDTO = createTestUserBasicDTO(1L, "testDisplayName");
@@ -124,17 +126,18 @@ public class ShoppingListFromRecipesServiceImplTestIT {
         Recipe testRecipe = createTestRecipe("testR1", LocalDateTime.of(2023, Month.NOVEMBER, 3, 6, 30, 40, 50000), testCategorySM, testUser, List.of(testIngredient1, testIngredient2));
         Recipe testRecipe2 = createTestRecipe("testR2", LocalDateTime.of(2023, Month.OCTOBER, 3, 6, 30, 40, 50000), testCategorySM, testUser, List.of(testIngredient1, testIngredient2));
         ShoppingListFromRecipes testShoppingListFromRecipes = createTestShoppingList(testUser, List.of(testRecipe, testRecipe2));
-        RecipeShortInfoDTO testRShorInfoDTO1 = createTestRecipeShortInfoDTO(testRecipe, (short) (testRecipe.getServings()+2));
-        RecipeShortInfoDTO testRShorInfoDTO2 = createTestRecipeShortInfoDTO(testRecipe2, (short) (testRecipe2.getServings()+2));
+        RecipeShortInfoDTO testRShorInfoDTO1 = createTestRecipeShortInfoDTO(testRecipe, (short) (testRecipe.getServings() + 2));
+        RecipeShortInfoDTO testRShorInfoDTO2 = createTestRecipeShortInfoDTO(testRecipe2, (short) (testRecipe2.getServings() + 2));
         ShopListRecipesDTO testShopListRecipesDTO = createTestShopListRecipesDTO(testUserBasicDTO, List.of(testRShorInfoDTO1, testRShorInfoDTO2));
 
         shopListServiceToTest.updateShoppingListWithRecipesDesiredServingsQtyPossibleChanges(testShopListRecipesDTO);
 
         assertEquals(testRecipe.getServings() + (short) 2, (short) testShopListRecipesDTO.getShopListRecipes().get(0).getDesiredServings());
     }
+
     @Test
     @DirtiesContext
-    void test_updateShoppingListWithRecipesDesiredServingsQtyPossibleChanges_returnsFalseWhenInvalidUserId(){
+    void test_updateShoppingListWithRecipesDesiredServingsQtyPossibleChanges_returnsFalseWhenInvalidUserId() {
 
         UserBasicDTO testInvalidUserBasicDTO = createTestUserBasicDTO(9999L, "testDisplayName");
         RecipeShortInfoDTO testRShorInfoDTO1 = new RecipeShortInfoDTO();
@@ -147,7 +150,7 @@ public class ShoppingListFromRecipesServiceImplTestIT {
     @Test
     @DirtiesContext
     @Transactional
-    void test_removeRecipeFromCurrentUserShopList_whenRemovingSecondOfTwoRecipesInShopList(){
+    void test_removeRecipeFromCurrentUserShopList_whenRemovingSecondOfTwoRecipesInShopList() {
 
         ItemCategorySupermarket testCategorySM = createTestCategory("fish and seafood", (short) 1);
         UserBasicDTO testUserBasicDTO = createTestUserBasicDTO(1L, "testDisplayName");
@@ -173,7 +176,7 @@ public class ShoppingListFromRecipesServiceImplTestIT {
     @Test
     @DirtiesContext
 //    @Transactional
-    void test_removeRecipeFromCurrentUserShopList_whenRemovingAllOfTheRecipesInShopList(){
+    void test_removeRecipeFromCurrentUserShopList_whenRemovingAllOfTheRecipesInShopList() {
 
         ItemCategorySupermarket testCategorySM = createTestCategory("fish and seafood", (short) 1);
         UserBasicDTO testUserBasicDTO = createTestUserBasicDTO(1L, "testDisplayName");
@@ -194,6 +197,109 @@ public class ShoppingListFromRecipesServiceImplTestIT {
 
         assertNull(userService.findById(testUser.getId()).get().getShoppingListFromRecipes());
         Assertions.assertTrue(shopListRepository.findByCookerId(testUser.getId()).isEmpty());
+    }
+
+    @Test
+    @DirtiesContext
+    void test_getShopListProductsForUser() {
+
+        ItemCategorySupermarket testCategorySM = createTestCategory("fish and seafood", (short) 1);
+        UserRoleEntity userRoleUser = createUserRoleEntityUser();
+        User testUser = createTestUser("test@t.com", "testDisplayName", userRoleUser);
+        Ingredient testIngredient1 = createTestIngredient("fish", testCategorySM);
+        Ingredient testIngredient2 = createTestIngredient("oil", testCategorySM);
+        Recipe testRecipe = createTestRecipe("testR1", LocalDateTime.of(2023, Month.NOVEMBER, 3, 6, 30, 40, 50000), testCategorySM, testUser, List.of(testIngredient1, testIngredient2));
+        Recipe testRecipe2 = createTestRecipe("testR2", LocalDateTime.of(2023, Month.OCTOBER, 3, 6, 30, 40, 50000), testCategorySM, testUser, List.of(testIngredient1, testIngredient2));
+        ShoppingListFromRecipes testShoppingListFromRecipes = createTestShoppingList(testUser, List.of(testRecipe, testRecipe2));
+        testUser.setShoppingListFromRecipes(testShoppingListFromRecipes);
+
+        ShopListProductsDTO shopLProductsDTO = shopListServiceToTest.getShopListProductsForUser(testUser.getEmail());
+
+        Assertions.assertEquals(testCategorySM.getName(),
+                shopLProductsDTO.getIngredientsPurchaseStatusListByProductCategoryMap().keySet().stream().findFirst().get());
+        Assertions.assertEquals(1,
+                shopLProductsDTO.getIngredientsPurchaseStatusListByProductCategoryMap().size());
+        Assertions.assertEquals(2,
+                shopLProductsDTO.getIngredientsPurchaseStatusListByProductCategoryMap().get(testCategorySM.getName()).size());
+
+    }
+
+    @Test
+    @DirtiesContext
+    @Transactional
+    void test_updateCheckedStatusOfProductsBought() {
+
+        ItemCategorySupermarket testCategorySM = createTestCategory("fish and seafood", (short) 1);
+        UserRoleEntity userRoleUser = createUserRoleEntityUser();
+        User testUser = createTestUser("test@t.com", "testDisplayName", userRoleUser);
+        Ingredient testIngredient1 = createTestIngredient("fish", testCategorySM);
+        Ingredient testIngredient2 = createTestIngredient("oil", testCategorySM);
+        Recipe testRecipe = createTestRecipe("testR1", LocalDateTime.of(2023, Month.NOVEMBER, 3, 6, 30, 40, 50000), testCategorySM, testUser, List.of(testIngredient1, testIngredient2));
+        Recipe testRecipe2 = createTestRecipe("testR2", LocalDateTime.of(2023, Month.OCTOBER, 3, 6, 30, 40, 50000), testCategorySM, testUser, List.of(testIngredient1, testIngredient2));
+        ShoppingListFromRecipes testShoppingListFromRecipes = createTestShoppingList(testUser, List.of(testRecipe, testRecipe2));
+        //  testUser.setShoppingListFromRecipes(testShoppingListFromRecipes);
+        String[] testCheckboxStatusUpdatesChecked = new String[]{"dummyCheckboxStringAlwaysPresent", "fish"};
+
+        shopListServiceToTest.updateCheckedStatusOfProductsBought(testCheckboxStatusUpdatesChecked, testUser.getEmail(), null);
+
+        Assertions.assertEquals(true,
+                shopListRepository.findByCookerEmail(testUser.getEmail()).get()
+                        .getIngredientsPurchaseStatusMap()
+                        .get(testIngredient1));
+        Assertions.assertEquals(false,
+                shopListRepository.findByCookerEmail(testUser.getEmail()).get()
+                        .getIngredientsPurchaseStatusMap()
+                        .get(testIngredient2));
+    }
+
+    @Test
+    @DirtiesContext
+    @Transactional
+    void test_updateCheckedStatusOfProductsBought_whenNothingIsChecked() {
+
+        ItemCategorySupermarket testCategorySM = createTestCategory("fish and seafood", (short) 1);
+        UserRoleEntity userRoleUser = createUserRoleEntityUser();
+        User testUser = createTestUser("test@t.com", "testDisplayName", userRoleUser);
+        Ingredient testIngredient1 = createTestIngredient("fish", testCategorySM);
+        Ingredient testIngredient2 = createTestIngredient("oil", testCategorySM);
+        Recipe testRecipe = createTestRecipe("testR1", LocalDateTime.of(2023, Month.NOVEMBER, 3, 6, 30, 40, 50000), testCategorySM, testUser, List.of(testIngredient1, testIngredient2));
+        Recipe testRecipe2 = createTestRecipe("testR2", LocalDateTime.of(2023, Month.OCTOBER, 3, 6, 30, 40, 50000), testCategorySM, testUser, List.of(testIngredient1, testIngredient2));
+        ShoppingListFromRecipes testShoppingListFromRecipes = createTestShoppingList(testUser, List.of(testRecipe, testRecipe2));
+        //  testUser.setShoppingListFromRecipes(testShoppingListFromRecipes);
+        String[] testCheckboxStatusUpdatesChecked = new String[]{"dummyCheckboxStringAlwaysPresent"};
+
+        shopListServiceToTest.updateCheckedStatusOfProductsBought(testCheckboxStatusUpdatesChecked, testUser.getEmail(), null);
+
+        Assertions.assertEquals(false,
+                shopListRepository.findByCookerEmail(testUser.getEmail()).get()
+                        .getIngredientsPurchaseStatusMap()
+                        .get(testIngredient1));
+        Assertions.assertEquals(false,
+                shopListRepository.findByCookerEmail(testUser.getEmail()).get()
+                        .getIngredientsPurchaseStatusMap()
+                        .get(testIngredient2));
+    }
+
+    @Test
+    @DirtiesContext
+    void test_findAndDeleteShopListsInactiveByLastAccessedDate() {
+
+        ItemCategorySupermarket testCategorySM = createTestCategory("fish and seafood", (short) 1);
+        UserRoleEntity userRoleUser = createUserRoleEntityUser();
+        User testUser = createTestUser("test@t.com", "testDisplayName", userRoleUser);
+        Ingredient testIngredient1 = createTestIngredient("fish", testCategorySM);
+        Ingredient testIngredient2 = createTestIngredient("oil", testCategorySM);
+        Recipe testRecipe = createTestRecipe("testR1", LocalDateTime.of(2023, Month.NOVEMBER, 3, 6, 30, 40, 50000), testCategorySM, testUser, List.of(testIngredient1, testIngredient2));
+        Recipe testRecipe2 = createTestRecipe("testR2", LocalDateTime.of(2023, Month.OCTOBER, 3, 6, 30, 40, 50000), testCategorySM, testUser, List.of(testIngredient1, testIngredient2));
+        ShoppingListFromRecipes testShoppingListFromRecipes = createTestShoppingList(testUser, List.of(testRecipe, testRecipe2));
+        testUser.setShoppingListFromRecipes(testShoppingListFromRecipes);
+        userRepository.save(testUser);
+
+        shopListServiceToTest.findAndDeleteShopListsInactiveByLastAccessedDate(LocalDate.of(2023, 11, 21));
+
+        Assertions.assertTrue(true);
+        Assertions.assertNull(userService.findByEmail(testUser.getEmail()).get().getShoppingListFromRecipes());
+
     }
 
 
