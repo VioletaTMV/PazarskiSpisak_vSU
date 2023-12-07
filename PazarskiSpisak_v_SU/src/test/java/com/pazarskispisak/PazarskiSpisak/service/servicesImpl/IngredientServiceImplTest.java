@@ -1,6 +1,7 @@
 package com.pazarskispisak.PazarskiSpisak.service.servicesImpl;
 
 import com.pazarskispisak.PazarskiSpisak.models.dtos.IngredientDTO;
+import com.pazarskispisak.PazarskiSpisak.models.dtos.IngredientIdNameAndMeasurementValuesOnlyDTO;
 import com.pazarskispisak.PazarskiSpisak.models.entities.Ingredient;
 import com.pazarskispisak.PazarskiSpisak.models.entities.ItemCategorySupermarket;
 import com.pazarskispisak.PazarskiSpisak.models.enums.IngredientMeasurementUnitEnum;
@@ -8,20 +9,19 @@ import com.pazarskispisak.PazarskiSpisak.repository.IngredientRepository;
 import com.pazarskispisak.PazarskiSpisak.service.IngredientService;
 import com.pazarskispisak.PazarskiSpisak.service.ItemCategoryService;
 import com.pazarskispisak.PazarskiSpisak.service.ItemService;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.stubbing.OngoingStubbing;
 import org.modelmapper.ModelMapper;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class IngredientServiceImplTest {
@@ -97,7 +97,7 @@ class IngredientServiceImplTest {
         //Arrange
         Ingredient testIngredient = createTestIngredient();
         Ingredient testIngredientBeforeAssignmentOfItemCategory = createTestIngredientWithoutItemCategory();
-        IngredientDTO testIngredientDTO = createTestIngredientDTO();
+        IngredientDTO testIngredientDTO = createTestIngredientDTO("ingrName");
 
         when(mockedModelMapper.map(testIngredientDTO, Ingredient.class))
                 .thenReturn(testIngredientBeforeAssignmentOfItemCategory);
@@ -112,10 +112,60 @@ class IngredientServiceImplTest {
 
     }
 
+    @Test
+    void test_getAllIngredientsSortedAlphabetically() {
+
+        ItemCategorySupermarket testCategorySM = createTestCategory("fish and seafood", (short) 1);
+        Ingredient testIngredient1 = createTestIngredient("ingrName1", testCategorySM);
+        Ingredient testIngredient2 = createTestIngredient("ingrName2", testCategorySM);
+        Ingredient testIngredient3 = createTestIngredient("ingrName3", testCategorySM);
+        List<Ingredient> testIngrList = List.of(testIngredient2, testIngredient3, testIngredient1);
+        IngredientDTO testIngrDTO1 = createTestIngredientDTO("ingrName1");
+        IngredientDTO testIngrDTO2 = createTestIngredientDTO("ingrName2");
+        IngredientDTO testIngrDTO3 = createTestIngredientDTO("ingrName3");
+
+       doReturn(testIngrList).when(mockedIngredientRepository).findAll();
+       when(mockedModelMapper.map(testIngredient1, IngredientDTO.class))
+               .thenReturn(testIngrDTO1);
+        when(mockedModelMapper.map(testIngredient2, IngredientDTO.class))
+                .thenReturn(testIngrDTO2);
+        when(mockedModelMapper.map(testIngredient3, IngredientDTO.class))
+                .thenReturn(testIngrDTO3);
+
+
+        List<IngredientDTO> testResult = serviceToTest.getAllIngredientsSortedAlphabetically();
+
+        Assertions.assertEquals(testIngredient1.getName(), testResult.get(0).getName());
+        Assertions.assertEquals(testIngredient2.getName(), testResult.get(1).getName());
+        Assertions.assertEquals(testIngredient3.getName(), testResult.get(2).getName());
+
+    }
 
 
     @Test
     void findIngredientIdNameAndMeasuresById() {
+
+        ItemCategorySupermarket testCategorySM = createTestCategory("fish and seafood", (short) 1);
+        Ingredient testIngredient1 = createTestIngredient("ingrName1", testCategorySM);
+
+        when(mockedIngredientRepository.findById(1L))
+                .thenReturn(Optional.of(testIngredient1));
+
+        IngredientIdNameAndMeasurementValuesOnlyDTO testResult = serviceToTest.findIngredientIdNameAndMeasuresById(1L);
+
+        assertEquals("ingrName1", testResult.getName());
+        assertTrue(testResult.getAcceptableMeasurementUnitsForRecipeDescriptionMap().containsKey(IngredientMeasurementUnitEnum.PIECE));
+        assertTrue(testResult.getAcceptableMeasurementUnitsForRecipeDescriptionMap().containsKey(IngredientMeasurementUnitEnum.TABLE_SPOON));
+        assertTrue(testResult.getAcceptableMeasurementUnitsForRecipeDescriptionMap().containsKey(IngredientMeasurementUnitEnum.GRAM));
+      assertEquals(3, testResult.getAcceptableMeasurementUnitsForRecipeDescriptionMap().size());
+    }
+
+    @Test
+    void findIngredientIdNameAndMeasuresById_whenNonExistingIngredientID() {
+
+        IngredientIdNameAndMeasurementValuesOnlyDTO testResult = serviceToTest.findIngredientIdNameAndMeasuresById(11111L);
+
+        Assertions.assertNull(testResult);
     }
 
     @Test
@@ -127,7 +177,42 @@ class IngredientServiceImplTest {
     }
 
     @Test
+    void ingredientExists_whenNonExistingIngredientID() {
+
+        boolean b = serviceToTest.ingredientExists(3333L);
+
+        assertFalse(b);
+    }
+
+    @Test
+    void ingredientExists_whenNullIngredientID() {
+
+        boolean b = serviceToTest.ingredientExists(null);
+
+        assertFalse(b);
+    }
+
+    @Test
     void ingredientExists() {
+
+        ItemCategorySupermarket testCategorySM = createTestCategory("fish and seafood", (short) 1);
+        Ingredient testIngredient1 = createTestIngredient("ingrName1", testCategorySM);
+        when(mockedIngredientRepository.findById(1L))
+                .thenReturn(Optional.of(testIngredient1));
+
+        boolean b = serviceToTest.ingredientExists(1L);
+
+        assertTrue(b);
+    }
+
+    private ItemCategorySupermarket createTestCategory(String testItemCategoryName, short orderShopList) {
+
+        ItemCategorySupermarket testItemCategory = new ItemCategorySupermarket();
+        testItemCategory.setName(testItemCategoryName);
+        testItemCategory.setFood(true);
+        testItemCategory.setOrderInShoppingList(orderShopList);
+
+        return testItemCategory;
     }
 
     private static Ingredient createTestIngredient() {
@@ -143,10 +228,23 @@ class IngredientServiceImplTest {
         return testIngredient;
 
     }
-    private IngredientDTO createTestIngredientDTO() {
+
+    private Ingredient createTestIngredient(String testName, ItemCategorySupermarket testCategory) {
+        Ingredient testIngredient = new Ingredient();
+        testIngredient.setName(testName);
+        testIngredient.setMainUnitOfMeasurement(IngredientMeasurementUnitEnum.GRAM);
+        testIngredient.setShoppingListDisplayUnitOfMeasurement(IngredientMeasurementUnitEnum.GRAM);
+        testIngredient.setItemCategory(testCategory);
+        testIngredient.addAlternativeMeasurementUnitAndValueToMap(IngredientMeasurementUnitEnum.PIECE, 2.1F);
+        testIngredient.addAlternativeMeasurementUnitAndValueToMap(IngredientMeasurementUnitEnum.TABLE_SPOON, 5F);
+
+        return testIngredient;
+    }
+
+    private IngredientDTO createTestIngredientDTO(String name) {
 
         IngredientDTO testIngredientDTO = new IngredientDTO()
-                .setName("ingrName")
+                .setName(name)
                 .setMainUnitOfMeasurement(IngredientMeasurementUnitEnum.GRAM)
                 .setShoppingListDisplayUnitOfMeasurement(IngredientMeasurementUnitEnum.EMPTY)
                 .setItemCategorySupermarketName("productCategoryName")

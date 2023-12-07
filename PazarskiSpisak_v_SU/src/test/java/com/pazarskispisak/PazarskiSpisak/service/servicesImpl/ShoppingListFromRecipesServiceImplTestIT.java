@@ -297,7 +297,6 @@ public class ShoppingListFromRecipesServiceImplTestIT {
 
         shopListServiceToTest.findAndDeleteShopListsInactiveByLastAccessedDate(LocalDate.of(2023, 11, 21));
 
-        Assertions.assertTrue(true);
         Assertions.assertNull(userService.findByEmail(testUser.getEmail()).get().getShoppingListFromRecipes());
 
     }

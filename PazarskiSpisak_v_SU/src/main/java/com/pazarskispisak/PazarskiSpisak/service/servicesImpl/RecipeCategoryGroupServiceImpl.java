@@ -43,7 +43,8 @@ public class RecipeCategoryGroupServiceImpl implements RecipeCategoryGroupServic
 
         List<RecipeCategoryGroup> allRecipeCategoryGroups = this.recipeCategoryGroupRepository.findAll();
 
-        List<RecipeCategoryGroupDTO> recipeCategoryGroupDTOSOrderedByDisplayOrderAndRecCatEnumOrdinals = Arrays.stream(this.modelMapper.map(allRecipeCategoryGroups, RecipeCategoryGroupDTO[].class))
+        List<RecipeCategoryGroupDTO> recipeCategoryGroupDTOSOrderedByDisplayOrderAndRecCatEnumOrdinals = Arrays.stream(
+                this.modelMapper.map(allRecipeCategoryGroups, RecipeCategoryGroupDTO[].class))
                 .sorted(Comparator.comparing(RecipeCategoryGroupDTO::getGroupDisplayOrder))
                 .filter(cg -> {
                     Set<RecipeCategoryEnum> activeRecipeCategories = cg.getRecipeCategories().stream()
