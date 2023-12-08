@@ -5,4 +5,7 @@ public enum UserRoleEnum {
     USER,
     MODERATOR,
     ADMIN;
+
 }
+
+

@@ -22,17 +22,17 @@
 
             <section class="row clr-beigeish round-corners-25">
                 <div class="grid-container form-group round-corners-25">
-                    <div class="bottom-space">
-                        <p>Номер по ред | Имейл: ххх | Последно влизане: | [Роли: Роля1, роля2];</p>
-                    </div>
-                    <div class="bottom-space">
-                        <p>Номер по ред | Имейл: ххх | Последно влизане: | [Роли: Роля1, роля2];</p>
-                    </div>
-                    <div class="bottom-space">
-                        <p>Номер по ред | Имейл: ххх | Последно влизане: | [Роли: Роля1, роля2];</p>
-                    </div>
-                    <div class="bottom-space">
-                        <p>Номер по ред | Имейл: ххх | Последно влизане: | [Роли: Роля1, роля2];</p>
+                    <div class="bottom-space"
+                         th:each="u, uIter: ${usersList}">
+                        <p><span th:text="${uIter.index + 1}">Номер по ред </span> |
+                            <span th:text="${u.email}"> Имейл </span> |
+                            <span th:text="${u.displayNickname}">Потребител </span> |
+                            <span th:text="${u.dateRegistered}">Регистриран на </span> |
+                            <span th:text="${u.userRoles}">Роли </span>;
+                        </p>
+<!--                        <span th:each="ur: ${u.userRoles}">-->
+<!--                                  <span th:text="${ur}">Роля </span>-->
+<!--                                </span>-->
                     </div>
                 </div>
             </section>

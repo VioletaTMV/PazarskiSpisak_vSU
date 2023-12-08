@@ -1,5 +1,6 @@
 package com.pazarskispisak.PazarskiSpisak.service;
 
+import com.pazarskispisak.PazarskiSpisak.models.dtos.AdminUserViewDTO;
 import com.pazarskispisak.PazarskiSpisak.models.dtos.UserBasicDTO;
 import com.pazarskispisak.PazarskiSpisak.models.dtos.UserRegisterDTO;
 import com.pazarskispisak.PazarskiSpisak.models.entities.User;
@@ -20,13 +21,6 @@ public interface UserService {
 
     Optional<User> findByEmail(String email);
 
-    //надолу са вече след импорта на старите данни
-
-    //login i logout ги изтриваме, защото вече ги имплементираме посредством Spring security!!! Закоментирам ги за да имам за справка ако реша
-//    void login(UserLoginDTO userDTO);
-//
-//    void logout();
-
     boolean register(UserRegisterDTO userRegisterDTO);
 
     Optional<User> findByDisplayNickname(String displayNickname);
@@ -35,4 +29,6 @@ public interface UserService {
     Optional<UserBasicDTO> getBasicUserData(String email);
 
     Optional <User> findById(Long id);
+
+    List<AdminUserViewDTO> getUsersInfoOrderedByRegistrationDateReversedWithAdminsFirst();
 }

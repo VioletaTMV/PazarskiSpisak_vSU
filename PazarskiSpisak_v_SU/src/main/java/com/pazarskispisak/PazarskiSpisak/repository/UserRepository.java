@@ -31,4 +31,9 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Transactional
     @Query("update User u set u.lastTimeLoggedIn=:currentDateTime where u.id =:id")
     void updateLastTimeLoggedIn(LocalDateTime currentDateTime, Long id);
+
+    @Query("SELECT u " +
+            "FROM User u " +
+            "ORDER BY SIZE(u.userRoles) DESC, registeredOn DESC")
+    List<User> findByOrderByUserRolesCountThenByRegistrationDate();
 }

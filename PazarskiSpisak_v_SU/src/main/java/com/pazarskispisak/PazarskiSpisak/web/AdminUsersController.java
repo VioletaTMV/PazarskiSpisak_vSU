@@ -1,33 +1,50 @@
 package com.pazarskispisak.PazarskiSpisak.web;
 
+import com.pazarskispisak.PazarskiSpisak.models.dtos.AdminUserViewDTO;
+import com.pazarskispisak.PazarskiSpisak.service.RecipeCategoryGroupService;
+import com.pazarskispisak.PazarskiSpisak.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.ui.Model;
+
+import java.util.List;
 
 @Controller
 public class AdminUsersController {
 
-    @GetMapping("/admin-users")
+    private UserService userService;
+    private RecipeCategoryGroupService recipeCategoryGroupService;
+
+    @Autowired
+    public AdminUsersController(UserService userService, RecipeCategoryGroupService recipeCategoryGroupService) {
+        this.userService = userService;
+        this.recipeCategoryGroupService = recipeCategoryGroupService;
+    }
+
+
+    @GetMapping("/admin/users")
     public String adminUsers(){
 
-        return "redirect:/admin-users-view";
+        return "redirect:/admin/users/view";
     }
 
-    @GetMapping("/admin-users-view")
-    public String adminUsersView(){
+    @GetMapping("/admin/users/view")
+    public String adminUsersView(Model model){
 
-        return "/admin-users-view";
+        List<AdminUserViewDTO> usersViewForAdminDTO = this.userService.getUsersInfoOrderedByRegistrationDateReversedWithAdminsFirst();
+
+        model.addAttribute("usersList", usersViewForAdminDTO);
+        model.addAttribute("recipeCategoryGroups", this.recipeCategoryGroupService.getAllCategoryGroupsHavingCategoryRecipesWithActiveAssignedRecipes());
+
+        return "admin-users-view";
     }
 
-    @GetMapping("/admin-users-edit")
+    @GetMapping("/admin/users/edit")
     public String adminUsersEdit(){
 
-        return "/admin-users-edit";
+        return "admin-users-edit";
     }
 
-    @GetMapping("/admin-users-delete")
-    public String adminUsersDelete(){
-
-        return "/admin-users-delete";
-    }
 
 }
