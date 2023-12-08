@@ -56,8 +56,6 @@ public class User {
         this.registeredOn = LocalDate.now();
         this.userRoles = new LinkedHashSet<>();
         this.isDeleted = false;
-//        this.chosenRecipesForCookWithDesiredServingsAmountMap = new LinkedHashMap<>();
-//        this.shoppingListMap = new LinkedHashMap<>(new HashMap<>());
     }
 
 

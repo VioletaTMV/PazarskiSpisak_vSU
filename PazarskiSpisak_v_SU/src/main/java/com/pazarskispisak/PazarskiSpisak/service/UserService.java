@@ -31,4 +31,8 @@ public interface UserService {
     Optional <User> findById(Long id);
 
     List<AdminUserViewDTO> getUsersInfoOrderedByRegistrationDateReversedWithAdminsFirst();
+
+    AdminUserViewDTO getUserToUpdate(Long userId);
+
+    void updateUserRoles(AdminUserViewDTO adminUserViewDTO);
 }

@@ -4,20 +4,23 @@ import com.pazarskispisak.PazarskiSpisak.models.dtos.AdminUserViewDTO;
 import com.pazarskispisak.PazarskiSpisak.models.dtos.UserBasicDTO;
 import com.pazarskispisak.PazarskiSpisak.models.dtos.UserRegisterDTO;
 import com.pazarskispisak.PazarskiSpisak.models.entities.User;
+import com.pazarskispisak.PazarskiSpisak.models.entities.UserRoleEntity;
+import com.pazarskispisak.PazarskiSpisak.models.enums.UserRoleEnum;
 import com.pazarskispisak.PazarskiSpisak.repository.UserRepository;
+import com.pazarskispisak.PazarskiSpisak.service.UserRolesService;
 import com.pazarskispisak.PazarskiSpisak.service.UserService;
+import com.pazarskispisak.PazarskiSpisak.service.exception.ObjectNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -27,12 +30,14 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
     private final PasswordEncoder passwordEncoder;
+    private UserRolesService userRolesService;
 
     @Autowired
-    public UserServiceImpl(UserRepository userRepository, ModelMapper modelMapper, PasswordEncoder passwordEncoder) {
+    public UserServiceImpl(UserRepository userRepository, ModelMapper modelMapper, PasswordEncoder passwordEncoder, UserRolesService userRolesService) {
         this.userRepository = userRepository;
         this.modelMapper = modelMapper;
         this.passwordEncoder = passwordEncoder;
+        this.userRolesService = userRolesService;
     }
 
 
@@ -77,6 +82,9 @@ public class UserServiceImpl implements UserService {
 
         newUser.setPassword(this.passwordEncoder.encode(userRegisterDTO.getPassword()));
 
+        UserRoleEntity userRoleUser = this.userRolesService.getUserRoleEntity(UserRoleEnum.USER);
+        newUser.getUserRoles().add(userRoleUser);
+
         this.userRepository.save(newUser);
 
         return true;
@@ -116,7 +124,37 @@ public class UserServiceImpl implements UserService {
 
         List<AdminUserViewDTO> adminUserViewDTOList = Arrays.stream(this.modelMapper.map(users, AdminUserViewDTO[].class)).toList();
 
+        System.out.println();
         return adminUserViewDTOList;
+    }
+
+    @Override
+    public AdminUserViewDTO getUserToUpdate(Long userId) {
+
+        Optional<User> byId = this.userRepository.findById(userId);
+        AdminUserViewDTO mapped = this.modelMapper.map(byId, AdminUserViewDTO.class);
+
+        return mapped;
+    }
+
+    @Override
+    @Transactional
+    public void updateUserRoles(AdminUserViewDTO adminUserViewDTO) {
+
+        Optional<User> byId = this.userRepository.findById(adminUserViewDTO.getId());
+
+        if (byId.isEmpty()){
+            throw new ObjectNotFoundException("User with ID " + adminUserViewDTO.getId() + " not found.");
+        }
+
+        Set<UserRoleEntity> collect = adminUserViewDTO.getUserRoles().stream()
+                .map(r -> userRolesService.getUserRoleEntity(UserRoleEnum.valueOf(r)))
+                .collect(Collectors.toSet());
+
+        byId.get().setUserRoles(collect);
+
+        System.out.println();
+
     }
 
 

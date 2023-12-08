@@ -61,7 +61,7 @@ public class UserRegistrationController {
 
         this.userService.register(userModel);
 
-        return "redirect:/";
+        return "redirect:/login";
     }
 
 }

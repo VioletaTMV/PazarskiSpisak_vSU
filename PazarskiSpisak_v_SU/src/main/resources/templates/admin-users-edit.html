@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec='http://www.thymeleaf.org/extras/spring-security'>
 
 <head>
     <title>ShoppingListProject</title>
@@ -12,51 +13,92 @@
 
 <th:block th:replace="~{fragments/navbar-admin}">Admin SubNavbar</th:block>
 
-    <main>
-        <div class="container-account r-add-container clr-grayish round-corners-25">
+<main>
+    <div class="container-account r-add-container clr-grayish round-corners-25">
 
-            <th:block th:replace="~{fragments/navbar-admin-users}">Administer users</th:block>
+        <th:block th:replace="~{fragments/navbar-admin-users}">Administer users</th:block>
 
-            <form action="">
-                <div class="edit-zone clr-orangeish round-corners-25">
+        <
+        <form
+                th:action="@{/admin/users/edit(id=${userToUpdate.id})}"
+                th:method="patch"
+                th:object="${userToUpdate}">
 
-                    <section class="row clr-beigeish round-corners-25">
-                        <div class="form-group r-name text-black admin">
+            <div class="edit-zone clr-orangeish round-corners-25">
 
-                            <label for="admin-user-select">Потребител за актуализация на роли</label>
-                            <p class="alert-message font-14"></p>
-                            <select name="admin-user-select" id="admin-user-select" class="form-control">
-                                <option value="">- Избери потребител -</option>
-                            </select>
-                        </div>
-                    </section>
+                <section class="row clr-beigeish round-corners-25">
+                    <div class="form-group r-name text-black admin">
+                        <p>Актуализация на потребител <span> <b th:text="*{displayNickname}">Потребител </b></span>
+                            с имейл <b th:text="*{email}">Имейл</b>,
+                            регистриран от <b th:text="*{dateRegistered}">Регистриран от </b></p>
+                    </div>
+                    <!--                </section>-->
 
                     <section class="row clr-beigeish round-corners-25">
                         <div class="form-group r-name text-black admin"></div>
-                        <label for="admin-user-role-choose">Приложи роли</label>
+                        <label for="usrRolesUpd">Приложи роли</label>
                         <p class="alert-message font-14"></p>
-                        <select name="admin-user-role-choose" id="admin-user-role-choose" class="form-control" multiple>
-                            <option value="">- Избери роли -</option>
-                        </select>
+                        <!--                                        <select name="usrRolesUpd"-->
+                        <!--                                                id="usrRolesUpd"-->
+                        <!--                                                class="form-control"-->
 
+                        <!--                                                multiple>-->
+                        <!--                                            <option value="">- Избери роли -</option>-->
+                        <!--                                            <option th:each="r: ${userRolesDTOList}"-->
+                        <!--                                                    th:text="${r}"-->
+                        <!--                                                    th:value="${r}"-->
+                        <!--                                                    th:selected="${#sets.contains(userToUpdate.userRoles, r)}"-->
+                        <!--                                                   ></option>-->
+                        <!--                    &lt;!&ndash;                        th:field="*{userRoles}"&ndash;&gt;-->
+                        <!--                    &lt;!&ndash;                        th:selected="${r} == *{userRoles}"&ndash;&gt;-->
+                        <!--                                        </select>-->
+
+
+                        <div
+                        >
+                            <input th:each="r: ${userRolesDTOList}"
+                                   class="form-control"
+                                   type="checkbox"
+                                   id="usrRolesUpd"
+                                   name="usrRolesUpd"
+                                   th:value="${r}"
+                                   th:text="${r}"
+                                   th:field="${userToUpdate.userRoles}"
+                            >
+                            <!--                        th:selected="${#sets.contains(userToUpdate.userRoles, r)}"-->
+                            <!--                        th:selected="${r} == *{userRoles}"-->
+                            <!--                        th:field="${userToUpdateDTOEnum.userRoleList}"-->
+                            <!--                    th:field="*{userRoles}"-->
+                            <!--                    <label-->
+                            <!--                            class="r-categories"-->
+                            <!--                            for="usrRolesUpd"-->
+                            <!--                            -->
+                            <!--                    >-->
+                            <!--                    </label>-->
+
+                        </div>
                     </section>
 
                     <section class="row button-row r-update-container">
                         <div class="col /*col-md-4*/">
                             <div class="button-holder d-flex">
-                                <input class="font-18 btn" type="submit" value="Актуализирай" />
+                                <input class="font-18 btn"
+                                       type="submit"
+                                       name="usrRolesUpd"
+                                       value="Актуализирай"/>
                             </div>
                         </div>
                     </section>
-                </div>
-            </form>
+                </section>
+            </div>
+        </form>
 
-        </div>
+    </div>
 
-    </main>
+</main>
 
 
-    <footer></footer>
+<footer></footer>
 
 
 </body>

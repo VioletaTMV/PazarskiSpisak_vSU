@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec='http://www.thymeleaf.org/extras/spring-security'>
 
 <head>
     <title>ShoppingListProject</title>
@@ -19,7 +20,6 @@
 
         <div class="edit-zone clr-greenish round-corners-25">
 
-
             <section class="row clr-beigeish round-corners-25">
                 <div class="grid-container form-group round-corners-25">
                     <div class="bottom-space"
@@ -30,9 +30,28 @@
                             <span th:text="${u.dateRegistered}">Регистриран на </span> |
                             <span th:text="${u.userRoles}">Роли </span>;
                         </p>
-<!--                        <span th:each="ur: ${u.userRoles}">-->
-<!--                                  <span th:text="${ur}">Роля </span>-->
-<!--                                </span>-->
+                        <!--                        <span th:each="ur: ${u.userRoles}">-->
+                        <!--                                  <span th:text="${ur}">Роля </span>-->
+                        <!--                                </span>-->
+
+                        <!--                        <input th:type="hidden"-->
+                        <!--                               th:name="usrEdit"-->
+                        <!--                               th:value="${u.id}">-->
+
+                        <form sec:authorize="isAuthenticated()"
+                              class="inline-display"
+                              th:method="get"
+                              th:action="@{/admin/users/edit(id=${u.id})}">
+
+                            <button class="button-as-link add-to-list-link"
+                                    type="submit"
+                                    th:name="id"
+                                    th:value="${u.id}">
+                                <a> Редактирай</a>
+                            </button>
+<!--                            name="usrEdit"-->
+                        </form>
+
                     </div>
                 </div>
             </section>
