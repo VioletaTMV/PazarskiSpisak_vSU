@@ -72,13 +72,12 @@ public class AdminUsersController {
                                         @ModelAttribute("userToUpdate") AdminUserViewDTO adminUserViewDTO) {
 
         AdminUserViewDTO userToUpdateDTO = this.userService.getUserToUpdate(userId);
-        System.out.println();
+
         adminUserViewDTO.setId(userToUpdateDTO.getId());
         adminUserViewDTO.setEmail(userToUpdateDTO.getEmail());
         adminUserViewDTO.setDisplayNickname(userToUpdateDTO.getDisplayNickname());
         adminUserViewDTO.setDateRegistered(userToUpdateDTO.getDateRegistered());
         adminUserViewDTO.setUserRoles(userToUpdateDTO.getUserRoles());
-
 
         return "admin-users-edit";
     }
@@ -89,7 +88,6 @@ public class AdminUsersController {
                                   BindingResult bindingResult,
                                   RedirectAttributes redirectAttributes) {
 
-        System.out.println();
         if (bindingResult.hasErrors()) {
 
             redirectAttributes.addFlashAttribute("userToUpdate", adminUserViewDTO);
@@ -97,9 +95,7 @@ public class AdminUsersController {
 
             return "redirect:/admin/users/edit?id=" + adminUserViewDTO.getId();
         }
-        System.out.println();
 
-        //презапиши ролите на юзъра
         this.userService.updateUserRoles(adminUserViewDTO);
 
         return "redirect:/admin/users/view";

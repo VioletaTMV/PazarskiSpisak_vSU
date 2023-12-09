@@ -77,7 +77,7 @@ public class ShopListController {
     public String showListOfChosenRecipes(@ModelAttribute("shopListRecipesModel") ShopListRecipesDTO shopListRecipesDTO,
                                           Model model,
                                           Principal principal) {
-        System.out.println();
+
         if (principal == null) {
             model.addAttribute("userNotRegisteredMessage", "Списъка е празен. Започни да добавяш рецепти. Необходимо е да си регистриран потребител за тази функционалност.");
             return "my-list-recipes";
@@ -131,7 +131,7 @@ public class ShopListController {
     public String addToShopList(@RequestParam("id") Long id,
                                 @ModelAttribute("shopListRecipesModel") ShopListRecipesDTO shopListRecipesDTO,
                                 Principal principal) {
-        System.out.println();
+
         if (principal == null) {
             return "redirect:/user/login";
         }

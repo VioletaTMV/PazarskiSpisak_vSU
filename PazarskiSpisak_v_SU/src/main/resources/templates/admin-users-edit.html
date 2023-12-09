@@ -38,24 +38,8 @@
                         <div class="form-group r-name text-black admin"></div>
                         <label for="usrRolesUpd">Приложи роли</label>
                         <p class="alert-message font-14"></p>
-                        <!--                                        <select name="usrRolesUpd"-->
-                        <!--                                                id="usrRolesUpd"-->
-                        <!--                                                class="form-control"-->
 
-                        <!--                                                multiple>-->
-                        <!--                                            <option value="">- Избери роли -</option>-->
-                        <!--                                            <option th:each="r: ${userRolesDTOList}"-->
-                        <!--                                                    th:text="${r}"-->
-                        <!--                                                    th:value="${r}"-->
-                        <!--                                                    th:selected="${#sets.contains(userToUpdate.userRoles, r)}"-->
-                        <!--                                                   ></option>-->
-                        <!--                    &lt;!&ndash;                        th:field="*{userRoles}"&ndash;&gt;-->
-                        <!--                    &lt;!&ndash;                        th:selected="${r} == *{userRoles}"&ndash;&gt;-->
-                        <!--                                        </select>-->
-
-
-                        <div
-                        >
+                        <div>
                             <input th:each="r: ${userRolesDTOList}"
                                    class="form-control"
                                    type="checkbox"
@@ -65,16 +49,6 @@
                                    th:text="${r}"
                                    th:field="${userToUpdate.userRoles}"
                             >
-                            <!--                        th:selected="${#sets.contains(userToUpdate.userRoles, r)}"-->
-                            <!--                        th:selected="${r} == *{userRoles}"-->
-                            <!--                        th:field="${userToUpdateDTOEnum.userRoleList}"-->
-                            <!--                    th:field="*{userRoles}"-->
-                            <!--                    <label-->
-                            <!--                            class="r-categories"-->
-                            <!--                            for="usrRolesUpd"-->
-                            <!--                            -->
-                            <!--                    >-->
-                            <!--                    </label>-->
 
                         </div>
                     </section>

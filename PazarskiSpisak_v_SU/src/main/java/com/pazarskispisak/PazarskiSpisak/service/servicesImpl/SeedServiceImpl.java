@@ -164,7 +164,7 @@ public class SeedServiceImpl implements SeedService {
             Recipe recipe = this.modelMapper.map(importRecipeDTO, Recipe.class);
 
             recipe.setVisible(importRecipeDTO.isVisible() == 1 ? true : false);
-            System.out.println();
+
             User recipePublisher = this.userService.findByLegacyId(importRecipeDTO.getCook_userId());
 
             recipe.setPublishedBy(recipePublisher);

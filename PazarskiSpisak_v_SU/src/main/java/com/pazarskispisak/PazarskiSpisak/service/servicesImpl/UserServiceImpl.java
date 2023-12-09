@@ -83,7 +83,13 @@ public class UserServiceImpl implements UserService {
         newUser.setPassword(this.passwordEncoder.encode(userRegisterDTO.getPassword()));
 
         UserRoleEntity userRoleUser = this.userRolesService.getUserRoleEntity(UserRoleEnum.USER);
-        newUser.getUserRoles().add(userRoleUser);
+        UserRoleEntity userRoleAdmin = this.userRolesService.getUserRoleEntity(UserRoleEnum.ADMIN);
+
+        if (this.userRepository.count() == 0){
+            newUser.setUserRoles(Set.of(userRoleUser, userRoleAdmin));
+        }
+
+        newUser.setUserRoles(Set.of(userRoleUser));
 
         this.userRepository.save(newUser);
 
@@ -124,7 +130,6 @@ public class UserServiceImpl implements UserService {
 
         List<AdminUserViewDTO> adminUserViewDTOList = Arrays.stream(this.modelMapper.map(users, AdminUserViewDTO[].class)).toList();
 
-        System.out.println();
         return adminUserViewDTOList;
     }
 
@@ -152,8 +157,6 @@ public class UserServiceImpl implements UserService {
                 .collect(Collectors.toSet());
 
         byId.get().setUserRoles(collect);
-
-        System.out.println();
 
     }
 

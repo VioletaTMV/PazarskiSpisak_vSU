@@ -6,6 +6,7 @@ import com.pazarskispisak.PazarskiSpisak.models.entities.User;
 import com.pazarskispisak.PazarskiSpisak.models.entities.UserRoleEntity;
 import com.pazarskispisak.PazarskiSpisak.models.enums.UserRoleEnum;
 import com.pazarskispisak.PazarskiSpisak.repository.UserRepository;
+import com.pazarskispisak.PazarskiSpisak.service.UserRolesService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -34,10 +35,13 @@ public class UserServiceImplTests {
     @Mock
     private PasswordEncoder mockedPasswordEncoder;
 
+    @Mock
+    private UserRolesService mockedUserRolesService;
+
 
     @BeforeEach
     void setUp() {
-        serviceToTest = new UserServiceImpl(mockedUserRepository, mockedModelMapper, mockedPasswordEncoder);
+        serviceToTest = new UserServiceImpl(mockedUserRepository, mockedModelMapper, mockedPasswordEncoder, mockedUserRolesService);
     }
 
     @Test
@@ -73,11 +77,19 @@ public class UserServiceImplTests {
         //Arrange
         UserRegisterDTO testUserRegisterDTO = createTestUserRegisterDTO();
         User testUser = createTestUser();
+        UserRoleEntity testUserRoleUserEntity = createTestUserRoleEntity(UserRoleEnum.USER);
+        UserRoleEntity testUserRoleAdminEntity = createTestUserRoleEntity(UserRoleEnum.ADMIN);
 
         when(mockedModelMapper.map(testUserRegisterDTO, User.class))
                 .thenReturn(testUser);
         when(mockedPasswordEncoder.encode(testUserRegisterDTO.getPassword()))
                 .thenReturn(testUserRegisterDTO.getPassword());
+        when(mockedUserRolesService.getUserRoleEntity(UserRoleEnum.USER))
+                .thenReturn(testUserRoleUserEntity);
+        when(mockedUserRolesService.getUserRoleEntity(UserRoleEnum.ADMIN))
+                .thenReturn(testUserRoleAdminEntity);
+        when(mockedUserRepository.count())
+                .thenReturn(1L);
 
         //Act
         boolean register = serviceToTest.register(testUserRegisterDTO);
@@ -88,6 +100,14 @@ public class UserServiceImplTests {
         assertEquals(testUserRegisterDTO.getDisplayNickname(), testUser.getDisplayNickname());
         assertEquals(testUserRegisterDTO.getPassword(), testUserRegisterDTO.getPasswordRepeat());
     }
+
+    private UserRoleEntity createTestUserRoleEntity(UserRoleEnum userRoleEnum) {
+
+        UserRoleEntity testURE = new UserRoleEntity();
+        testURE.setUserRole(UserRoleEnum.USER);
+        return testURE;
+    }
+
 
     @Test
     void testFindByDisplayNickname_whenNonExistingUser(){

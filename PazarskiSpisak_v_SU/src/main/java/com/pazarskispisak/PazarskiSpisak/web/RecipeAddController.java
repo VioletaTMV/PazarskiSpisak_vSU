@@ -112,7 +112,7 @@ public class RecipeAddController {
         recipePictureAddDTO.setRecipeId(recipePictureAddDTOfromDB.getRecipeId());
         recipePictureAddDTO.setRecipeName(recipePictureAddDTOfromDB.getRecipeName());
         recipePictureAddDTO.setRecipePublishedById(recipePictureAddDTOfromDB.getRecipePublishedById());
-        System.out.println();
+
         return "recipe-add-2";
     }
 
@@ -123,7 +123,7 @@ public class RecipeAddController {
                                      HttpServletRequest httpServletRequest){
 //                                     @RequestParam("r-picture")
 //                                     MultipartFile multipartFile)
-        System.out.println();
+
         Optional<UserBasicDTO> userBasicDTOOpt = userBasicDTOOpt = this.userService.getBasicUserData(httpServletRequest.getUserPrincipal().getName());
         boolean operationAllowed = this.recipeService.isCurrentUserAllowedToUploadPictureForCurrentRecipe(userBasicDTOOpt.get(), recipePictureAddDTO);
         if (!operationAllowed){
