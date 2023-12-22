@@ -160,5 +160,30 @@ public class UserServiceImpl implements UserService {
 
     }
 
+    @Override
+    @Transactional
+    public void assignRolesToMigratedUsers() {
+
+        UserRoleEntity ureUser = this.userRolesService.getUserRoleEntity(UserRoleEnum.USER);
+        UserRoleEntity ureAdmin = this.userRolesService.getUserRoleEntity(UserRoleEnum.ADMIN);
+
+        List<User> all = userRepository.findAll();
+
+        for (int i = 0; i < all.size(); i++) {
+
+            User currentUser = all.get(i);
+
+            if (i == 0) {
+                currentUser.setUserRoles(Set.of(ureUser, ureAdmin));
+            } else {
+                currentUser.setUserRoles(Set.of(ureUser));
+            }
+
+//            this.userRepository.save(currentUser);
+        }
+
+
+    }
+
 
 }

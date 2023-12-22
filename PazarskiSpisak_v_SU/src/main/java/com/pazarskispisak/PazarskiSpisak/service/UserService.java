@@ -35,4 +35,6 @@ public interface UserService {
     AdminUserViewDTO getUserToUpdate(Long userId);
 
     void updateUserRoles(AdminUserViewDTO adminUserViewDTO);
+
+    void assignRolesToMigratedUsers();
 }
