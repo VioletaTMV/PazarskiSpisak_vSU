@@ -1,5 +1,6 @@
 package com.pazarskispisak.PazarskiSpisak.util;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -12,6 +13,9 @@ import java.nio.file.StandardCopyOption;
 
 @Component
 public class FileUploadUtil {
+
+//    This utility class is only responsible for creating the directory if not exists,
+//    and save the uploaded file from MultipartFile object to a file in the file system.
 
     public static void saveFile(String uploadDir, String fileName,
                                 MultipartFile multipartFile) throws IOException {

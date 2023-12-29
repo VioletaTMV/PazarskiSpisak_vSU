@@ -22,8 +22,10 @@ public class MvcConfig implements WebMvcConfigurer{
         this.maintenanceInterceptor = maintenanceInterceptor;
     }
 
-
-    @Override
+//Display uploaded images (от локалния сървър) in browser
+//In case of uploaded files are images, we can display the images in browser with a little configuration.
+// We need to expose the directory containing the uploaded files so the clients (web browsers) can access.
+//    @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
         exposeDirectory(UPLOAD_DIRECTORY, registry);
@@ -34,7 +36,9 @@ public class MvcConfig implements WebMvcConfigurer{
         registry.addInterceptor(maintenanceInterceptor);
     }
 
-
+    //Display uploaded (от локалния сървър) images in browser
+//In case of uploaded files are images, we can display the images in browser with a little configuration.
+// We need to expose the directory containing the uploaded files so the clients (web browsers) can access.
     private void exposeDirectory(String dirName, ResourceHandlerRegistry registry) {
 
         Path recipeImgUploadDir = Paths.get(dirName);

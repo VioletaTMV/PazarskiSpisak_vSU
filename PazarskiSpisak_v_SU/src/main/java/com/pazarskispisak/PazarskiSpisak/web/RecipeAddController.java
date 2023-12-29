@@ -124,7 +124,7 @@ public class RecipeAddController {
 //                                     @RequestParam("r-picture")
 //                                     MultipartFile multipartFile)
 
-        Optional<UserBasicDTO> userBasicDTOOpt = userBasicDTOOpt = this.userService.getBasicUserData(httpServletRequest.getUserPrincipal().getName());
+        Optional<UserBasicDTO> userBasicDTOOpt = this.userService.getBasicUserData(httpServletRequest.getUserPrincipal().getName());
         boolean operationAllowed = this.recipeService.isCurrentUserAllowedToUploadPictureForCurrentRecipe(userBasicDTOOpt.get(), recipePictureAddDTO);
         if (!operationAllowed){
             redirectAttributes.addFlashAttribute("operationNotAllowed", "Операцията не бе позволена. Снимка към рецепта може да качва единствено нейният автор.");
@@ -137,14 +137,14 @@ public class RecipeAddController {
             return "redirect:/recipe/add/picture?id=" + recipePictureAddDTO.getRecipeId();
         }
         try {
-            String recipeImageName = this.recipeService.uploadPictureToDirAndGetFileName(
+            String recipeImageNameWithFileExtension = this.recipeService.uploadPictureToDirAndGetFileName(
                     recipePictureAddDTO.getMultipartFile(),
                     userBasicDTOOpt.get(),
                     recipePictureAddDTO);
             this.recipeService.savePictureNameForRecipeInDB(
                     recipePictureAddDTO.getRecipeId(),
                     userBasicDTOOpt.get().getId(),
-                    recipeImageName);
+                    recipeImageNameWithFileExtension);
         } catch (IOException e) {
             System.out.println(e.toString());
             redirectAttributes.addFlashAttribute("uploadFailed", "Снимката не бе запазена. Опитайте пак.");

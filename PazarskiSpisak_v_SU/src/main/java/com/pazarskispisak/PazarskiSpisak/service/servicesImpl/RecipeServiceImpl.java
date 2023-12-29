@@ -1,5 +1,7 @@
 package com.pazarskispisak.PazarskiSpisak.service.servicesImpl;
 
+import com.cloudinary.Cloudinary;
+import com.cloudinary.utils.ObjectUtils;
 import com.pazarskispisak.PazarskiSpisak.models.dtos.*;
 import com.pazarskispisak.PazarskiSpisak.models.entities.Recipe;
 import com.pazarskispisak.PazarskiSpisak.models.entities.RecipeIngredientWithDetails;
@@ -7,10 +9,7 @@ import com.pazarskispisak.PazarskiSpisak.models.entities.User;
 import com.pazarskispisak.PazarskiSpisak.models.enums.IngredientMeasurementUnitEnum;
 import com.pazarskispisak.PazarskiSpisak.models.enums.RecipeCategoryEnum;
 import com.pazarskispisak.PazarskiSpisak.repository.RecipeRepository;
-import com.pazarskispisak.PazarskiSpisak.service.IngredientService;
-import com.pazarskispisak.PazarskiSpisak.service.RecipeIngredientsService;
-import com.pazarskispisak.PazarskiSpisak.service.RecipeService;
-import com.pazarskispisak.PazarskiSpisak.service.UserService;
+import com.pazarskispisak.PazarskiSpisak.service.*;
 import com.pazarskispisak.PazarskiSpisak.service.exception.ObjectNotFoundException;
 import com.pazarskispisak.PazarskiSpisak.util.FileUploadUtil;
 import org.modelmapper.ModelMapper;
@@ -20,13 +19,17 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-import static com.pazarskispisak.PazarskiSpisak.constants.UploadDirectory.UPLOAD_DIRECTORY;
+import static com.pazarskispisak.PazarskiSpisak.constants.UploadDirectory.*;
 
 @Service
 public class RecipeServiceImpl implements RecipeService {
@@ -36,14 +39,20 @@ public class RecipeServiceImpl implements RecipeService {
     private final UserService userService;
     private final IngredientService ingredientService;
     private final RecipeIngredientsService recipeIngredientsService;
+    private final CloudinaryService cloudinaryService;
+
 
     @Autowired
-    public RecipeServiceImpl(RecipeRepository recipeRepository, ModelMapper modelMapper, UserService userService, IngredientService ingredientService, RecipeIngredientsService recipeIngredientsService) {
+    public RecipeServiceImpl(RecipeRepository recipeRepository, ModelMapper modelMapper,
+                             UserService userService, IngredientService ingredientService,
+                             RecipeIngredientsService recipeIngredientsService,
+                             CloudinaryService cloudinaryService) {
         this.recipeRepository = recipeRepository;
         this.modelMapper = modelMapper;
         this.userService = userService;
         this.ingredientService = ingredientService;
         this.recipeIngredientsService = recipeIngredientsService;
+        this.cloudinaryService = cloudinaryService;
     }
 
 
@@ -100,8 +109,11 @@ public class RecipeServiceImpl implements RecipeService {
 
         recipeViewDTO.setRecipeIngredientWithDetailsDTOSet(recipeIngredientWithDetailsDTOSet);
 
-        //добавяме пълния път до снимката
-        recipeViewDTO.setPicture(getRecipeImgPath(recipe.get().getPicture()));
+        //добавяме пълния път до снимката когато сме запазаили снимката а локалния диск
+//        recipeViewDTO.setPicture(getRecipeImgPath(recipe.get().getPicture()));
+
+        //добавяме пълния път до снимката когато сме запазаили снимката в Cloudinary
+        recipeViewDTO.setPicture(getRecipeImgAddress(recipe.get().getPicture()));
 
         this.recipeRepository.increaseViewTimesByOne(recipe.get().getViewCount() + 1, recipe.get().getId());
 
@@ -212,12 +224,26 @@ public class RecipeServiceImpl implements RecipeService {
         String recipeImageName = null;
 
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
-        recipeImageName = userBasicDTO.getId()
-                + "_"
-                + recipePictureAddDTO.getRecipeName().replaceAll(" ", "_");
-        FileUploadUtil.saveFile(UPLOAD_DIRECTORY, recipeImageName, multipartFile);
-        return recipeImageName;
+        String fileExtension = extractExtentionOfFileName(fileName);
+
+        recipeImageName = userBasicDTO.getId() + "-"
+//                + recipePictureAddDTO.getRecipeName().replaceAll(" ", "_");
+                + recipePictureAddDTO.getRecipeId() + "-"
+                + LocalDate.now() + "-"
+                + LocalTime.now().getHour() + "-"
+                + LocalTime.now().getMinute() + "-"
+                + LocalTime.now().getSecond();
+//        долното е приложимо, когато съхранявам снимката на локалния диск, в определената
+//        в константите директория
+//        FileUploadUtil.saveFile(UPLOAD_DIRECTORY, recipeImageName, multipartFile);
+
+        //а долното при съхранение в Cloudinary
+        String uploadedPicCloudURL = this.cloudinaryService.uploadFile(
+                multipartFile, CLOUDINARY_UPLOAD_FOLDER, recipeImageName);
+
+        return recipeImageName + fileExtension;
     }
+
 
     @Override
     public RecipePictureAddDTO getRecipePictureAddDTO(Long recipeId) {
@@ -303,5 +329,26 @@ public class RecipeServiceImpl implements RecipeService {
             return null;
         }
         return "/" + UPLOAD_DIRECTORY + "/" + pictureName;
+    }
+
+    private String getRecipeImgAddress(String pictureNameWithFileExtension) {
+
+        if (pictureNameWithFileExtension == null) {
+            return null;
+        }
+
+        int fileExtensionLength = extractExtentionOfFileName(pictureNameWithFileExtension).length();
+
+        String pictureName = pictureNameWithFileExtension.substring(0, pictureNameWithFileExtension.length()-fileExtensionLength);
+
+        return CLOUDINARY_BASE_IMAGE_UPLOAD_URL + CLOUDINARY_UPLOAD_FOLDER + "/" + pictureName;
+    }
+
+    private String extractExtentionOfFileName(String fileName) {
+
+        int indexOfExtensionStart = fileName.lastIndexOf(".");
+        String fileExtension = fileName.substring(indexOfExtensionStart);
+
+        return fileExtension;
     }
 }

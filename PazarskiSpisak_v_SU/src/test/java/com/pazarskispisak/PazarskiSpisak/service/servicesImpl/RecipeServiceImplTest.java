@@ -1,5 +1,6 @@
 package com.pazarskispisak.PazarskiSpisak.service.servicesImpl;
 
+import com.cloudinary.Cloudinary;
 import com.pazarskispisak.PazarskiSpisak.models.dtos.*;
 import com.pazarskispisak.PazarskiSpisak.models.entities.*;
 import com.pazarskispisak.PazarskiSpisak.models.enums.IngredientMeasurementUnitEnum;
@@ -55,6 +56,7 @@ public class RecipeServiceImplTest {
     private User testUser;
     private Recipe testRecipe;
     private RecipeViewDTO testRecipeViewDTO;
+    private Cloudinary mockedCloudinary;
 
 
     @BeforeEach
@@ -64,7 +66,8 @@ public class RecipeServiceImplTest {
                 mockedModelMapper,
                 mockedUserService,
                 mockedIngredientService,
-                mockedRecipeIngredientsService);
+                mockedRecipeIngredientsService,
+                mockedCloudinary);
 
         testCategorySM = createTestCategory("fish and seafood", (short) 1);
         userRoleUser = createUserRoleEntityUser();

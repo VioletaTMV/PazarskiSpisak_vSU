@@ -11,6 +11,7 @@ spring:
         password: ${db_password}
         username: ${db_username}
         url: jdbc:mysql://pazarskispisak-db.mysql.database.azure.com:3306/pazarski?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&characterEncoding=UTF-8
+#        url: jdbc:mysql://localhost:3306/pazarski?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&characterEncoding=UTF-8
     jpa:
         hibernate:
             ddl-auto: update
@@ -22,7 +23,7 @@ spring:
                 show_sql: true
     sql:
         init:
-            mode: always
+            mode: never
     mvc:
         hiddenmethod:
             filter:
@@ -32,9 +33,16 @@ spring:
             enabled: true
             max-file-size: 2MB
             max-request-size: 2MB
+#upload:
+#    path: C:/Users/Violeta/Documents/JavaProgramsUploads
 server:
     tomcat:
         max-swallow-size: -1
 PazarskiSpisak_v_SU:
     default.admin.pass: ${DEFAULT_ADMIN_PASS:test12Q!}
     remember.me.key: ${REMEBER_ME_KEY:test12Q!}
+
+cloudinary:
+    cloud_name: ${cloudinary_cloud_name:pazarski}
+    api_key: ${cloudinary_api_key:966195189114375}
+    api_secret: ${cloudinary_api_secret:vtbtHLMexlJ2ZtDrh1es1WumEj0}
