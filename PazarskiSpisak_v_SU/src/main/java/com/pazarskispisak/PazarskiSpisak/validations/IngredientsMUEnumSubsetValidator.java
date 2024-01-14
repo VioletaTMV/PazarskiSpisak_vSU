@@ -6,12 +6,12 @@ import jakarta.validation.ConstraintValidatorContext;
 
 import java.util.Arrays;
 
-public class IngredientsMeasurementUnitsEnumSubsetValidator implements ConstraintValidator<IngredientsMeasurementUnitsEnumSubset, IngredientMeasurementUnitEnum> {
+public class IngredientsMUEnumSubsetValidator implements ConstraintValidator<IngredientsMUEnumSubset, IngredientMeasurementUnitEnum> {
 
     private IngredientMeasurementUnitEnum[] subset;
 
     @Override
-    public void initialize(IngredientsMeasurementUnitsEnumSubset constraintAnnotation) {
+    public void initialize(IngredientsMUEnumSubset constraintAnnotation) {
         this.subset = constraintAnnotation.anyOf();
     }
 

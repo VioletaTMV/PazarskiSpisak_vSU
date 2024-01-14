@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class ShoppingListDisplayMeasurementUnitForProductMatchOneOfMainOrAlternativeUnitsChosenOrEmptyValidator implements ConstraintValidator
-        <ShoppingListDisplayMeasurementUnitForProductMatchOneOfMainOrAlternativeUnitsChosenOrEmpty, IngredientDTO> {
+public class ShopListDisplMUMainOrAltOrEmptyValidator implements ConstraintValidator
+        <ShopListDisplMUMainOrAltOrEmpty, IngredientDTO> {
 
     private IngredientMeasurementUnitEnum mainUnitChosen;
     private List<IngredientMeasurementUnitEnum> alternativeUnitsNotNullAndPositive;
@@ -23,7 +23,7 @@ public class ShoppingListDisplayMeasurementUnitForProductMatchOneOfMainOrAlterna
 //    private String message;
 
     @Override
-    public void initialize(ShoppingListDisplayMeasurementUnitForProductMatchOneOfMainOrAlternativeUnitsChosenOrEmpty constraintAnnotation) {
+    public void initialize(ShopListDisplMUMainOrAltOrEmpty constraintAnnotation) {
 
 //        this.first = constraintAnnotation.first();
 //        this.second = constraintAnnotation.second();

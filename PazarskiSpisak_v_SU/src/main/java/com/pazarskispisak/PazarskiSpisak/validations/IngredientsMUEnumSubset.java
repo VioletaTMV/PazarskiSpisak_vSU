@@ -11,8 +11,8 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = IngredientsMeasurementUnitsEnumSubsetValidator.class)
-public @interface IngredientsMeasurementUnitsEnumSubset {
+@Constraint(validatedBy = IngredientsMUEnumSubsetValidator.class)
+public @interface IngredientsMUEnumSubset {
 
     IngredientMeasurementUnitEnum[] anyOf();
     String message() default "must be any of {anyOf}";

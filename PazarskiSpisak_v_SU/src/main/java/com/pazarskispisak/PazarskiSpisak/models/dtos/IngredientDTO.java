@@ -7,7 +7,7 @@ import jakarta.validation.constraints.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-@ShoppingListDisplayMeasurementUnitForProductMatchOneOfMainOrAlternativeUnitsChosenOrEmpty(
+@ShopListDisplMUMainOrAltOrEmpty(
         message = "Мерната единица в пазарски списък трябва да е или избраната основна мерна единица, или една от алтернативните мерни единици, приложими (попълнени) за продукта."
 )
 public class IngredientDTO {
@@ -24,7 +24,7 @@ public class IngredientDTO {
     private String itemCategorySupermarketName;
 
     @NotNull(message = "Задължително поле.")
-    @IngredientsMeasurementUnitsEnumSubset(anyOf = {IngredientMeasurementUnitEnum.GRAM, IngredientMeasurementUnitEnum.MILLILITER}, message = "Изберете между гр. или мл.")
+    @IngredientsMUEnumSubset(anyOf = {IngredientMeasurementUnitEnum.GRAM, IngredientMeasurementUnitEnum.MILLILITER}, message = "Изберете между гр. или мл.")
     private IngredientMeasurementUnitEnum mainUnitOfMeasurement;
 
     private Map<IngredientMeasurementUnitEnum,

@@ -10,8 +10,8 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-@Constraint(validatedBy = ShoppingListDisplayMeasurementUnitForProductMatchOneOfMainOrAlternativeUnitsChosenOrEmptyValidator.class)
-public @interface ShoppingListDisplayMeasurementUnitForProductMatchOneOfMainOrAlternativeUnitsChosenOrEmpty {
+@Constraint(validatedBy = ShopListDisplMUMainOrAltOrEmptyValidator.class)
+public @interface ShopListDisplMUMainOrAltOrEmpty {
 
 //    String first();
 //    String[] second();

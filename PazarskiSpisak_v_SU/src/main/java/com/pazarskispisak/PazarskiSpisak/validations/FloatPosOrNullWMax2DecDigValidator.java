@@ -3,7 +3,7 @@ package com.pazarskispisak.PazarskiSpisak.validations;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
-public class FloatPositiveOrNullWithMax2DecimalDigitsValidator implements ConstraintValidator<FloatPositiveOrNullWithMax2DecimalDigits, Float> {
+public class FloatPosOrNullWMax2DecDigValidator implements ConstraintValidator<FloatPositiveOrNullWithMax2DecimalDigits, Float> {
 
 
     @Override
