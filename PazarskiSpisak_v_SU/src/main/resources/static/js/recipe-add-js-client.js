@@ -32,7 +32,7 @@ function limitMeasurementUnitsDropdownOptionsByIngredientId(idOfSelectEl){
         };
 
 //        fetch(`http://localhost:8080/products/${selectedIngredientId}`, requestOptions)
-//долу променяме хттп адреса, за да работи на онлайн ендпойнта
+//долу променяме хттп адреса, за да работи на онлайн ендпойнта в Azure
         fetch(`https://pazarskispisak.calmocean-7e102e43.westeurope.azurecontainerapps.io/products/${selectedIngredientId}`, requestOptions)
           .then(response => response.json())
           .then(jsonIngr => Object.entries(jsonIngr.acceptableMeasurementUnitsForRecipeDescriptionMap).forEach(([key, value]) => {
