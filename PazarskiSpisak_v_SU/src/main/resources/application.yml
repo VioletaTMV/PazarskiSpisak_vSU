@@ -8,10 +8,13 @@ logging:
 spring:
     datasource:
         driverClassName: com.mysql.cj.jdbc.Driver
-        password: ${db_password}
-        username: ${db_username}
-        url: jdbc:mysql://pazarskispisak-db.mysql.database.azure.com:3306/pazarski?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&characterEncoding=UTF-8
+ #       password: ${db_password}
+ #       username: ${db_username}
+#        url: jdbc:mysql://pazarskispisak-db.mysql.database.azure.com:3306/pazarski?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&characterEncoding=UTF-8
 #        url: jdbc:mysql://localhost:3306/pazarski?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&characterEncoding=UTF-8
+        password: ${MYSQL_PASSWORD}
+        username: ${MYSQL_USER}
+        url: jdbc:mysql://localhost:3306/${MYSQL_DATABASE}?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&characterEncoding=UTF-8
     jpa:
         hibernate:
             ddl-auto: update
